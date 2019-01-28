@@ -258,7 +258,7 @@ public class Verwaltung implements Serializable
         kundenListe.add(k1);
     }
 
-    private void showOberteilListe(boolean filterAn, boolean nurAngebote)
+    private void showOberteilListe // !Methode fehlt vorher:Nur Angebot
     {
         String s;
 
@@ -278,7 +278,7 @@ public class Verwaltung implements Serializable
             Artikel i  =  iter.next();
             if (i instanceof Oberteile)
             {
-                if (filterAn && nurAngebote && !i.getIstAngebot())
+                if (filterAn && nurAufLager ) //&& !i.getIstAngebot())
                 {
                     continue;
                 }
@@ -317,6 +317,16 @@ public class Verwaltung implements Serializable
         }
         printLF();
     }
+public nurAufLager ()
+{ 
+   if (i.getLagerbestand > 0)
+   {
+   
+   }   
+    else()
+     {}
+            
+       }
 
     private void showKundenListe()
     {
@@ -426,15 +436,17 @@ public class Verwaltung implements Serializable
             s = castInt2String(i.getAdresse().getPostleitzahl());
             printZentriert(s);
 
-            if (i instanceof Grundstueck) printZentriert("Grundstueck"); 
-            if (i instanceof Wohnung) printZentriert("Wohnung"); 
-            if (i instanceof Haus) printZentriert("Haus");
+            if (i instanceof Oberteile) printZentriert("Oberteile"); 
+            if (i instanceof Unterteile) printZentriert("Unterteile"); 
+            if (i instanceof Accessoires) printZentriert("Accessoires");
+            if (i instanceof Schuhe) printZentriert("Schuhe");
+            
 
             s = castDouble2String(i.getPreis());
             printRechtsbuendig(s);
 
-            if (i.getIstAngebot()) printZentriert("BIETE");
-            else printZentriert("SUCHE");
+            if (i.getLagerbestand()>0) printZentriert("auf Lager");
+            else printZentriert("Vergriffen");
 
             printLF();            
         }
