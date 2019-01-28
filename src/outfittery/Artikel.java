@@ -33,7 +33,7 @@ public abstract class Artikel
    * @param par2 ist die Preiskategorie
    * @param par3 ist das Geschlecht
    * @param par4 ist der Stil
-   * @param par5 ist die Lageranzahl
+   * @param par5 ist die Lagerbestand
    * @param par6 ist die Größe des Kleidungsstücks
    * @param par7 ist die Beschreibung
    */
