@@ -23,14 +23,10 @@ public class Oberteile extends Artikel
      * @param größe Größe, des Oberteiles
      * @param preiskategorie gewünschte Höhe des Preises
      * @param geschlecht Geschlecht, welches dieses Oberteil tragen kann
-     * @param lageranzahl vorhandener Lagervorrat dieses Oberteils
+     * @param lagerbestand vorhandener Lagervorrat dieses Oberteils
      * @param stil gewünschter Stil (sportlich, business,freizeit?)
      * @param beschreibung text über das Oberteil 
      */
-    public Oberteile(double preis,int größe, int preiskategorie,int geschlecht, int lageranzahl, int stil, String beschreibung)
-    {
-        super(preis, größe, preiskategorie, geschlecht, lageranzahl, stil, beschreibung);
-    }
 }
     
 
