@@ -25,7 +25,7 @@ public class Verwaltung implements Serializable
      */
     public Verwaltung()
     {
-        artikelListe = new ArrayList <Artikel>();
+       A artikelListe = new ArrayList <Artikel>();
         kundenListe = new ArrayList <Kunde>();
     }
    
