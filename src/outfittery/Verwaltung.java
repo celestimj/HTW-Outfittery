@@ -355,10 +355,10 @@ public class Verwaltung implements Serializable
         printLF();
         printLinieLF(4); // Trennlinie für 6 Felder anzeigen
 
-        Iterator <Oberteile>iter = oberteileListe.iterator();
+        Iterator <Unterteile>iter = unterteileListe.iterator();
         while(iter.hasNext())
         {
-            Oberteile i  =  iter.next();
+            Unterteile i  =  iter.next();
 
             s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
@@ -399,10 +399,10 @@ public class Verwaltung implements Serializable
         printLF();
         printLinieLF(4); // Trennlinie für 6 Felder anzeigen
 
-        Iterator <Oberteile>iter = oberteileListe.iterator();
+        Iterator <Schuhe>iter = schuheListe.iterator();
         while(iter.hasNext())
         {
-            Oberteile i  =  iter.next();
+            Schuhe i  =  iter.next();
 
             s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
@@ -443,10 +443,10 @@ public class Verwaltung implements Serializable
         printLF();
         printLinieLF(4); // Trennlinie für 6 Felder anzeigen
 
-        Iterator <Oberteile>iter = oberteileListe.iterator();
+        Iterator <Accessoires>iter = accessoiresListe.iterator();
         while(iter.hasNext())
         {
-            Oberteile i  =  iter.next();
+            Accessoires i  =  iter.next();
 
             s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
