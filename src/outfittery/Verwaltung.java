@@ -408,7 +408,7 @@ public nurAufLager ()
         }
     }
 
-    private void showSchuhListe()
+    private void showArtikelListe()
     {
         String s;
 
