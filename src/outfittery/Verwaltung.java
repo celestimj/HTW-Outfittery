@@ -17,6 +17,10 @@ public class Verwaltung implements Serializable
 {
     private ArrayList <Artikel> artikelListe;
     private ArrayList <Kunde> kundenListe;
+    private ArrayList <Oberteile> OberteileListe;
+    private ArrayList <Unterteile> UnterteileListe;
+    private ArrayList <Schuhe> SchuheListe;
+    private ArrayList <Accessoires> AccessoiresListe;
 
     final static int FELDLAENGE = 14;
 
@@ -25,8 +29,12 @@ public class Verwaltung implements Serializable
      */
     public Verwaltung()
     {
-       A artikelListe = new ArrayList <Artikel>();
+        artikelListe = new ArrayList <Artikel>();
         kundenListe = new ArrayList <Kunde>();
+        OberteileListe = new ArrayList <Oberteile>();
+        UnterteileListe = new ArrayList <Unterteile>();
+        SchuheListe = new ArrayList <Schuhe>();
+        AccessoiresListe = new ArrayList <Accessoires>();
     }
    
     public void initData()
@@ -164,11 +172,11 @@ public class Verwaltung implements Serializable
             {
                 case '0': menuewechsel = true;
                     break;
-                case '1': showOberteilListe(false, false);
+                case '1': showOberteileListe();
                     break;
-                case '2': showUnterteilListe(true, true);
+                case '2': showUnterteileListe();
                     break;
-                case '3': showSchuhListe();
+                case '3': showSchuheListe();
                     break;
                 case '4': showAccessoiresListe ();
                 default: printEingabeFehler();
@@ -258,77 +266,128 @@ public class Verwaltung implements Serializable
         kundenListe.add(k1);
     }
 
-    private void showOberteilListe // !Methode fehlt vorher:Nur Angebot
+    
+
+    private void showKundenListe()
     {
         String s;
 
-        printZentriert("Artikelnummer");
-        printZentriert("Größe");
-        printZentriert("Geschlecht");
-        printZentriert("Stil");
-        printZentriert("Preiskategorie");
-        printZentriert("Preis");
-        printZentriert("Lagerbestand");
+        printZentriert("Kundennummer");
+        printZentriert("Vorname");
+        printZentriert("Name");
+        printZentriert("Telefon");
         printLF();
-        printLinieLF(7); // Trennlinie für 6 Felder anzeigen
+        printLinieLF(4); // Trennlinie für 6 Felder anzeigen
 
-        Iterator <Artikel>iter = artikelListe.iterator();
+        Iterator <Kunde>iter = kundenListe.iterator();
         while(iter.hasNext())
         {
-            Artikel i  =  iter.next();
-            if (i instanceof Oberteile)
-            {
-                if (filterAn && nurAufLager ) //&& !i.getIstAngebot())
-                {
-                    continue;
-                }
+            Kunde i  =  iter.next();
 
-                s = castDouble2String(i.getArtikelnummer());
-                printZentriert(s);
+            s = castInt2String(i.getKundennummer());
+            printZentriert(s);
 
-                s = castInt2String(i.getArtikelnummer().getGröße());
-                printZentriert(s);
+            printLinksbuendig(i.getVorname());
 
-                s = castInt2String(i.getArtikelnummer().getGeschlecht());
-                printZentriert(s);
-               
-                 s = castInt2String(i.getArtikelnummer().getStil());
-                printZentriert(s);
-                
-                 s = castInt2String(i.getArtikelnummer().getPreiskategorie());
-                printZentriert(s);
-                
-                 s = castInt2String(i.getArtikelnummer().getPreis());
-                printZentriert(s);
-                
-                 s = castInt2String(i.getArtikelnummer().getLagerbestand());
-                printZentriert(s);
-                Oberteile o = (Oberteile) i;
-                s = castDouble2String(h.getGröße());
-                printRechtsbuendig(s);
+            printLinksbuendig(i.getName());
 
-                s = castDouble2String(i.getPreis());
-                printRechtsbuendig(s);
+            printLinksbuendig(i.getTelefonnummer());
 
-               
-                printLF();
-
-            }
+            printLF();
         }
         printLF();
     }
-public nurAufLager ()
-{ 
-   if (i.getLagerbestand > 0)
-   {
-   
-   }   
-    else()
-     {}
-            
-       }
+        private void showOberteileListe()
+    {
+        String s;
 
-    private void showKundenListe()
+        printZentriert("Kundennummer");
+        printZentriert("Vorname");
+        printZentriert("Name");
+        printZentriert("Telefon");
+        printLF();
+        printLinieLF(4); // Trennlinie für 6 Felder anzeigen
+
+        Iterator <Kunde>iter = kundenListe.iterator();
+        while(iter.hasNext())
+        {
+            Kunde i  =  iter.next();
+
+            s = castInt2String(i.getKundennummer());
+            printZentriert(s);
+
+            printLinksbuendig(i.getVorname());
+
+            printLinksbuendig(i.getName());
+
+            printLinksbuendig(i.getTelefonnummer());
+
+            printLF();
+        }
+        printLF();
+    }
+        
+    private void showUnterteileListe()
+    {
+        String s;
+
+        printZentriert("Kundennummer");
+        printZentriert("Vorname");
+        printZentriert("Name");
+        printZentriert("Telefon");
+        printLF();
+        printLinieLF(4); // Trennlinie für 6 Felder anzeigen
+
+        Iterator <Kunde>iter = kundenListe.iterator();
+        while(iter.hasNext())
+        {
+            Kunde i  =  iter.next();
+
+            s = castInt2String(i.getKundennummer());
+            printZentriert(s);
+
+            printLinksbuendig(i.getVorname());
+
+            printLinksbuendig(i.getName());
+
+            printLinksbuendig(i.getTelefonnummer());
+
+            printLF();
+        }
+        printLF();
+    }
+            
+    private void showSchuheListe()
+    {
+        String s;
+
+        printZentriert("Kundennummer");
+        printZentriert("Vorname");
+        printZentriert("Name");
+        printZentriert("Telefon");
+        printLF();
+        printLinieLF(4); // Trennlinie für 6 Felder anzeigen
+
+        Iterator <Kunde>iter = kundenListe.iterator();
+        while(iter.hasNext())
+        {
+            Kunde i  =  iter.next();
+
+            s = castInt2String(i.getKundennummer());
+            printZentriert(s);
+
+            printLinksbuendig(i.getVorname());
+
+            printLinksbuendig(i.getName());
+
+            printLinksbuendig(i.getTelefonnummer());
+
+            printLF();
+        }
+        printLF();
+    }
+                
+    private void showAccessoiresListe()
     {
         String s;
 
