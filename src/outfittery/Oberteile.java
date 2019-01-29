@@ -8,7 +8,8 @@ package outfittery;
  */
 
 public class Oberteile extends Artikel
-{
+{   // Instanzvaribale
+    
     /**
      * Standardkonstruktor (eigentlich nur notwendig für die XML-Speicherung)
      */
@@ -27,10 +28,10 @@ public class Oberteile extends Artikel
      * @param stil gewünschter Stil (sportlich, business,freizeit?)
      * @param beschreibung text über das Oberteil 
      */
-    public Oberteile(double par1,String par2, String par3,String par4, int par5, int par6, String par7)
+    public Oberteile(double preis,String größe, String preiskategorie,String geschlecht, int lagerbestand, int stil, String beschreibung)
     {     
-            super(par1,par2,par3,par4,par5,par6,par7);
-    
+            super(preis,größe,preiskategorie,geschlecht,lagerbestand,stil,beschreibung);
+            
     }
     
 }
