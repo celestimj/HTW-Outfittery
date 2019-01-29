@@ -15,7 +15,6 @@ import de.htw.saarland.stl.Stdin;           // fuer Eingaben von der Konsole
  */
 public class Verwaltung implements Serializable
 {
-    private ArrayList <Artikel> artikelListe;
     private ArrayList <Kunde> kundenListe;
     private ArrayList <Oberteile> oberteileListe;
     private ArrayList <Unterteile> unterteileListe;
@@ -29,12 +28,12 @@ public class Verwaltung implements Serializable
      */
     public Verwaltung()
     {
-        artikelListe = new ArrayList <Artikel>();
+       
         kundenListe = new ArrayList <Kunde>();
-        OberteileListe = new ArrayList <Oberteile>();
-        UnterteileListe = new ArrayList <Unterteile>();
-        SchuheListe = new ArrayList <Schuhe>();
-        AccessoiresListe = new ArrayList <Accessoires>();
+        oberteileListe = new ArrayList <Oberteile>();
+        unterteileListe = new ArrayList <Unterteile>();
+        schuheListe = new ArrayList <Schuhe>();
+        accessoiresListe = new ArrayList <Accessoires>();
     }
    
     public void initData()
@@ -98,15 +97,7 @@ public class Verwaltung implements Serializable
         System.exit(0);
     }
 
-    public ArrayList getArtikelListe()
-    {
-        return this.artikelListe;
-    }
-
-    public void setArtikelListe(ArrayList liste)
-    {
-        this.artikelListe = liste;
-    }
+   
 
     public ArrayList getKundenListe()
     {
@@ -521,51 +512,6 @@ public class Verwaltung implements Serializable
             }
             printLF();
         }
-    }
-
-    private void showArtikelListe()
-    {
-        String s;
-
-        printZentriert("Artikelnummer");
-        printZentriert("Größe");
-        printZentriert("Geschlecht");
-        printZentriert("Stil");
-        printZentriert("Preiskategorie");
-        printZentriert("Preis");
-        printZentriert("Lagerbestand");
-        printLF();
-        printLinieLF(6); // Trennlinie für 6 Felder anzeigen
-
-        Iterator <Artikel>iter = artikelListe.iterator();
-        while(iter.hasNext())
-        {
-            Artikel i  =  iter.next();
-
-            s = castInt2String(i.getArtikelnummer());
-            printZentriert(s);
-
-            s = castInt2String(i.getKunde().getKundennummer());
-            printZentriert(s);
-
-            s = castInt2String(i.getAdresse().getPostleitzahl());
-            printZentriert(s);
-
-            if (i instanceof Oberteile) printZentriert("Oberteile"); 
-            if (i instanceof Unterteile) printZentriert("Unterteile"); 
-            if (i instanceof Accessoires) printZentriert("Accessoires");
-            if (i instanceof Schuhe) printZentriert("Schuhe");
-            
-
-            s = castDouble2String(i.getPreis());
-            printRechtsbuendig(s);
-
-            if (i.getLagerbestand()>0) printZentriert("auf Lager");
-            else printZentriert("Vergriffen");
-
-            printLF();            
-        }
-        printLF();
     }
 
     private String castInt2String(int meinInt)
