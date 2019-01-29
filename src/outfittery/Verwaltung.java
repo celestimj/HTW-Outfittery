@@ -29,11 +29,11 @@ public class Verwaltung implements Serializable
     public Verwaltung()
     {
        
-        kundenListe = new ArrayList <Kunde>();
-        oberteileListe = new ArrayList <Oberteile>();
-        unterteileListe = new ArrayList <Unterteile>();
-        schuheListe = new ArrayList <Schuhe>();
-        accessoiresListe = new ArrayList <Accessoires>();
+        kundenListe = new ArrayList <>();
+        oberteileListe = new ArrayList <>();
+        unterteileListe = new ArrayList <>();
+        schuheListe = new ArrayList <>();
+        accessoiresListe = new ArrayList <>();
     }
    
     public void initData()
@@ -142,6 +142,7 @@ public class Verwaltung implements Serializable
         } while (true);
     }
 
+    
     private void warenBestand()
     {
         char eingabe;
@@ -232,6 +233,13 @@ public class Verwaltung implements Serializable
                 default: printEingabeFehler();
             }
         } while (!menuewechsel);
+    }
+    private void outfitSuche()
+    {
+    
+    
+    
+    
     }
 
 //    private void erstelleNeuenKunden()
@@ -602,7 +610,7 @@ public class Verwaltung implements Serializable
     private String baueLinksbuendigenString(String s, int laenge)
     {
         // wir entfernen Leerzeichen am Anfang und Ende des Strings
-        s.trim();
+        s=s.trim();
         // falls der String zu lang ist, kuerzen wir ihn
         if (s.length() > laenge)
         {
