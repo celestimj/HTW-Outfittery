@@ -174,7 +174,7 @@ public class Verwaltung implements Serializable
                           break;
                 case '3': verwaltungsMenue();
                           break;
-                case '4': outfitSuche ();
+                case '4': outfitSuche1 ();
                           break;                
                 default: printEingabeFehler();
             }
@@ -274,14 +274,148 @@ public class Verwaltung implements Serializable
             }
         } while (!menuewechsel);
     }
-    private void outfitSuche()
+    
+    private void outfitSuche1()
     {
+        char eingabe;
+        boolean menuewechsel = false;
+        do
+        {
+            System.out.println("OUTFITSUCHE");
+            System.out.println("------------------------------------------------------------");
+            System.out.println("Für welchen Anlass suchen sie Bekleidung? ");
+            System.out.println("[1] Freizeit ");
+            System.out.println("[2] Sport");
+            System.out.println("[3] Business");
+            System.out.println("[0] HAUPTMENUE");
+
+            printAuswahlTreffen();
+            eingabe = Stdin.readlnChar();
+
+            switch (eingabe)
+            {
+                case '0': menuewechsel = true;
+                    break;
+                case '1':  outfitSuche2 ();  //speichere die Angaben und switch zur nächsten Frage
+                    break;
+                case '2':     //ebenso "
+                    break;
+                case '3': 
+                    break;
+                default: printEingabeFehler();
+            }
+        } while (!menuewechsel);
+        
+    }
+    
+     private void outfitSuche2()
+    {
+        char eingabe;
+        boolean menuewechsel = false;
+        do
+        {
+            System.out.println("OUTFITSUCHE");
+            System.out.println("------------------------------------------------------------");
+            System.out.println("Suchen Sie für... ");
+            System.out.println("[1] Frauen ");
+            System.out.println("[2] Männer");
+            System.out.println("[3] Unisex");
+            System.out.println("[0] HAUPTMENUE");
+
+            printAuswahlTreffen();
+            eingabe = Stdin.readlnChar();
+
+            switch (eingabe)
+            {
+                case '0': menuewechsel = true;
+                    break;
+                case '1':  outfitSuche3 ();  //speichere die Angaben und switch zur nächsten Frage
+                    break;
+                case '2':     //ebenso "
+                    break;
+                case '3': 
+                    break;
+                default: printEingabeFehler();
+            }
+        } while (!menuewechsel);
+    }
     
     
-    
+    private void outfitSuche3()
+    {
+        char eingabe;
+        boolean menuewechsel = false;
+        do
+        {
+            System.out.println("OUTFITSUCHE");
+            System.out.println("------------------------------------------------------------");
+            System.out.println("Welche Größe benötigen Sie? ");
+            System.out.println("[1] S ");
+            System.out.println("[2] M");
+            System.out.println("[3] L");
+            System.out.println("[0] HAUPTMENUE");
+
+            printAuswahlTreffen();
+            eingabe = Stdin.readlnChar();
+
+            switch (eingabe)
+            {
+                case '0': menuewechsel = true;
+                    break;
+                case '1':  outfitSuche4 ();  //speichere die Angaben und switch zur nächsten Frage
+                    break;
+                case '2':     //ebenso "
+                    break;
+                case '3': 
+                    break;
+                default: printEingabeFehler();
+            }
+        } while (!menuewechsel);
     
     }
+    
+    
+      private void outfitSuche4()
+    {
+        char eingabe;
+        boolean menuewechsel = false;
+        do
+        {
+            System.out.println("OUTFITSUCHE");
+            System.out.println("------------------------------------------------------------");
+            System.out.println("In welcher Preiskategorie soll ihr Outfit liegen? ");
+            System.out.println("[1] billig");
+            System.out.println("[2] mittel");
+            System.out.println("[3] teuer");
+            System.out.println("[0] HAUPTMENUE");
 
+            printAuswahlTreffen();
+            eingabe = Stdin.readlnChar();
+
+            switch (eingabe)
+            {
+                case '0': menuewechsel = true;
+                    break;
+                case '1':  findeOutfits();  //speichere die Angaben und suche OUtfit
+                    break;
+                case '2':                   //ebenso "
+                    break;
+                case '3': 
+                    break;
+                default: printEingabeFehler();
+            }
+        } while (!menuewechsel);
+    
+    }
+    
+      private void findeOutfits()
+     {
+     
+     
+     }
+
+      
+      
 //    private void erstelleNeuenKunden()
 //    {
 //        Kunde k1 = new Kunde("Hans","Becker","0171 9876543");
@@ -346,7 +480,7 @@ public class Verwaltung implements Serializable
         printZentriert("Geschlecht");
         printZentriert("Größe");
         printZentriert("Preis");
-        printZentriert("Lagerbestand");
+        printZentriert("Lagerbestand"); 
         printLF();
         printLinieLF(7); // Trennlinie waagerecht für 7 felder
        
@@ -373,8 +507,6 @@ public class Verwaltung implements Serializable
             
             s = castInt2String(i.getLagerbestand());
             printLinksbuendig(s);
-
-            
 
             printLF();
         }
