@@ -481,8 +481,9 @@ public class Verwaltung implements Serializable
         printZentriert("Größe");
         printZentriert("Preis");
         printZentriert("Lagerbestand"); 
+        printZentriert("Beschreibung");
         printLF();
-        printLinieLF(7); // Trennlinie waagerecht für 7 felder
+        printLinieLF(10); // Trennlinie waagerecht für 7 felder
        
 
         Iterator <Oberteile>iter = oberteileListe.iterator();
@@ -507,8 +508,10 @@ public class Verwaltung implements Serializable
             
             s = castInt2String(i.getLagerbestand());
             printLinksbuendig(s);
-
-            printLF();
+            
+            printLinksbuendig(i.getBeschreibung());
+             printLF();
+           
         }
         printLF();
     }
