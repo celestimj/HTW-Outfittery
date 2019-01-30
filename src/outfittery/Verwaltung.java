@@ -11,7 +11,7 @@ import de.htw.saarland.stl.Stdin;           // fuer Eingaben von der Konsole
  * Hier wird die Programmlogik implementiert, sowie die Benutzer-Menues.
  *
  * @author Loreen
- * @version v1 - Dezeber 2018
+ * @version v1 - Dezember 2018
  */
 public class Verwaltung implements Serializable
 {
@@ -38,10 +38,10 @@ public class Verwaltung implements Serializable
    
     public void initData()
     {
-        Kunde k1 = new Kunde("Tim","Müller","0156 09354267");
-        Kunde k2 = new Kunde("Michelle","Watson","0171 2233593");
-        Kunde k3 = new Kunde("Lena","Caron","0177 4622273");
-        Kunde k4 = new Kunde("Eric","Lentes","0160 8874036");
+        Kunde k1 = new Kunde("Tim","Müller","015609354267");
+        Kunde k2 = new Kunde("Michelle","Watson","01712233593");
+        Kunde k3 = new Kunde("Lena","Caron","01774622273");
+        Kunde k4 = new Kunde("Eric","Lentes","01608874036");
         kundenListe.add(k1);
         kundenListe.add(k2);
         kundenListe.add(k3);
@@ -175,6 +175,7 @@ public class Verwaltung implements Serializable
                 case '3': verwaltungsMenue();
                           break;
                 case '4': outfitSuche ();
+                          break;                
                 default: printEingabeFehler();
             }
         } while (true);
@@ -208,7 +209,8 @@ public class Verwaltung implements Serializable
                     break;
                 case '3': showSchuheListe();
                     break;
-                case '4': showAccessoiresListe ();
+                case '4': showAccessoiresListe();
+                    break;                          
                 default: printEingabeFehler();
             }
         } while (!menuewechsel);
@@ -653,7 +655,7 @@ public class Verwaltung implements Serializable
         // falls der String zu lang ist, kuerzen wir ihn
         if (s.length() > laenge)
         {
-            s.substring(0, laenge);
+           s.substring(0, laenge);  
         }
         else
         {
@@ -677,8 +679,9 @@ public class Verwaltung implements Serializable
     private void printProgrammInfo()
     {
         System.out.println("************************************************************");
-        System.out.println("* HTW-ImmoPortal v1.0 written by Prof. Dr. Daniel F. Abawi *");
-        System.out.println("*                                Oliver Fourman (M.Sc.)    *");
+        System.out.println("* Outfittery-Portal v1.0 written by Nicolas Human,Marius   *");
+        System.out.println("*                        Vermeulen,Christian     ?, Loreen *");
+        System.out.println("*                        Gerard, Celeste Bettscheider      *");
         System.out.println("************************************************************");
     }
 

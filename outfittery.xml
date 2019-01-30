@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_192" class="java.beans.XMLDecoder">
+ <string>outfittery</string>
+ <object class="outfittery.Verwaltung" id="Verwaltung0">
+  <void property="kundenListe">
+   <void method="add">
+    <object class="outfittery.Kunde">
+     <void property="name">
+      <string>Müller</string>
+     </void>
+     <void property="telefonnummer">
+      <string>0156 09354267</string>
+     </void>
+     <void property="vorname">
+      <string>Tim</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="outfittery.Kunde">
+     <void property="name">
+      <string>Watson</string>
+     </void>
+     <void property="telefonnummer">
+      <string>0171 2233593</string>
+     </void>
+     <void property="vorname">
+      <string>Michelle</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="outfittery.Kunde">
+     <void property="name">
+      <string>Caron</string>
+     </void>
+     <void property="telefonnummer">
+      <string>0177 4622273</string>
+     </void>
+     <void property="vorname">
+      <string>Lena</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="outfittery.Kunde">
+     <void property="name">
+      <string>Lentes</string>
+     </void>
+     <void property="telefonnummer">
+      <string>0160 8874036</string>
+     </void>
+     <void property="vorname">
+      <string>Eric</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="outfittery.Kunde">
+     <void property="name">
+      <string>Schmitt</string>
+     </void>
+     <void property="telefonnummer">
+      <string>01768543321</string>
+     </void>
+     <void property="vorname">
+      <string>Luna</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>
