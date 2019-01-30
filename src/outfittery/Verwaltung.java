@@ -339,14 +339,15 @@ public class Verwaltung implements Serializable
         String s;
 
         printZentriert("Artikelnummer");
-        printZentriert("Größe");
-        printZentriert("Geschlecht");
         printZentriert("Stil");
         printZentriert("Preiskategorie");
+        printZentriert("Geschlecht");
+        printZentriert("Größe");
         printZentriert("Preis");
         printZentriert("Lagerbestand");
         printLF();
-        printLinieLF(4); // Trennlinie für 6 Felder anzeigen
+        printLinieLF(7); // Trennlinie waagerecht für 7 felder
+       
 
         Iterator <Oberteile>iter = oberteileListe.iterator();
         while(iter.hasNext())
@@ -383,14 +384,14 @@ public class Verwaltung implements Serializable
         String s;
 
         printZentriert("Artikelnummer");
-        printZentriert("Größe");
-        printZentriert("Geschlecht");
         printZentriert("Stil");
         printZentriert("Preiskategorie");
+        printZentriert("Geschlecht");
+        printZentriert("Größe");
         printZentriert("Preis");
         printZentriert("Lagerbestand");
         printLF();
-        printLinieLF(4); // Trennlinie für 6 Felder anzeigen
+        printLinieLF(7); // Trennlinie für 6 Felder anzeigen
 
         Iterator <Unterteile>iter = unterteileListe.iterator();
         while(iter.hasNext())
@@ -427,14 +428,14 @@ public class Verwaltung implements Serializable
         String s;
 
         printZentriert("Artikelnummer");
-        printZentriert("Größe");
-        printZentriert("Geschlecht");
         printZentriert("Stil");
-        printZentriert("Preiskategorie");
+        printZentriert("Preiskategrie");
+        printZentriert("Geschlecht");
+        printZentriert("Größe");
         printZentriert("Preis");
         printZentriert("Lagerbestand");
         printLF();
-        printLinieLF(4); // Trennlinie für 6 Felder anzeigen
+        printLinieLF(7); // Trennlinie für 6 Felder anzeigen
 
         Iterator <Schuhe>iter = schuheListe.iterator();
         while(iter.hasNext())
@@ -471,14 +472,14 @@ public class Verwaltung implements Serializable
         String s;
 
         printZentriert("Artikelnummer");
-        printZentriert("Größe");
-        printZentriert("Geschlecht");
         printZentriert("Stil");
         printZentriert("Preiskategorie");
+        printZentriert("Geschlecht");
+        printZentriert("Größe");
         printZentriert("Preis");
         printZentriert("Lagerbestand");
         printLF();
-        printLinieLF(4); // Trennlinie für 6 Felder anzeigen
+        printLinieLF(7); // Trennlinie für 6 Felder anzeigen
 
         Iterator <Accessoires>iter = accessoiresListe.iterator();
         while(iter.hasNext())
