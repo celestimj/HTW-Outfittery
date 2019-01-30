@@ -79,8 +79,8 @@ public class Verwaltung implements Serializable
         
         Accessoires a1 = new Accessoires(25, "S", "mittel","männlich" , 75, 0, "bordeaux farbende Krawatte ");
         Accessoires a2 = new Accessoires(17.99, "S", "niedrig", "weiblich", 57, 2,"goldene Kette mit kleinem Glitzerstein" );
-        Accessoires a3 = new Accessoires();
-        Accessoires a4 = new Accessoires();
+        Accessoires a3 = new Accessoires(15, "M","niedrig","weiblich", 54,2,"grau Schal");
+        Accessoires a4 = new Accessoires(20,"L","niedrig", "männlich",38,2, "Wollmütze");
         
         accessoiresListe.add(a1);
         accessoiresListe.add(a2);
