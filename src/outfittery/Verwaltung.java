@@ -529,7 +529,7 @@ public class Verwaltung implements Serializable
         printZentriert("Preis");
         printZentriert("Lagerbestand");
         printLF();
-        printLinieLF(7); // Trennlinie für 6 Felder anzeigen
+        printLinieLF(10); // Trennlinie für 6 Felder anzeigen
 
         Iterator <Unterteile>iter = unterteileListe.iterator();
         while(iter.hasNext())
@@ -554,7 +554,7 @@ public class Verwaltung implements Serializable
             s = castInt2String(i.getLagerbestand());
             printLinksbuendig(s);
 
-            
+            printLinksbuendig(i.getBeschreibung());
 
             printLF();
         }
@@ -573,7 +573,7 @@ public class Verwaltung implements Serializable
         printZentriert("Preis");
         printZentriert("Lagerbestand");
         printLF();
-        printLinieLF(7); // Trennlinie für 6 Felder anzeigen
+        printLinieLF(10); // Trennlinie für 6 Felder anzeigen
 
         Iterator <Schuhe>iter = schuheListe.iterator();
         while(iter.hasNext())
@@ -597,7 +597,8 @@ public class Verwaltung implements Serializable
             
             s = castInt2String(i.getLagerbestand());
             printLinksbuendig(s);
-
+      
+             printLinksbuendig(i.getBeschreibung());
             
 
             printLF();
@@ -617,7 +618,7 @@ public class Verwaltung implements Serializable
         printZentriert("Preis");
         printZentriert("Lagerbestand");
         printLF();
-        printLinieLF(7); // Trennlinie für 6 Felder anzeigen
+        printLinieLF(10); // Trennlinie für 6 Felder anzeigen
 
         Iterator <Accessoires>iter = accessoiresListe.iterator();
         while(iter.hasNext())
@@ -642,7 +643,7 @@ public class Verwaltung implements Serializable
             s = castInt2String(i.getLagerbestand());
             printLinksbuendig(s);
 
-            
+             printLinksbuendig(i.getBeschreibung());
 
             printLF();
         }
@@ -814,11 +815,12 @@ public class Verwaltung implements Serializable
 
     private void printProgrammInfo()
     {
-        System.out.println("************************************************************");
-        System.out.println("* Outfittery-Portal v1.0 written by Nicolas Human,Marius   *");
-        System.out.println("*                        Vermeulen,Christian     ?, Loreen *");
-        System.out.println("*                        Gerard, Celeste Bettscheider      *");
-        System.out.println("************************************************************");
+        System.out.println("**************************************************************");
+        System.out.println("* Outfittery-Portal v1.0 written by Christian Paulssen,Marius*");
+        System.out.println("*                                   Vermeulen,Loreen Gerard, *");
+        System.out.println("*                                   Nikolas Human & Celeste  *");
+        System.out.println("*                                   Bettscheider             *");
+        System.out.println("**************************************************************");
     }
 
     /**
