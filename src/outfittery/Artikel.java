@@ -49,6 +49,7 @@ public abstract class Artikel
        this.artikelnummer = Artikel.artnr_counter;
         artnr_counter = artnr_counter + 1;
     }
+  
   public void setArtikelnummer(int artikelnummer)
     {
         this.artikelnummer = artikelnummer;

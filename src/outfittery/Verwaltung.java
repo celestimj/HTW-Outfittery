@@ -20,7 +20,7 @@ public class Verwaltung implements Serializable
     private ArrayList <Unterteile> unterteileListe;
     private ArrayList <Schuhe> schuheListe;
     private ArrayList <Accessoires> accessoiresListe;
-
+    private ArrayList <Artikel> artikelListe;
     final static int FELDLAENGE = 14;
 
     /**
@@ -34,6 +34,7 @@ public class Verwaltung implements Serializable
         unterteileListe = new ArrayList <>();
         schuheListe = new ArrayList <>();
         accessoiresListe = new ArrayList <>();
+        artikelListe =  new ArrayList <>();
     }
    
     public void initData()
@@ -298,9 +299,9 @@ public class Verwaltung implements Serializable
                     break;
                 case '1':  outfitSuche2 ();  //speichere die Angaben und switch zur nächsten Frage
                     break;
-                case '2':     //ebenso "
+                case '2':   outfitSuche2();  //ebenso "
                     break;
-                case '3': 
+                case '3': outfitSuche2();
                     break;
                 default: printEingabeFehler();
             }
@@ -331,9 +332,9 @@ public class Verwaltung implements Serializable
                     break;
                 case '1':  outfitSuche3 ();  //speichere die Angaben und switch zur nächsten Frage
                     break;
-                case '2':     //ebenso "
+                case '2':   outfitSuche3 ();  //ebenso "
                     break;
-                case '3': 
+                case '3': outfitSuche3 ();
                     break;
                 default: printEingabeFehler();
             }
@@ -364,9 +365,9 @@ public class Verwaltung implements Serializable
                     break;
                 case '1':  outfitSuche4 ();  //speichere die Angaben und switch zur nächsten Frage
                     break;
-                case '2':     //ebenso "
+                case '2':   outfitSuche4 ();  //ebenso "
                     break;
-                case '3': 
+                case '3': outfitSuche4 ();
                     break;
                 default: printEingabeFehler();
             }
@@ -398,9 +399,9 @@ public class Verwaltung implements Serializable
                     break;
                 case '1':  findeOutfits();  //speichere die Angaben und suche OUtfit
                     break;
-                case '2':                   //ebenso "
+                case '2':   findeOutfits();                //ebenso "
                     break;
-                case '3': 
+                case '3': findeOutfits();
                     break;
                 default: printEingabeFehler();
             }
