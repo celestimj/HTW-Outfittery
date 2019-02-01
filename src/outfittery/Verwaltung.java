@@ -385,8 +385,8 @@ public class Verwaltung implements Serializable
             System.out.println("OUTFITSUCHE");
             System.out.println("------------------------------------------------------------");
             System.out.println("In welcher Preiskategorie soll ihr Outfit liegen? ");
-            System.out.println("[1] billig");
-            System.out.println("[2] mittel");
+            System.out.println("[1] billig findeOutfits");
+            System.out.println("[2] mittel Test");
             System.out.println("[3] teuer");
             System.out.println("[0] HAUPTMENUE");
 
@@ -399,7 +399,7 @@ public class Verwaltung implements Serializable
                     break;
                 case '1':  findeOutfits();  //speichere die Angaben und suche OUtfit
                     break;
-                case '2':   findeOutfits();                //ebenso "
+                case '2':   Test();                //ebenso "
                     break;
                 case '3': findeOutfits();
                     break;
