@@ -48,40 +48,40 @@ public class Verwaltung implements Serializable
         kundenListe.add(k3);
         kundenListe.add(k4);
         
-        Oberteile o1 = new Oberteile(24.99, "S", "mittel","unisex",255, 1, "Blauer Kapuzenpullover mit Aufschrift"); // 1=sportlich
-        Oberteile o2 = new Oberteile(15.99, "L", "billig","männlich",155, 2, "Blauer Pullover mit V-Ausschnitt");  // 2=FReizeit
-        Oberteile o3  = new Oberteile(20.99, "M", "billig","unisex",145, 1, "Roter Kapuzenpullover");      
-        Oberteile o4 = new Oberteile(29.99, "S", "mittel","weiblich",305, 0, "Weiße Bluse mit 3/4 Ärmel und Knopfleiste"); // 0=business
+        Oberteile o1 = new Oberteile(24.99, "S", "mittel","unisex",255, "sportlich", "Blauer Kapuzenpullover mit Aufschrift"); // Kombi, S bzw M freizeit für männlich und weiblich möglich
+        Oberteile o2 = new Oberteile(15.99, "M", "billig","männlich",155, "freizeit", "Blauer Pullover mit V-Ausschnitt");  // Kombi business L weiblich möglich zum Testen
+        Oberteile o3  = new Oberteile(20.99, "S", "billig","unisex",145, "freizeit", "Roter Kapuzenpullover");      
+        Oberteile o4 = new Oberteile(29.99, "L", "mittel","weiblich",305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste"); 
                 
         oberteileListe.add(o1);
         oberteileListe.add(o2);
         oberteileListe.add(o3);
         oberteileListe.add(o4);
         
-        Unterteile u1 = new Unterteile(24.99, "M", "mittel", "männlich", 125,0,"Beige Chinohose" );
-        Unterteile u2 = new Unterteile(35, "S", "mittel", "weiblich", 230, 2, "blaue Skinnyjeans ");
-        Unterteile u3 = new Unterteile(80, "L", "teuer", "männlich", 220, 0, "schwarze Anzugshose");
-        Unterteile u4 = new Unterteile(15.99, "M", "niedrig", "unisex", 420, 1, "hellgraue Jogginghose mit Gummibund");
+        Unterteile u1 = new Unterteile(24.99, "L", "mittel", "weiblich", 125,"business","Beige Chinohose" );
+        Unterteile u2 = new Unterteile(35, "S", "mittel", "weiblich", 230, "freizeit", "blaue Skinnyjeans ");
+        Unterteile u3 = new Unterteile(80, "M", "teuer", "männlich", 220, "business", "schwarze Anzugshose");
+        Unterteile u4 = new Unterteile(15.99, "M", "niedrig", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
         
         unterteileListe.add(u1);
         unterteileListe.add(u2);   
         unterteileListe.add(u3);
         unterteileListe.add(u4);
         
-        Schuhe s1 = new Schuhe(18.99, "S", "niedrig", "weiblich", 133, 2,"beige Ballerinas aus Wildleder");
-        Schuhe s2 = new Schuhe(79.99, "L", "teuer", "männlich", 125, 0, "schwarze Lackschuhe mit Schnürsenkel aus Echtleder");
-        Schuhe s3 = new Schuhe(12.99, "M", "niedrig", "unisex", 240, 2, "schwarze Flip-Flops");
-        Schuhe s4 = new Schuhe(59.99, "S", "teuer", "unisex", 255, 1, "bordeaux farbende Nikeschuhe");
+        Schuhe s1 = new Schuhe(18.99, "S", "niedrig", "weiblich", 133, "freizeit","beige Ballerinas aus Wildleder");
+        Schuhe s2 = new Schuhe(79.99, "L", "teuer", "weiblich", 125, "business", "schwarze Lackschuhe mit Schnürsenkel aus Echtleder");
+        Schuhe s3 = new Schuhe(12.99, "M", "niedrig", "unisex", 240, "freizeit", "schwarze Flip-Flops");
+        Schuhe s4 = new Schuhe(59.99, "S", "teuer", "unisex", 255, "sportlich", "bordeaux farbende Nikeschuhe");
         
         schuheListe.add(s1);
         schuheListe.add(s2);
         schuheListe.add(s3);
         schuheListe.add(s4);
         
-        Accessoires a1 = new Accessoires(25, "S", "mittel","männlich" , 75, 0, "bordeaux farbende Krawatte ");
-        Accessoires a2 = new Accessoires(17.99, "S", "niedrig", "weiblich", 57, 2,"goldene Kette mit kleinem Glitzerstein" );
-        Accessoires a3 = new Accessoires(15, "M","niedrig","weiblich", 54,2,"grau Schal");
-        Accessoires a4 = new Accessoires(20,"L","niedrig", "männlich",38,2, "Wollmütze");
+        Accessoires a1 = new Accessoires(25, "S", "mittel","männlich" , 75,"business", "bordeaux farbende Krawatte ");
+        Accessoires a2 = new Accessoires(17.99, "S", "niedrig", "weiblich", 57, "business","goldene Kette mit kleinem Glitzerstein" );
+        Accessoires a3 = new Accessoires(15, "M","niedrig","weiblich", 54,"freizeit","grau Schal");
+        Accessoires a4 = new Accessoires(20,"L","niedrig", "männlich",38,"freizeit", "Wollmütze");
         
         accessoiresListe.add(a1);
         accessoiresListe.add(a2);
@@ -495,8 +495,8 @@ public class Verwaltung implements Serializable
             s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
             
-            s = castInt2String(i.getGröße());
-            printLinksbuendig(s);
+            printLinksbuendig(i.getGröße());
+            
 
             printLinksbuendig(i.getGeschlecht());
            
@@ -539,8 +539,8 @@ public class Verwaltung implements Serializable
             s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
             
-            s = castInt2String(i.getGröße());
-            printLinksbuendig(s);
+            printLinksbuendig(i.getGröße());
+           
 
             printLinksbuendig(i.getGeschlecht());
            
@@ -583,8 +583,8 @@ public class Verwaltung implements Serializable
             s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
             
-            s = castInt2String(i.getGröße());
-            printLinksbuendig(s);
+            printLinksbuendig(i.getGröße());
+            
 
             printLinksbuendig(i.getGeschlecht());
            
@@ -628,8 +628,8 @@ public class Verwaltung implements Serializable
             s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
             
-            s = castInt2String(i.getGröße());
-            printLinksbuendig(s);
+            printLinksbuendig(i.getGröße());
+            
 
             printLinksbuendig(i.getGeschlecht());
            
