@@ -10,6 +10,7 @@ package outfittery;
 
 public abstract class Artikel 
 { //Instanzvariablen
+    private String preissegment;
     private int artikelnummer;
     private double preis;
     private int lagerbestand;
@@ -37,10 +38,10 @@ public abstract class Artikel
    * @param par6 ist die Größe des Kleidungsstücks
    * @param par7 ist die Beschreibung
    */
-  public Artikel(double par1,String par2, String par3,String par4, int par5, String par6, String par7)
+  public Artikel(double par1, String par3,String par4, int par5, String par6, String par7)
     { 
        this.preis=par1;
-       this.preiskategorie=par2;
+       this.preiskategorie=preissegment;
        this.geschlecht=par3;
        this.stil=par4;
        this.lagerbestand=par5;
@@ -129,6 +130,28 @@ public void setBeschreibung( String beschreibung)
 
     this.beschreibung = beschreibung;
 }
+
+
+public void Preissegment()
+{  
+   
+    
+     if(preis <30) 
+    {
+       preissegment = ("billig");   
+    }
+   
+   if(preis <100 && preis >30)
+    {
+       preissegment = ("mittel");
+    }
+   else
+    {
+       preissegment = ("teuer");
+    }
+       
+}
+
 }
     
 

@@ -29,11 +29,12 @@ public class Oberteile extends Artikel
      * @param stil gewünschter Stil (sportlich, business,freizeit?)
      * @param beschreibung 
      */
-    public Oberteile (double preis,String größe, String preiskategorie,String geschlecht, int lagerbestand, String stil, String beschreibung)
+    public Oberteile (double preis,String größe,String geschlecht, int lagerbestand, String stil, String beschreibung)
     {     
-            super(preis,größe,preiskategorie,geschlecht,lagerbestand,stil,beschreibung);
+            super(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
     
     }
+    
 }
     
 

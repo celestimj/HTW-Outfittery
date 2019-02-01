@@ -31,7 +31,7 @@ public class Unterteile extends Artikel
      */
     public Unterteile (double preis,String größe, String preiskategorie,String geschlecht, int lagerbestand, String stil, String beschreibung)
     {     
-            super(preis,größe,preiskategorie,geschlecht,lagerbestand,stil,beschreibung);
+            super(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
     
     }
 }

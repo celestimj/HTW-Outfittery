@@ -48,10 +48,10 @@ public class Verwaltung implements Serializable
         kundenListe.add(k3);
         kundenListe.add(k4);
         
-        Oberteile o1 = new Oberteile(24.99, "S", "mittel","unisex",255, "sportlich", "Blauer Kapuzenpullover mit Aufschrift"); // Kombi, S bzw M freizeit für männlich und weiblich möglich
-        Oberteile o2 = new Oberteile(15.99, "M", "billig","männlich",155, "freizeit", "Blauer Pullover mit V-Ausschnitt");  // Kombi business L weiblich möglich zum Testen
-        Oberteile o3  = new Oberteile(20.99, "S", "billig","unisex",145, "freizeit", "Roter Kapuzenpullover");      
-        Oberteile o4 = new Oberteile(29.99, "L", "mittel","weiblich",305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste"); 
+        Oberteile o1 = new Oberteile(24.99, "S","unisex",255, "sportlich", "Blauer Kapuzenpullover mit Aufschrift"); // Kombi, S bzw M freizeit für männlich und weiblich möglich
+        Oberteile o2 = new Oberteile(15.99, "M","männlich",155, "freizeit", "Blauer Pullover mit V-Ausschnitt");  // Kombi business L weiblich möglich zum Testen
+        Oberteile o3  = new Oberteile(20.99, "S", "unisex",145, "freizeit", "Roter Kapuzenpullover");      
+        Oberteile o4 = new Oberteile(29.99, "L","weiblich",305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste"); 
                 
         oberteileListe.add(o1);
         oberteileListe.add(o2);
@@ -68,20 +68,20 @@ public class Verwaltung implements Serializable
         unterteileListe.add(u3);
         unterteileListe.add(u4);
         
-        Schuhe s1 = new Schuhe(18.99, "S", "niedrig", "weiblich", 133, "freizeit","beige Ballerinas aus Wildleder");
-        Schuhe s2 = new Schuhe(79.99, "L", "teuer", "weiblich", 125, "business", "schwarze Lackschuhe mit Schnürsenkel aus Echtleder");
-        Schuhe s3 = new Schuhe(12.99, "M", "niedrig", "unisex", 240, "freizeit", "schwarze Flip-Flops");
-        Schuhe s4 = new Schuhe(59.99, "S", "teuer", "unisex", 255, "sportlich", "bordeaux farbende Nikeschuhe");
+        Schuhe s1 = new Schuhe(18.99, "S", "weiblich", 133, "freizeit","beige Ballerinas aus Wildleder");
+        Schuhe s2 = new Schuhe(79.99, "L", "weiblich", 125, "business", "schwarze Lackschuhe mit Schnürsenkel aus Echtleder");
+        Schuhe s3 = new Schuhe(12.99, "M", "unisex", 240, "freizeit", "schwarze Flip-Flops");
+        Schuhe s4 = new Schuhe(59.99, "S", "unisex", 255, "sportlich", "bordeaux farbende Nikeschuhe");
         
         schuheListe.add(s1);
         schuheListe.add(s2);
         schuheListe.add(s3);
         schuheListe.add(s4);
         
-        Accessoires a1 = new Accessoires(25, "S", "mittel","männlich" , 75,"business", "bordeaux farbende Krawatte ");
-        Accessoires a2 = new Accessoires(17.99, "S", "niedrig", "weiblich", 57, "business","goldene Kette mit kleinem Glitzerstein" );
-        Accessoires a3 = new Accessoires(15, "M","niedrig","weiblich", 54,"freizeit","grau Schal");
-        Accessoires a4 = new Accessoires(20,"L","niedrig", "männlich",38,"freizeit", "Wollmütze");
+        Accessoires a1 = new Accessoires(25, "S","männlich" , 75,"business", "bordeaux farbende Krawatte ");
+        Accessoires a2 = new Accessoires(17.99, "S", "weiblich", 57, "business","goldene Kette mit kleinem Glitzerstein" );
+        Accessoires a3 = new Accessoires(15, "M","weiblich", 54,"freizeit","grau Schal");
+        Accessoires a4 = new Accessoires(20,"L", "männlich",38,"freizeit", "Wollmütze");
         
         accessoiresListe.add(a1);
         accessoiresListe.add(a2);
@@ -518,6 +518,7 @@ public class Verwaltung implements Serializable
         }
         printLF();
     }
+    
         private void showOberteileListe()
     {
         String s;
