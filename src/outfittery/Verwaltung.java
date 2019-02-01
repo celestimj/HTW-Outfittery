@@ -409,10 +409,57 @@ public class Verwaltung implements Serializable
     
     }
     
-      private void findeOutfits()
+     private void findeOutfits()
      {
-     
-     
+         String preiskategorie = Stdin.readString("Bitte preiskategorie eingeben, nachdem gesucht werden soll:");
+         String geschlecht = Stdin.readString("Bitte geschlecht eingeben, nachdem gesucht werden soll:");
+        // die oberteilliste scheint nicht zu funktioniern...
+        boolean treffer = false;
+        Iterator <Oberteile>iter = oberteileListe.iterator();
+        while(iter.hasNext())
+        {
+            Oberteile i  =  iter.next();
+            if (i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht)) treffer = true;
+        }
+
+        if (!treffer)
+        {
+            
+            System.out.println("Es gibt keinen Kunden mit dem Nachnamen "+preiskategorie+geschlecht);
+        }
+        else
+        {
+           
+                  
+            System.out.print("pupsi");
+        }
+     }
+      
+      
+         public void Test()
+      {
+         String preiskategorie = Stdin.readString("Bitte nachname eingeben, nachdem gesucht werden soll:");
+         String geschlecht = Stdin.readString("Bitte vorname eingeben, nachdem gesucht werden soll:");
+        // zum testen der findeoutfitfunktion 
+        boolean treffer = false;
+        Iterator <Kunde>iter = kundenListe.iterator();
+        while(iter.hasNext())
+        {
+            Kunde i  =  iter.next();
+            if (i.getName().equalsIgnoreCase(preiskategorie) && i.getVorname().equalsIgnoreCase(geschlecht)) treffer = true;
+        }
+
+        if (!treffer)
+        {
+            
+            System.out.println("Es gibt keinen Kunden mit dem Nachnamen "+preiskategorie+geschlecht);
+        }
+        else
+        {
+           
+                  
+            System.out.print("pupsi");//Hier könnte die speicherung in eine ander arrylist erfolgen...
+        }
      }
 
       
