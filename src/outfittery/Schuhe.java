@@ -17,21 +17,20 @@ public class Schuhe extends Artikel
     }
     
 
+   
     /**
-     * Konstruktor der Klasse Schuhe mit sechs Parametern
+     * Konstruktor der Klasse Accesoires mit sechs Parametern
      * @param preis Preis, eines Oberteiles
      * @param größe Größe, des Oberteiles
      * @param preiskategorie gewünschte Höhe des Preises
      * @param geschlecht Geschlecht, welches dieses Oberteil tragen kann
-     * @param lagerbestand vorhandener Lagervorrat dieses Oberteils
+     * @param lageranzahl vorhandener Lagervorrat dieses Oberteils
      * @param stil gewünschter Stil (sportlich, business,freizeit?)
-     * @param beschreibung
+     * @param beschreibung 
      */
-    public Schuhe(double preis,String größe, String preiskategorie,String geschlecht, int lagerbestand, int stil, String beschreibung)
+    public Schuhe (double preis,String größe, String preiskategorie,String geschlecht, int lagerbestand, String stil, String beschreibung)
     {     
             super(preis,größe,preiskategorie,geschlecht,lagerbestand,stil,beschreibung);
     
     }
-
-   
-}   // hier wurde ne super methode gelöscht die hat gestört
+}

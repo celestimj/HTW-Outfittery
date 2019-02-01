@@ -26,9 +26,9 @@ public class Accessoires extends Artikel
      * @param stil gewünschter Stil (sportlich, business,freizeit?)
      * @param beschreibung 
      */
-    public Accessoires(double preis,String größe, String preiskategorie,String geschlecht, int lagerbestand, int stil, String beschreibung)
+    public Accessoires(double preis,String größe, String preiskategorie,String geschlecht, int lagerbestand, String stil, String beschreibung)
     {     
-            super(preis,größe,preiskategorie,geschlecht,lagerbestand,stil,beschreibung);;
+            super(preis,größe,preiskategorie,geschlecht,lagerbestand,stil,beschreibung);
     
     }
 }

@@ -13,7 +13,7 @@ public abstract class Artikel
     private int artikelnummer;
     private double preis;
     private int lagerbestand;
-    private int größe;
+    private String größe;
     private String preiskategorie;
     private String geschlecht;
     private String stil;
@@ -37,7 +37,7 @@ public abstract class Artikel
    * @param par6 ist die Größe des Kleidungsstücks
    * @param par7 ist die Beschreibung
    */
-  public Artikel(double par1,String par2, String par3,String par4, int par5, int par6, String par7)
+  public Artikel(double par1,String par2, String par3,String par4, int par5, String par6, String par7)
     { 
        this.preis=par1;
        this.preiskategorie=par2;
@@ -110,12 +110,12 @@ public int getLagerbestand()
         return this.lagerbestand;
  
     }
-public void setGröße(int größe)
+public void setGröße(String größe)
     {
         this.größe = größe;
     }
     
-public int getGröße()
+public String getGröße()
     {
         return this.größe;
  
