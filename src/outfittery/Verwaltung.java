@@ -14,7 +14,9 @@ import de.htw.saarland.stl.Stdin;           // fuer Eingaben von der Konsole
  * @version v1 - Dezember 2018
  */
 public class Verwaltung implements Serializable
-{
+{   private ArrayList <Outfit> outfitListe;
+    private ArrayList <Kunde> testListe;//für Test2 
+    
     private ArrayList <Kunde> kundenListe;
     private ArrayList <Oberteile> oberteileListe;
     private ArrayList <Unterteile> unterteileListe;
@@ -28,7 +30,9 @@ public class Verwaltung implements Serializable
      */
     public Verwaltung()
     {
-       
+        testListe =new ArrayList<>();//für Test2
+        outfitListe =new ArrayList<>();//Hier können die Kleidungstücke Gespeichert werden von Outfitsuche
+        
         kundenListe = new ArrayList <>();
         oberteileListe = new ArrayList <>();
         unterteileListe = new ArrayList <>();
@@ -39,6 +43,7 @@ public class Verwaltung implements Serializable
    
     public void initData()
     {
+        
         Kunde k1 = new Kunde("Tim","Müller","015609354267");
         Kunde k2 = new Kunde("Michelle","Watson","01712233593");
         Kunde k3 = new Kunde("Lena","Caron","01774622273");
@@ -287,7 +292,7 @@ public class Verwaltung implements Serializable
             System.out.println("Für welchen Anlass suchen sie Bekleidung? ");
             System.out.println("[1] Freizeit ");
             System.out.println("[2] Sport");
-            System.out.println("[3] Business");
+            System.out.println("[3] Business Test2");
             System.out.println("[0] HAUPTMENUE");
 
             printAuswahlTreffen();
@@ -301,7 +306,7 @@ public class Verwaltung implements Serializable
                     break;
                 case '2':   outfitSuche2();  //ebenso "
                     break;
-                case '3': outfitSuche2();
+                case '3': Test2();
                     break;
                 default: printEingabeFehler();
             }
@@ -458,12 +463,54 @@ public class Verwaltung implements Serializable
         {
            
                   
-            System.out.print("pupsi");//Hier könnte die speicherung in eine ander arrylist erfolgen...
+            System.out.println("PUUUUUUUUUUUUPSI");//Hier könnte die speicherung in eine ander arrylist erfolgen...
+        }
+     }
+         
+          public void Test2()
+      {
+         String preiskategorie = Stdin.readString("Bitte nachname eingeben, nachdem gesucht werden soll:");
+         String geschlecht = Stdin.readString("Bitte vorname eingeben, nachdem gesucht werden soll:");
+        // zum testen der findeoutfitfunktion 
+        boolean treffer = false;
+        Iterator <Kunde>iter = kundenListe.iterator();
+        
+        while(iter.hasNext())
+        {
+            Kunde i  =  iter.next();
+            
+            if (i.getName().equalsIgnoreCase(preiskategorie) && i.getVorname().equalsIgnoreCase(geschlecht)) treffer = true;
+        }
+
+        if (!treffer)
+        {
+            
+            System.out.println("Es gibt keinen Kunden mit dem Nachnamen "+preiskategorie+geschlecht);
+        }
+        else
+        {   
+            Iterator <Kunde>iter2 = kundenListe.iterator();
+             while(iter2.hasNext())
+            {
+                Kunde i  =  iter2.next();
+                
+                if(i.getName().equalsIgnoreCase(preiskategorie) && i.getVorname().equalsIgnoreCase(geschlecht)) {
+           System.out.print("Juhu es klapptnit");
+           Outfit x1 = new Outfit(i.getKundennummer());//speichert den Kunden(Kleidungsstück) in die Outfistliste
+           outfitListe.add(x1);
+           
+          String s = castInt2String(i.getKundennummer());
+                    printZentriert(s);
+                    
+           String b = castInt2String(x1.getOutfitid());
+                    printZentriert(s);        
+           
+                }   
         }
      }
 
       
-      
+      }
 //    private void erstelleNeuenKunden()
 //    {
 //        Kunde k1 = new Kunde("Hans","Becker","0171 9876543");
@@ -472,6 +519,7 @@ public class Verwaltung implements Serializable
 //        kundenListe.add(k2);
 //    }
 
+      
     private void erstelleNeuenKunden()
     {
         String nachname = Stdin.readlnString("Bitte geben Sie den Nachnamen des Kunden ein:");
