@@ -34,6 +34,8 @@ public class Oberteile extends Artikel
             super(preis,größe,preiskategorie,geschlecht,lagerbestand,stil,beschreibung);
     
     }
+    
+
 }
     
 

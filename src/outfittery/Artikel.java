@@ -37,14 +37,14 @@ public abstract class Artikel
    * @param par6 ist die Größe des Kleidungsstücks
    * @param par7 ist die Beschreibung
    */
-  public Artikel(double par1,String par2, String par3,String par4, int par5, String par6, String par7)
+  public Artikel(double par1,String par2, String par3, String par4,int par5, String par6, String par7)
     { 
        this.preis=par1;
-       this.preiskategorie=par2;
-       this.geschlecht=par3;
-       this.stil=par4;
+       this.preiskategorie=par3;
+       this.geschlecht=par4;
+       this.stil=par6;
        this.lagerbestand=par5;
-       this.größe=par6;
+       this.größe=par2;
        this.beschreibung =par7;
        this.artikelnummer = Artikel.artnr_counter;
         artnr_counter = artnr_counter + 1;
