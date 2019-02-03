@@ -434,9 +434,23 @@ public class Verwaltung implements Serializable
         }
         else
         {
+                       
+              Iterator <Oberteile>iter2 = oberteileListe.iterator();
+             while(iter2.hasNext())
+            {
+                Oberteile i  =  iter2.next();
+                
+                if(i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht)) {
+           System.out.print("Juhu es klapptnit");
+           Outfit x1 = new Outfit(i.getArtikelnummer());//speichert den Kunden(Kleidungsstück) in die Outfistliste
+           outfitListe.add(x1);
            
+          String s = castInt2String(i.getArtikelnummer());
+                    printZentriert(s);
+                    
+           String b = castInt2String(x1.getOutfitid());
+                    printZentriert(s);        
                   
-            System.out.print("pupsi");
         }
      }
       
