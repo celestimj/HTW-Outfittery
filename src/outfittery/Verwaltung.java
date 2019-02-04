@@ -49,8 +49,8 @@ public class Verwaltung implements Serializable
         kundenListe.add(k4);
         
         Oberteile o1 = new Oberteile(24.99, "S","unisex",255, "sportlich", "Blauer Kapuzenpullover mit Aufschrift"); // Kombi, S bzw M freizeit für männlich und weiblich möglich
-        Oberteile o2 = new Oberteile(15.99, "M","männlich",155, "freizeit", "Blauer Pullover mit V-Ausschnitt");  // Kombi business L weiblich möglich zum Testen
-        Oberteile o3  = new Oberteile(20.99, "S", "unisex",145, "freizeit", "Roter Kapuzenpullover");      
+        Oberteile o2 = new Oberteile(115.99, "M","männlich",155, "freizeit", "Blauer Pullover mit V-Ausschnitt");  // Kombi business L weiblich möglich zum Testen
+        Oberteile o3  = new Oberteile(70.99, "S", "unisex",145, "freizeit", "Roter Kapuzenpullover");      
         Oberteile o4 = new Oberteile(29.99, "L","weiblich",305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste"); 
                 
         oberteileListe.add(o1);
@@ -59,7 +59,7 @@ public class Verwaltung implements Serializable
         oberteileListe.add(o4);
         
         Unterteile u1 = new Unterteile(24.99, "L", "mittel", "weiblich", 125,"business","Beige Chinohose" );
-        Unterteile u2 = new Unterteile(35, "S", "mittel", "weiblich", 230, "freizeit", "blaue Skinnyjeans ");
+        Unterteile u2 = new Unterteile(135, "S", "mittel", "weiblich", 230, "freizeit", "blaue Skinnyjeans ");
         Unterteile u3 = new Unterteile(80, "M", "teuer", "männlich", 220, "business", "schwarze Anzugshose");
         Unterteile u4 = new Unterteile(15.99, "M", "niedrig", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
         

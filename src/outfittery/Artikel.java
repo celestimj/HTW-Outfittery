@@ -1,4 +1,5 @@
 package outfittery;
+
 /*
  * Die Klasse Artikel ist die Basisklasse aller unserer Artikelobjekte.
  * Sie ist abstrakt, da aus den Subklassen Objekte erzeugt werden sollen, nicht aber auf Basis dieser Klasse.
@@ -6,10 +7,9 @@ package outfittery;
  * @author Loreen Gerard
  * @version v1 - Dezember 2018
  */
- 
 
-public abstract class Artikel 
-{ //Instanzvariablen
+public abstract class Artikel { //Instanzvariablen
+
     private String preissegment;
     private int artikelnummer;
     private double preis;
@@ -19,140 +19,123 @@ public abstract class Artikel
     private String geschlecht;
     private String stil;
     private String beschreibung;
-    
-    
-    
- // Statische Variablen
-  
- private static int artnr_counter = 1000;
- 
-  public Artikel()
-  {
-  }
-  /** 
-   *@param par1 ist der Preis
-   * @param par2 ist die Preiskategorie
-   * @param par3 ist das Geschlecht
-   * @param par4 ist der Stil
-   * @param par5 ist die Lagerbestand
-   * @param par6 ist die Größe des Kleidungsstücks
-   * @param par7 ist die Beschreibung
-   */
-  public Artikel(double par1, String par3,String par4, int par5, String par6, String par7)
-    { 
-       this.preis=par1;
-       this.preiskategorie=preissegment;
-       this.geschlecht=par3;
-       this.stil=par4;
-       this.lagerbestand=par5;
-       this.größe=par6;
-       this.beschreibung =par7;
-       this.artikelnummer = Artikel.artnr_counter;
+
+    // Statische Variablen
+    private static int artnr_counter = 1000;
+
+    public Artikel() {
+    }
+
+    /**
+     * @param par1 ist der Preis
+     * @param par2 ist die Preiskategorie
+     * @param par3 ist das Geschlecht
+     * @param par4 ist der Stil
+     * @param par5 ist die Lagerbestand
+     * @param par6 ist die Größe des Kleidungsstücks
+     * @param par7 ist die Beschreibung
+     */
+    public Artikel(double par1, String par3, String par4, int par5, String par6, String par7) {
+        this.preis = par1;
+
+        this.geschlecht = par3;
+        this.stil = par4;
+        this.lagerbestand = par5;
+        this.größe = par6;
+        this.beschreibung = par7;
+        this.artikelnummer = Artikel.artnr_counter;
         artnr_counter = artnr_counter + 1;
     }
-  
-  public void setArtikelnummer(int artikelnummer)
-    {
+
+    public void setArtikelnummer(int artikelnummer) {
         this.artikelnummer = artikelnummer;
     }
-    
-    public int getArtikelnummer()
-    {
+
+    public int getArtikelnummer() {
         return this.artikelnummer;
- 
+
     }
-public void setPreis(double preis)
-    {
+
+    public void setPreis(double preis) {
         this.preis = preis;
     }
-    
-    public double getPreis()
-    {
+
+    public double getPreis() {
         return this.preis;
- 
+
     }
-    
-public void setGeschlecht(String geschlecht)
-    {
+
+    public void setGeschlecht(String geschlecht) {
         this.geschlecht = geschlecht;
     }
-    
-public String getGeschlecht()
-    {
+
+    public String getGeschlecht() {
         return this.geschlecht;
     }
-public void setStil(String stil)
-    {
+
+    public void setStil(String stil) {
         this.stil = stil;
     }
-    
-public String getStil()
-           
-    {
+
+    public String getStil() {
         return this.stil;
     }
-public void setPreiskategorie(String preiskategorie)
-    {
-        this.preiskategorie = preiskategorie;
+
+    public void setPreiskategorie(String preiskategorie) {
+        this.preiskategorie = getPreissegment();
     }
-    
-public String getPreiskategorie()
-    {
-        return this.preiskategorie;
- 
+
+    public String getPreiskategorie() {
+        return this.getPreissegment();
+
     }
-public void setLagerbestand(int lagerbestand) 
-    {
+
+    public void setLagerbestand(int lagerbestand) {
         this.lagerbestand = lagerbestand;
     }
-    
-public int getLagerbestand()
-    {
+
+    public int getLagerbestand() {
         return this.lagerbestand;
- 
+
     }
-public void setGröße(String größe)
-    {
+
+    public void setGröße(String größe) {
         this.größe = größe;
     }
-    
-public String getGröße()
-    {
+
+    public String getGröße() {
         return this.größe;
- 
+
     }
-public String getBeschreibung()
-{ return this.beschreibung;
-}
 
-public void setBeschreibung( String beschreibung)
-{
+    public String getBeschreibung() {
+        return this.beschreibung;
+    }
 
-    this.beschreibung = beschreibung;
-}
+    public void setBeschreibung(String beschreibung) {
 
+        this.beschreibung = beschreibung;
+    }
 
-public void Preissegment()
-{  
-   
+    public String getPreissegment()
+    {
+        bestimmePreissegment();
+        return this.preissegment;
+    }
     
-     if(preis <30) 
-    {
-       preissegment = ("billig");   
-    }
-   
-   if(preis <100 && preis >30)
-    {
-       preissegment = ("mittel");
-    }
-   else
-    {
-       preissegment = ("teuer");
-    }
-       
-}
-
-}
     
+    private void bestimmePreissegment() {
 
+        if (this.preis < 30) {
+          this.preissegment = ("billig");
+        }
 
+        else if (this.preis <= 100 && this.preis >= 30) {
+            this.preissegment = ("mittel");
+        } else {
+            this.preissegment = ("teuer");
+        }
+
+    }
+
+}
