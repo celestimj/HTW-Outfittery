@@ -18,7 +18,7 @@ public class Outfit
     
     public Outfit(int nr)//speicherung der artikelnummer
     {
-        this.artikelnummer= nr;
+        this.artikelnummer= nr;//hier muss der ganze Artikel gespeichert werden
          this.outfitid = Outfit.id_counter;//hier muss noch angepasst werden das jedes kleidungsstück die gleicheoutfit ID bekommt
         id_counter = id_counter + 1;
         
