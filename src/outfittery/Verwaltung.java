@@ -272,6 +272,7 @@ public class Verwaltung implements Serializable {
             }
         } while (!menuewechsel);
     }
+   
 
     private void outfitSuche1() {
         char eingabe;
@@ -279,10 +280,11 @@ public class Verwaltung implements Serializable {
         do {
             System.out.println("OUTFITSUCHE");
             System.out.println("------------------------------------------------------------");
-            System.out.println("Für welchen Anlass suchen sie Bekleidung? ");
-            System.out.println("[1] Freizeit ");
-            System.out.println("[2] Sport");
-            System.out.println("[3] Business Test2");
+            System.out.println(" * ");
+            System.out.println("[1]  test2");
+            System.out.println("[2]  Test ");
+            System.out.println("[3] namensliste nach 2 parametern");
+             System.out.println("[4] namensliste nach 2 parametern");
             System.out.println("[0] HAUPTMENUE");
 
             printAuswahlTreffen();
@@ -293,111 +295,7 @@ public class Verwaltung implements Serializable {
                     menuewechsel = true;
                     break;
                 case '1':
-                    outfitSuche2();  //speichere die Angaben und switch zur nächsten Frage
-                    break;
-                case '2':
-                    outfitSuche2();  //ebenso "
-                    break;
-                case '3':
-                    Test2();
-                    break;
-                default:
-                    printEingabeFehler();
-            }
-        } while (!menuewechsel);
-
-    }
-
-    private void outfitSuche2() {
-        char eingabe;
-        boolean menuewechsel = false;
-        do {
-            System.out.println("OUTFITSUCHE");
-            System.out.println("------------------------------------------------------------");
-            System.out.println("Suchen Sie für... ");
-            System.out.println("[1] Frauen ");
-            System.out.println("[2] Männer");
-            System.out.println("[3] Unisex");
-            System.out.println("[0] HAUPTMENUE");
-
-            printAuswahlTreffen();
-            eingabe = Stdin.readlnChar();
-
-            switch (eingabe) {
-                case '0':
-                    menuewechsel = true;
-                    break;
-                case '1':
-                    outfitSuche3();  //speichere die Angaben und switch zur nächsten Frage
-                    break;
-                case '2':
-                    outfitSuche3();  //ebenso "
-                    break;
-                case '3':
-                    outfitSuche3();
-                    break;
-                default:
-                    printEingabeFehler();
-            }
-        } while (!menuewechsel);
-    }
-
-    private void outfitSuche3() {
-        char eingabe;
-        boolean menuewechsel = false;
-        do {
-            System.out.println("OUTFITSUCHE");
-            System.out.println("------------------------------------------------------------");
-            System.out.println("Welche Größe benötigen Sie? ");
-            System.out.println("[1] S ");
-            System.out.println("[2] M");
-            System.out.println("[3] L");
-            System.out.println("[0] HAUPTMENUE");
-
-            printAuswahlTreffen();
-            eingabe = Stdin.readlnChar();
-
-            switch (eingabe) {
-                case '0':
-                    menuewechsel = true;
-                    break;
-                case '1':
-                    outfitSuche4();  //speichere die Angaben und switch zur nächsten Frage
-                    break;
-                case '2':
-                    outfitSuche4();  //ebenso "
-                    break;
-                case '3':
-                    outfitSuche4();
-                    break;
-                default:
-                    printEingabeFehler();
-            }
-        } while (!menuewechsel);
-
-    }
-
-    private void outfitSuche4() {
-        char eingabe;
-        boolean menuewechsel = false;
-        do {
-            System.out.println("OUTFITSUCHE");
-            System.out.println("------------------------------------------------------------");
-            System.out.println("In welcher Preiskategorie soll ihr Outfit liegen? ");
-            System.out.println("[1] billig findeOutfits OUTFITliste nach 2 parametern");
-            System.out.println("[2] mittel Test Namensliste nach zwei parametern");
-            System.out.println("[3] teuer");
-            System.out.println("[0] HAUPTMENUE");
-
-            printAuswahlTreffen();
-            eingabe = Stdin.readlnChar();
-
-            switch (eingabe) {
-                case '0':
-                    menuewechsel = true;
-                    break;
-                case '1':
-                    findeOutfits();  //speichere die Angaben und suche OUtfit
+                    Test2();  //speichere die Angaben und suche OUtfit
                     break;
                 case '2':
                     Test();                //ebenso "
@@ -405,6 +303,9 @@ public class Verwaltung implements Serializable {
                 case '3':
                     findeOutfits();
                     break;
+                case '4':
+                    
+                     break;
                 default:
                     printEingabeFehler();
             }
