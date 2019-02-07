@@ -30,22 +30,21 @@ public abstract class Artikel
   }
   /** 
    *@param par1 ist der Preis
-   * @param par2 ist die Preiskategorie
-   * @param par3 ist das Geschlecht
-   * @param par4 ist der Stil
-   * @param par5 ist die Lagerbestand
-   * @param par6 ist die Größe des Kleidungsstücks
-   * @param par7 ist die Beschreibung
+   * @param par2 ist das Geschlecht
+   * @param par3 ist der Stil
+   * @param par4 ist die Lagerbestand
+   * @param par5 ist die Größe des Kleidungsstücks
+   * @param par6 ist die Beschreibung
    */
-  public Artikel(double par1,String par2, String par3, String par4,int par5, String par6, String par7)
+  public Artikel(double par1, String par2, String par3,int par4, String par5, String par6)
     { 
        this.preis=par1;
-       this.preiskategorie=par3;
-       this.geschlecht=par4;
-       this.stil=par6;
-       this.lagerbestand=par5;
-       this.größe=par2;
-       this.beschreibung =par7;
+      
+       this.geschlecht=par2;
+       this.stil=par3;
+       this.lagerbestand=par4;
+       this.größe=par5;
+       this.beschreibung =par6;
        this.artikelnummer = Artikel.artnr_counter;
         artnr_counter = artnr_counter + 1;
     }
@@ -91,15 +90,29 @@ public String getStil()
         return this.stil;
     }
 public void setPreiskategorie(String preiskategorie)
-    {
-        this.preiskategorie = preiskategorie;
+    {  
+       this.preiskategorie = preiskategorie;
+     
     }
     
 public String getPreiskategorie()
     {
-        return this.preiskategorie;
- 
+        if(preis< 30)
+        {
+        return this.preiskategorie = "niedrig";
+        }
+        if(preis>30 && preis<80)
+        {
+         return this.preiskategorie= "mittel";
+        }
+        else
+        {
+        return this.preiskategorie = "hoch";
+        }
     }
+       
+   
+
 public void setLagerbestand(int lagerbestand) 
     {
         this.lagerbestand = lagerbestand;
@@ -129,6 +142,7 @@ public void setBeschreibung( String beschreibung)
 
     this.beschreibung = beschreibung;
 }
+
 }
     
 
