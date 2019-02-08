@@ -9,20 +9,22 @@ package outfittery;
  *
  * @author niki9
  */
-public class Outfit
+public class Outfit extends Artikel
 {
     
     private int artikelnummer;
     private int outfitid;   
     private static int id_counter = 1000;
     
-    public Outfit(int nr)//speicherung der artikelnummer
+    
+    public Outfit(Artikel i)//speicherung der artikelnummer
     {
-        this.artikelnummer= nr;//hier muss der ganze Artikel gespeichert werden
+        this.größe= i.getGröße();//hier muss der ganze Artikel gespeichert werden
          this.outfitid = Outfit.id_counter;//hier muss noch angepasst werden das jedes kleidungsstück die gleicheoutfit ID bekommt
         id_counter = id_counter + 1;
         
     }
+    
     
     public void setArtikelnummer(int artikelnummer)
     {

@@ -18,10 +18,6 @@ public class Verwaltung implements Serializable {
     private ArrayList<Kunde> testListe;//für Test2 
 
     private ArrayList<Kunde> kundenListe;
-    private ArrayList<Oberteile> oberteileListe;
-    private ArrayList<Unterteile> unterteileListe;
-    private ArrayList<Schuhe> schuheListe;
-    private ArrayList<Accessoires> accessoiresListe;
     private ArrayList<Artikel> artikelListe;
     final static int FELDLAENGE = 14;
 
@@ -33,10 +29,6 @@ public class Verwaltung implements Serializable {
         outfitListe = new ArrayList<>();//Hier können die Kleidungstücke Gespeichert werden von Outfitsuche
 
         kundenListe = new ArrayList<>();
-        oberteileListe = new ArrayList<>();
-        unterteileListe = new ArrayList<>();
-        schuheListe = new ArrayList<>();
-        accessoiresListe = new ArrayList<>();
         artikelListe = new ArrayList<>();
     }
 
@@ -56,40 +48,41 @@ public class Verwaltung implements Serializable {
         Oberteile o3 = new Oberteile(20.99, "S", "unisex", 145, "freizeit", "Roter Kapuzenpullover");
         Oberteile o4 = new Oberteile(29.99, "L",  "weiblich", 305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste");
 
-        oberteileListe.add(o1);
-        oberteileListe.add(o2);
-        oberteileListe.add(o3);
-        oberteileListe.add(o4);
+        artikelListe.add(o1);
+        artikelListe.add(o2);
+        artikelListe.add(o3);
+        artikelListe.add(o4);
 
         Unterteile u1 = new Unterteile(24.99, "L", "weiblich", 125, "business", "Beige Chinohose");
         Unterteile u2 = new Unterteile(35, "S", "weiblich", 230, "freizeit", "blaue Skinnyjeans ");
         Unterteile u3 = new Unterteile(80, "M", "männlich", 220, "business", "schwarze Anzugshose");
         Unterteile u4 = new Unterteile(15.99, "M", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
 
-        unterteileListe.add(u1);
-        unterteileListe.add(u2);
-        unterteileListe.add(u3);
-        unterteileListe.add(u4);
+        artikelListe.add(u1);
+        artikelListe.add(u2);
+        artikelListe.add(u3);
+        artikelListe.add(u4);
 
         Schuhe s1 = new Schuhe(18.99, "S", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
         Schuhe s2 = new Schuhe(79.99, "L", "weiblich", 125, "business", "schwarze Lackschuhe mit Schnürsenkel aus Echtleder");
         Schuhe s3 = new Schuhe(12.99, "M", "unisex", 240, "freizeit", "schwarze Flip-Flops");
         Schuhe s4 = new Schuhe(59.99, "S", "unisex", 255, "sportlich", "bordeaux farbende Nikeschuhe");
 
-        schuheListe.add(s1);
-        schuheListe.add(s2);
-        schuheListe.add(s3);
-        schuheListe.add(s4);
+        artikelListe.add(s1);
+        artikelListe.add(s2);
+        artikelListe.add(s3);
+        artikelListe.add(s4);
+                
 
         Accessoires a1 = new Accessoires(25, "S", "männlich", 75, "business", "bordeaux farbende Krawatte ");
         Accessoires a2 = new Accessoires(17.99, "S", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
-        Accessoires a3 = new Accessoires(15, "M", "weiblich", 54, "freizeit", "grau Schal");
+        Accessoires a3 = new Accessoires(35, "M", "weiblich", 54, "freizeit", "grau Schal");
         Accessoires a4 = new Accessoires(20, "L", "männlich", 38, "freizeit", "Wollmütze");
 
-        accessoiresListe.add(a1);
-        accessoiresListe.add(a2);
-        accessoiresListe.add(a3);
-        accessoiresListe.add(a4);
+        artikelListe.add(a1);
+        artikelListe.add(a2);
+        artikelListe.add(a3);
+        artikelListe.add(a4);
     }
 
     private void saveDataToXML() throws IOException {
@@ -318,9 +311,9 @@ public class Verwaltung implements Serializable {
         String geschlecht = Stdin.readString("Bitte geschlecht eingeben, nachdem gesucht werden soll:");
         // die oberteilliste scheint nicht zu funktioniern...
         boolean treffer = false;
-        Iterator<Oberteile> iter = oberteileListe.iterator();
+        Iterator<Artikel> iter = artikelListe.iterator();
         while (iter.hasNext()) {
-            Oberteile i = iter.next();
+            Artikel i = iter.next();
             if (i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht)) {
                 treffer = true;
             }
@@ -331,12 +324,12 @@ public class Verwaltung implements Serializable {
             System.out.println("Es gibt keinen Kunden mit dem Nachnamen " + preiskategorie + geschlecht);
         } else {
 
-            Iterator<Oberteile> iter2 = oberteileListe.iterator();
+            Iterator<Artikel> iter2 = artikelListe.iterator();
             while (iter2.hasNext()) {
-                Oberteile i = iter2.next();
+                Artikel i = iter2.next();
 
                 if (i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht)) {
-                    System.out.print("Juhu es klapptnit");
+                    System.out.print("Juhu es klappt nit");
                     Outfit x1 = new Outfit(i.getArtikelnummer());//speichert den Kunden(Kleidungsstück) in die Outfistliste
                     outfitListe.add(x1);
 
@@ -344,7 +337,7 @@ public class Verwaltung implements Serializable {
                     printZentriert(s);
 
                     String b = castInt2String(x1.getOutfitid());
-                    printZentriert(s);
+                    printZentriert(b);
 
                 }
             }
@@ -374,38 +367,40 @@ public class Verwaltung implements Serializable {
     }
 
     public void Test2() {
-        String preiskategorie = Stdin.readString("Bitte nachname eingeben, nachdem gesucht werden soll:");
-        String geschlecht = Stdin.readString("Bitte vorname eingeben, nachdem gesucht werden soll:");
+        String preiskategorie = Stdin.readString("Bitte preiskategorie eingeben, nachdem gesucht werden soll:");
+        String geschlecht = Stdin.readString("Bitte geschlecht eingeben, nachdem gesucht werden soll:");
         // zum testen der findeoutfitfunktion 
         boolean treffer = false;
-        Iterator<Kunde> iter = kundenListe.iterator();
+        Iterator<Artikel> iter = artikelListe.iterator();
 
         while (iter.hasNext()) {
-            Kunde i = iter.next();
+            Artikel i = iter.next();
 
-            if (i.getName().equalsIgnoreCase(preiskategorie) && i.getVorname().equalsIgnoreCase(geschlecht)) {
+            if (i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht)) {
                 treffer = true;
             }
         }
 
         if (!treffer) {
 
-            System.out.println("Es gibt keinen Kunden mit dem Nachnamen " + preiskategorie + geschlecht);
+            System.out.println("Es gibt keinen Artikel mit diesen Angaben " + preiskategorie + geschlecht);
         } else {
-            Iterator<Kunde> iter2 = kundenListe.iterator();
+            Iterator<Artikel> iter2 = artikelListe.iterator();
             while (iter2.hasNext()) {
-                Kunde i = iter2.next();
+                Artikel i = iter2.next();
 
-                if (i.getName().equalsIgnoreCase(preiskategorie) && i.getVorname().equalsIgnoreCase(geschlecht)) {
+                if (i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht)) {
                     System.out.print("Juhu es klapptnit");
-                    Outfit x1 = new Outfit(i.getKundennummer());//speichert den Kunden(Kleidungsstück) in die Outfistliste
+                    Outfit x1 = new Outfit(i.getArtikelnummer());//speichert den Kunden(Kleidungsstück) in die Outfistliste
                     outfitListe.add(x1);
 
-                    String s = castInt2String(i.getKundennummer());
+                    String s = castInt2String(i.getArtikelnummer());
                     printZentriert(s);
 
                     String b = castInt2String(x1.getOutfitid());
                     printZentriert(s);
+                    
+                    printLinksbuendig(x1.getGröße());
 
                 }
             }
@@ -475,11 +470,12 @@ public class Verwaltung implements Serializable {
         printLF();
         printLinieLF(10); // Trennlinie waagerecht für 7 felder
 
-        Iterator<Oberteile> iter = oberteileListe.iterator();
+        Iterator<Artikel> iter = artikelListe.iterator();
         while (iter.hasNext()) {
-            Oberteile i = iter.next();
-
-            s = castInt2String(i.getArtikelnummer());
+            Artikel i = iter.next();
+         
+            if (i instanceof Oberteile)
+            { s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
 
             printLinksbuendig(i.getGröße());
@@ -498,7 +494,7 @@ public class Verwaltung implements Serializable {
 
             printLinksbuendig(i.getBeschreibung());
             printLF();
-
+            }
         }
         printLF();
     }
@@ -516,11 +512,12 @@ public class Verwaltung implements Serializable {
         printLF();
         printLinieLF(10); // Trennlinie für 6 Felder anzeigen
 
-        Iterator<Unterteile> iter = unterteileListe.iterator();
+        Iterator<Artikel> iter = artikelListe.iterator();
         while (iter.hasNext()) {
-            Unterteile i = iter.next();
-
-            s = castInt2String(i.getArtikelnummer());
+            Artikel i = iter.next();
+        
+            if (i instanceof Unterteile)
+            { s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
 
             printLinksbuendig(i.getGröße());
@@ -541,6 +538,7 @@ public class Verwaltung implements Serializable {
 
             printLF();
         }
+       }
         printLF();
     }
 
@@ -557,10 +555,12 @@ public class Verwaltung implements Serializable {
         printLF();
         printLinieLF(10); // Trennlinie für 6 Felder anzeigen
 
-        Iterator<Schuhe> iter = schuheListe.iterator();
+        Iterator<Artikel> iter = artikelListe.iterator();
         while (iter.hasNext()) {
-            Schuhe i = iter.next();
+            Artikel i = iter.next();
 
+            if (i instanceof Schuhe)
+            {
             s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
 
@@ -582,6 +582,7 @@ public class Verwaltung implements Serializable {
 
             printLF();
         }
+       }
         printLF();
     }
 
@@ -598,10 +599,12 @@ public class Verwaltung implements Serializable {
         printLF();
         printLinieLF(10); // Trennlinie für 6 Felder anzeigen
 
-        Iterator<Accessoires> iter = accessoiresListe.iterator();
+        Iterator<Artikel> iter = artikelListe.iterator();
         while (iter.hasNext()) {
-            Accessoires i = iter.next();
+            Artikel i = iter.next();
 
+            if (i instanceof Accessoires)
+            {
             s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
 
@@ -623,6 +626,7 @@ public class Verwaltung implements Serializable {
 
             printLF();
         }
+       }
         printLF();
     }
 
