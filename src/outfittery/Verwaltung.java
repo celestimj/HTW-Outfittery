@@ -159,7 +159,7 @@ public class Verwaltung implements Serializable {
                     verwaltungsMenue();
                     break;
                 case '4':
-                    outfitSuche1();
+                    outfitSuche();
                     break;
                 default:
                     printEingabeFehler();
@@ -267,17 +267,14 @@ public class Verwaltung implements Serializable {
     }
    
 
-    private void outfitSuche1() {
+    private void outfitSuche() {
         char eingabe;
         boolean menuewechsel = false;
         do {
             System.out.println("OUTFITSUCHE");
             System.out.println("------------------------------------------------------------");
             System.out.println(" * ");
-            System.out.println("[1]  test2");
-            System.out.println("[2]  Test ");
-            System.out.println("[3] namensliste nach 2 parametern");
-             System.out.println("[4] namensliste nach 2 parametern");
+            System.out.println("[1]  Outfitsuche starten");
             System.out.println("[0] HAUPTMENUE");
 
             printAuswahlTreffen();
@@ -288,17 +285,9 @@ public class Verwaltung implements Serializable {
                     menuewechsel = true;
                     break;
                 case '1':
-                    Test2();  //speichere die Angaben und suche OUtfit
-                    break;
-                case '2':
-                    Test();                //ebenso "
-                    break;
-                case '3':
-                    findeOutfits();
-                    break;
-                case '4':
-                    
-                     break;
+                     findeOutfits();  //speichere die Angaben und suche OUtfit
+                  break;
+                  
                 default:
                     printEingabeFehler();
             }
@@ -307,106 +296,126 @@ public class Verwaltung implements Serializable {
     }
 
     private void findeOutfits() {
-        String preiskategorie = Stdin.readString("Bitte preiskategorie eingeben, nachdem gesucht werden soll:");
-        String geschlecht = Stdin.readString("Bitte geschlecht eingeben, nachdem gesucht werden soll:");
-        // die oberteilliste scheint nicht zu funktioniern...
-        boolean treffer = false;
-        Iterator<Artikel> iter = artikelListe.iterator();
-        while (iter.hasNext()) {
-            Artikel i = iter.next();
-            if (i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht)) {
-                treffer = true;
+        String preiskategorie = Stdin.readString("Bitte Preiskategorie eingeben, nachdem gesucht werden soll:");
+        String geschlecht = Stdin.readString("Bitte Geschlecht eingeben, nachdem gesucht werden soll:");
+        String größe = Stdin.readString("Bitte Größe eingeben, nachdem gesucht werden soll:");
+        String stil = Stdin.readString("Bitte Stil eingeben, nachdem gesucht werden soll:");
+                
+        // nach passendem Oberteil suchen
+        boolean trefferoberteile = false;
+        boolean weiter = true;
+        int ArtikelnrOberteilFind = 0;
+        // Ein Iterator-Objekt wird mittels der Methode iterator() erzeugt.
+        // Dessen Methode hasNext()liefert true, solange der Iterator noch nicht das Ende erreicht hat.
+        // Mit next() greift man auf dasjeweils nächste Element zu.
+        Iterator<Artikel> iterOberteil = artikelListe.iterator();
+        while (weiter) {
+            Artikel i = iterOberteil.next();
+            // Abfrage, ob alle Bedingungen fuer das Oberteil erfüllt sind
+            if ((i instanceof Oberteile) && i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht) && i.getGröße().equalsIgnoreCase(größe) && i.getStil().equalsIgnoreCase(stil)) {
+                // Alle Bedingungen sind erfuellt, Suche nach Oberteil kann beendet werden
+                trefferoberteile = true;
+                // Oberteil speichern
+                ArtikelnrOberteilFind = i.getArtikelnummer();
+               if (// Wird noch ein nächstes Oberteil gefunden UND es wurde noch kein passendes Oberteil gefunden? 
+                       (iterOberteil.hasNext()) && (trefferoberteile == false))
+                    {
+                   // kein passendes Oberteil gefunden und noch weitere Oberteile vorhanden: nichts machen
+                    }
+               else{
+                   // Suche beenden
+                   weiter = false;
+                   }
             }
         }
-
-        if (!treffer) {
-
-            System.out.println("Es gibt keinen Kunden mit dem Nachnamen " + preiskategorie + geschlecht);
-        } else {
-
-            Iterator<Artikel> iter2 = artikelListe.iterator();
-            while (iter2.hasNext()) {
-                Artikel i = iter2.next();
-
-                if (i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht)) {
-                    System.out.print("Juhu es klappt nit");
-                    Outfit x1 = new Outfit(i.getArtikelnummer());//speichert den Kunden(Kleidungsstück) in die Outfistliste
-                    outfitListe.add(x1);
-
-                    String s = castInt2String(i.getArtikelnummer());
-                    printZentriert(s);
-
-                    String b = castInt2String(x1.getOutfitid());
-                    printZentriert(b);
-
-                }
+        
+        // nach passendem Unterteil suchen
+        boolean trefferunterteile = false;
+        weiter = true;
+        int ArtikelnrUnterteilFind = 0;
+        
+        Iterator<Artikel> iterUnterteil = artikelListe.iterator();
+        while (weiter) {
+            Artikel i = iterUnterteil.next();
+            // Abfrage, ob alle Bedingungen fuer das Oberteil erfüllt sind
+            if ((i instanceof Unterteile) && i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht) && i.getGröße().equalsIgnoreCase(größe) && i.getStil().equalsIgnoreCase(stil)) {
+                // Alle Bedingungen sind erfuellt, Suche nach Unterteil kann beendet werden
+                trefferunterteile = true;
+                // Unterteil speichern
+               ArtikelnrUnterteilFind = i.getArtikelnummer();
+              if(iterUnterteil.hasNext() && trefferunterteile == false)
+              {
+              // kein passendes Unterteil gefunden und noch weitere Unterteile vorhanden: nichts machen
+              }
+              else{
+              weiter = false;
+              }
+            }
+        }    
+           // nach passenden Schuhen suchen
+        boolean trefferschuhe = false;
+        weiter = true;
+        int ArtikelnrSchuhFind = 0;
+        
+        Iterator<Artikel> iterSchuhe = artikelListe.iterator();
+        while (weiter) {
+            Artikel i = iterSchuhe.next();
+            // Abfrage, ob alle Bedingungen fuer das Oberteil erfüllt sind
+            if ((i instanceof Schuhe) && i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht) && i.getGröße().equalsIgnoreCase(größe) && i.getStil().equalsIgnoreCase(stil)) {
+                // Alle Bedingungen sind erfuellt, Suche nach Unterteil kann beendet werden
+                trefferschuhe = true;
+                // Schuhe speichern
+               ArtikelnrSchuhFind = i.getArtikelnummer();
+              if(iterSchuhe.hasNext() && trefferschuhe == false)
+              {
+              // keine passenden Schuhe gefunden und noch weitere Schuhe vorhanden: nichts machen
+              }
+              else{
+              weiter = false;
+              }
             }
         }
-    }
-
-    public void Test() {
-        String preiskategorie = Stdin.readString("Bitte nachname eingeben, nachdem gesucht werden soll:");
-        String geschlecht = Stdin.readString("Bitte vorname eingeben, nachdem gesucht werden soll:");
-        // zum testen der findeoutfitfunktion 
-        boolean treffer = false;
-        Iterator<Kunde> iter = kundenListe.iterator();
-        while (iter.hasNext()) {
-            Kunde i = iter.next();
-            if (i.getName().equalsIgnoreCase(preiskategorie) && i.getVorname().equalsIgnoreCase(geschlecht)) {
-                treffer = true;
+        
+        boolean trefferaccessoires = false;
+        weiter = true;
+        int ArtikelnrAccessoiresFind = 0;
+        
+        Iterator<Artikel> iterAccessoires = artikelListe.iterator();
+        while (weiter) {
+            Artikel i = iterAccessoires.next();
+            // Abfrage, ob alle Bedingungen fuer das Oberteil erfüllt sind
+            if ((i instanceof Accessoires) && i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht) && i.getGröße().equalsIgnoreCase(größe) && i.getStil().equalsIgnoreCase(stil)) {
+                // Alle Bedingungen sind erfuellt, Suche nach Unterteil kann beendet werden
+                trefferaccessoires = true;
+                // Schuhe speichern
+               ArtikelnrAccessoiresFind = i.getArtikelnummer();
+              if(iterAccessoires.hasNext() && trefferaccessoires == false)
+              {
+              // keine passenden Schuhe gefunden und noch weitere Schuhe vorhanden: nichts machen
+              }
+              else{
+              weiter = false;
+              }
             }
         }
-
-        if (!treffer) {
-
-            System.out.println("Es gibt keinen Kunden mit dem Nachnamen " + preiskategorie + geschlecht);
-        } else {
-
-            System.out.println("PUUUUUUUUUUUUPSI");//Hier könnte die speicherung in eine ander arrylist erfolgen...
-        }
-    }
-
-    public void Test2() {
-        String preiskategorie = Stdin.readString("Bitte preiskategorie eingeben, nachdem gesucht werden soll:");
-        String geschlecht = Stdin.readString("Bitte geschlecht eingeben, nachdem gesucht werden soll:");
-        // zum testen der findeoutfitfunktion 
-        boolean treffer = false;
-        Iterator<Artikel> iter = artikelListe.iterator();
-
-        while (iter.hasNext()) {
-            Artikel i = iter.next();
-
-            if (i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht)) {
-                treffer = true;
-            }
-        }
-
-        if (!treffer) {
-
-            System.out.println("Es gibt keinen Artikel mit diesen Angaben " + preiskategorie + geschlecht);
-        } else {
-            Iterator<Artikel> iter2 = artikelListe.iterator();
-            while (iter2.hasNext()) {
-                Artikel i = iter2.next();
-
-                if (i.getPreiskategorie().equalsIgnoreCase(preiskategorie) && i.getGeschlecht().equalsIgnoreCase(geschlecht)) {
-                    System.out.print("Juhu es klapptnit");
-                    Outfit x1 = new Outfit(i.getArtikelnummer());//speichert den Kunden(Kleidungsstück) in die Outfistliste
-                    outfitListe.add(x1);
-
-                    String s = castInt2String(i.getArtikelnummer());
-                    printZentriert(s);
-
-                    String b = castInt2String(x1.getOutfitid());
-                    printZentriert(s);
+        
+       
                     
-                    printLinksbuendig(x1.getGröße());
+        if (!trefferoberteile || !trefferunterteile || !trefferschuhe || !trefferaccessoires) {
+
+            System.out.println("Es gibt kein Outfit mit Deinen Wünschen. \n" + preiskategorie + "\n" + geschlecht + "\n" + größe + "\n" + stil);
+                }
+        else {
+            
+                    System.out.print(" :-P");
+                    
+                    Outfit x1 = new Outfit(ArtikelnrOberteilFind, ArtikelnrUnterteilFind,ArtikelnrSchuhFind, ArtikelnrAccessoiresFind); //legt ein neues Outfit mit den Artiklnummern der teile an
+                    outfitListe.add(x1);
 
                 }
             }
-        }
-
-    }
+    
+   //
 //    private void erstelleNeuenKunden()
 //    {
 //        Kunde k1 = new Kunde("Hans","Becker","0171 9876543");

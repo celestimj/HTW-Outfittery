@@ -12,30 +12,27 @@ package outfittery;
 public class Outfit extends Artikel
 {
     
-    private int artikelnummer;
+    private int artikelnummerOberteil;
+    private int artikelnummerUnterteil; 
+    private int artikelnummerSchuh;
+    private int artikelnummerAccessoires;
     private int outfitid;   
     private static int id_counter = 1000;
     
     
-    public Outfit(Artikel i)//speicherung der artikelnummer
+    public Outfit(int ArtikelnrOberteilFind, int ArtikelnrUnterteilFind, int ArtikelnrSchuhFind, int ArtikelnrAccessoiresFind)//speicherung der artikelnummer
     {
-        this.größe= i.getGröße();//hier muss der ganze Artikel gespeichert werden
+        this.artikelnummerOberteil = ArtikelnrOberteilFind;//Speicherung der Artikelnr Oberteil
+        this.artikelnummerUnterteil= ArtikelnrUnterteilFind;
+        this.artikelnummerSchuh = ArtikelnrSchuhFind;
+        this.artikelnummerAccessoires = ArtikelnrAccessoiresFind;
          this.outfitid = Outfit.id_counter;//hier muss noch angepasst werden das jedes kleidungsstück die gleicheoutfit ID bekommt
         id_counter = id_counter + 1;
         
     }
     
     
-    public void setArtikelnummer(int artikelnummer)
-    {
-        this.artikelnummer = artikelnummer;
-    }
-    public int getArtikelnummer()
-    {
-        return this.artikelnummer;
- 
-    }
-    
+  
     public void setOutfitid(int outfitid)
     {
         this.outfitid = outfitid;
