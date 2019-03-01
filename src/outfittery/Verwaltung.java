@@ -205,6 +205,8 @@ public class Verwaltung implements Serializable {
     }
 
     private void verwaltungsMenue() {
+        
+       
         char eingabe;
         boolean menuewechsel = false;
         do {
@@ -317,6 +319,8 @@ public class Verwaltung implements Serializable {
                 trefferoberteile = true;
                 // Oberteil speichern
                 ArtikelnrOberteilFind = i.getArtikelnummer();
+
+            }
                if (// Wird noch ein nächstes Oberteil gefunden UND es wurde noch kein passendes Oberteil gefunden? 
                        (iterOberteil.hasNext()) && (trefferoberteile == false))
                     {
@@ -325,8 +329,7 @@ public class Verwaltung implements Serializable {
                else{
                    // Suche beenden
                    weiter = false;
-                   }
-            }
+                   }    
         }
         
         // nach passendem Unterteil suchen
@@ -343,6 +346,7 @@ public class Verwaltung implements Serializable {
                 trefferunterteile = true;
                 // Unterteil speichern
                ArtikelnrUnterteilFind = i.getArtikelnummer();
+            }
               if(iterUnterteil.hasNext() && trefferunterteile == false)
               {
               // kein passendes Unterteil gefunden und noch weitere Unterteile vorhanden: nichts machen
@@ -350,7 +354,6 @@ public class Verwaltung implements Serializable {
               else{
               weiter = false;
               }
-            }
         }    
            // nach passenden Schuhen suchen
         boolean trefferschuhe = false;
@@ -366,6 +369,7 @@ public class Verwaltung implements Serializable {
                 trefferschuhe = true;
                 // Schuhe speichern
                ArtikelnrSchuhFind = i.getArtikelnummer();
+            }
               if(iterSchuhe.hasNext() && trefferschuhe == false)
               {
               // keine passenden Schuhe gefunden und noch weitere Schuhe vorhanden: nichts machen
@@ -373,7 +377,6 @@ public class Verwaltung implements Serializable {
               else{
               weiter = false;
               }
-            }
         }
         
         boolean trefferaccessoires = false;
@@ -389,14 +392,14 @@ public class Verwaltung implements Serializable {
                 trefferaccessoires = true;
                 // Schuhe speichern
                ArtikelnrAccessoiresFind = i.getArtikelnummer();
-              if(iterAccessoires.hasNext() && trefferaccessoires == false)
+               }
+            if(iterAccessoires.hasNext() && trefferaccessoires == false)
               {
               // keine passenden Schuhe gefunden und noch weitere Schuhe vorhanden: nichts machen
               }
               else{
               weiter = false;
               }
-            }
         }
         
        

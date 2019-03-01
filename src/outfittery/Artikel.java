@@ -39,11 +39,10 @@ public abstract class Artikel
   public Artikel(double par1, String par2, String par3,int par4, String par5, String par6)
     { 
        this.preis=par1;
-      
-       this.geschlecht=par2;
-       this.stil=par3;
+       this.geschlecht=par3;
+       this.stil=par5;
        this.lagerbestand=par4;
-       this.größe=par5;
+       this.größe=par2;
        this.beschreibung =par6;
        this.artikelnummer = Artikel.artnr_counter;
         artnr_counter = artnr_counter + 1;

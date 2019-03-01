@@ -20,7 +20,7 @@ public class Oberteile extends Artikel
 /**
      
     /**
-     * Konstruktor der Klasse Accesoires mit sechs Parametern
+     * Konstruktor der Klasse Accessoires mit sechs Parametern
      * @param preis Preis, eines Oberteiles
      * @param größe Größe, des Oberteiles  
      * @param geschlecht Geschlecht, welches dieses Oberteil tragen kann
@@ -31,7 +31,14 @@ public class Oberteile extends Artikel
     public Oberteile (double preis,String größe,String geschlecht, int lagerbestand, String stil, String beschreibung)
     {     
             super(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
-    
+        /*
+        double preis = preis;
+        String größe = größe;
+        String geschlecht = geschlecht;
+        int lagerbestand = lagerbestand;
+        String stil = stil;
+        String beschreibung = beschreibung;
+         */
     }
     
 
