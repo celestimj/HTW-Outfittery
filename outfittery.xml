@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_192" class="java.beans.XMLDecoder">
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
  <string>outfittery</string>
  <object class="outfittery.Verwaltung" id="Verwaltung0">
   <void property="kundenListe">
@@ -9,7 +9,7 @@
       <string>Müller</string>
      </void>
      <void property="telefonnummer">
-      <string>0156 09354267</string>
+      <string>015609354267</string>
      </void>
      <void property="vorname">
       <string>Tim</string>
@@ -22,7 +22,7 @@
       <string>Watson</string>
      </void>
      <void property="telefonnummer">
-      <string>0171 2233593</string>
+      <string>01712233593</string>
      </void>
      <void property="vorname">
       <string>Michelle</string>
@@ -35,7 +35,7 @@
       <string>Caron</string>
      </void>
      <void property="telefonnummer">
-      <string>0177 4622273</string>
+      <string>01774622273</string>
      </void>
      <void property="vorname">
       <string>Lena</string>
@@ -48,23 +48,10 @@
       <string>Lentes</string>
      </void>
      <void property="telefonnummer">
-      <string>0160 8874036</string>
+      <string>01608874036</string>
      </void>
      <void property="vorname">
       <string>Eric</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="outfittery.Kunde">
-     <void property="name">
-      <string>Schmitt</string>
-     </void>
-     <void property="telefonnummer">
-      <string>01768543321</string>
-     </void>
-     <void property="vorname">
-      <string>Luna</string>
      </void>
     </object>
    </void>

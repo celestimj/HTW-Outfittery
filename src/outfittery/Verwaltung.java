@@ -147,6 +147,7 @@ public class Verwaltung implements Serializable {
 
             switch (eingabe) {
                 case 'x':
+                    WilleZurSpeicherung();
                     System.out.println("Vielen Dank für die Nutzung des Outfittery-Portal. Das Programm wird beendet.");
                     beenden();
                 case '1':
@@ -178,11 +179,12 @@ public class Verwaltung implements Serializable {
             System.out.println("[3] Zeige alle Schuhe an ");
             System.out.println("[4] Zeige alle Accessoires an ");
              System.out.println("[5] Einbuchung von neuem Kleidungstück ");
+             System.out.println("[6] Outfitliste ");
             System.out.println("[0] HAUPTMENUE");
 
             printAuswahlTreffen();
             eingabe = Stdin.readlnChar();
-
+            
             switch (eingabe) {
                 case '0':
                     menuewechsel = true;
@@ -202,9 +204,14 @@ public class Verwaltung implements Serializable {
                     case '5':
                     erstelleNeuenArtikel();
                     break;
+                     case '6':
+                    printOutfitliste();
+                    break;
                 default:
                     printEingabeFehler();
             }
+            
+            
         } while (!menuewechsel);
     }
     
@@ -213,20 +220,23 @@ public class Verwaltung implements Serializable {
           
     
         
-        String artikelart = Stdin.readlnString("Artikelart: oberteil, unterteil, schuhe oder accessores eingeben");
+        String artikelart = Stdin.readlnString("Artikelart: oberteil, unterteil, schuhe oder accessoires eingeben:");
         
         //Kontrolle der Eingabe
         if(artikelart.equals("oberteil")||artikelart.equals("unterteil")||artikelart.equals("schuhe")||artikelart.equals("accessoires")){
         
-        String price = Stdin.readlnString("Bitte geben Sie den Preis des Kleidungstücks ein");
+        String price = Stdin.readlnString("Bitte geben Sie den Preis des Kleidungstücks ein:");
         String größe = Stdin.readlnString("Bitte geben Sie die Größe des Kleidungsstücks ein:");
-        String geschlecht = Stdin.readlnString("Bitte geben Sie das geschlecht für das Kleidungsstücks ein");
-        String lagerbestandd = Stdin.readlnString("Bitte geben Sie den Lagerbestand des Kleidungsstücks ein");
+        String geschlecht = Stdin.readlnString("Bitte geben Sie das Geschlecht für das Kleidungsstücks ein:");
+        String lagerbestandd = Stdin.readlnString("Bitte geben Sie den Lagerbestand des Kleidungsstücks ein:");
         String stil = Stdin.readlnString("Bitte geben Sie den Stil des Kleidungsstücks ein:");
         String beschreibung = Stdin.readlnString("Bitte geben Sie die Beschreibung des Kleidungstücks ein:");
+        String bestätigung = Stdin.readlnString("Wollen sie ihre Eingaben Verwerfen? (J/N):");
+        if(bestätigung.equals("N")||bestätigung.equals("Nein")||bestätigung.equals("n")||bestätigung.equals("nein")){//hiermit können fehlerhafte eingaben abgebrochen werden
+        
         
       //in dieser if bedingung könnten auch alle anderen eingaben reglementiert werden
-       if(price.matches("[0-9.]+")&&lagerbestandd.matches("[0-9]+")){//damit das Programm nicht abstürtzt wenn der String 
+       if(price.matches("[0-9.]+")&&lagerbestandd.matches("[0-9]+")){//damit das Programm nicht abstürtzt wenn der String nicht doubel oder int compatibel ist
       
            double preis = Double.parseDouble(price);// macht aus einem Sting price einen Double preis für Konstruktor
            int lagerbestand = Integer.parseInt(lagerbestandd);//String lagerbestandd digitiert zuuuu Integer Lagerbestandunpassende werte für int oder double umwandlung enthält
@@ -237,23 +247,26 @@ public class Verwaltung implements Serializable {
         Oberteile o5 = new Oberteile(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
         artikelListe.add(o5);
         System.out.println("Oberteile wurden zur Artikelliste Hinzugefügt");
-        
+         WilleZurSpeicherung();
         
         }
         if(artikelart.equals("unterteil")){
             Unterteile u5 = new Unterteile(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
         artikelListe.add(u5);
         System.out.println("Unterteile wurden zur Artikelliste Hinzugefügt");
+        WilleZurSpeicherung();
         }
         if(artikelart.equals("schuhe")){
             Schuhe s7 = new Schuhe(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
         artikelListe.add(s7);
         System.out.println("Schuhe wurden zur Artikelliste Hinzugefügt");
+        WilleZurSpeicherung();
         }
         if(artikelart.equals("accessoires")){
             Accessoires a5 = new Accessoires(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
         artikelListe.add(a5);
         System.out.println("Accessoires wurden zur Artikelliste Hinzugefügt");
+        WilleZurSpeicherung();
         }
         }
        else{
@@ -261,13 +274,41 @@ public class Verwaltung implements Serializable {
             System.out.println("Die Eingaben des Preises oder des Lagerbestandes sind ungültig");
             System.out.println("Kommas müssen als . Geschreiben werden und es sind nur Zahlen gültig");
         }
+        }      
         }
         else{
         System.out.println("Ungültige Eingabe der Artikelart");// wenn die Artikelart eingabe ungültig ist
         }
+        } 
+         
+    
+    private void WilleZurSpeicherung(){
+        String speicher = Stdin.readlnString("Wollen sie ihre Eingaben Für immer und ewig in der Xml Speicher? (J/N):");
+        if(speicher.equals("J")||speicher.equals("Ja")||speicher.equals("j")){//hiermit können fehlerhafte eingaben abgebrochen werden
         
+        save();
+        System.out.println("Ihre änderungen am Warenbestand wurden Gespeichert");
+        }
+        else{
+        System.out.println("dann halt nit");
+        }
+        }
+    
+    private void printOutfitliste(){
         
-                
+       Iterator<Outfit> iter = outfitListe.iterator();
+        while (iter.hasNext()) {
+            Outfit i = iter.next();
+
+            String s = castInt2String(i.getArtikelnummer());
+                    printZentriert(s);
+
+                    String b = castInt2String(i.getOutfitid());
+                    printZentriert(s);
+
+                    
+        }
+                  
     }
 
     private void verwaltungsMenue() {
@@ -364,9 +405,9 @@ public class Verwaltung implements Serializable {
     }
 
     private void findeOutfits() {
-        String preiskategorie = Stdin.readString("Bitte Preiskategorie eingeben, nachdem gesucht werden soll:");
+        String preiskategorie = Stdin.readString("Bitte Preiskategorie eingeben, nachder gesucht werden soll:");
         String geschlecht = Stdin.readString("Bitte Geschlecht eingeben, nachdem gesucht werden soll:");
-        String größe = Stdin.readString("Bitte Größe eingeben, nachdem gesucht werden soll:");
+        String größe = Stdin.readString("Bitte Größe eingeben, nachder gesucht werden soll:");
         String stil = Stdin.readString("Bitte Stil eingeben, nachdem gesucht werden soll:");
                 
         // nach passendem Oberteil suchen
