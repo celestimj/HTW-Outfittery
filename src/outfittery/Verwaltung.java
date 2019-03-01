@@ -26,14 +26,14 @@ public class Verwaltung implements Serializable {
      */
     public Verwaltung() {
         testListe = new ArrayList<>();//für Test2
-        outfitListe = new ArrayList<>();//Hier können die Kleidungstücke Gespeichert werden von Outfitsuche
+        outfitListe = new ArrayList<>();//Hier können die Kleidungstücke gespeichert werden von Outfitsuche
 
-        kundenListe = new ArrayList<>();
-        artikelListe = new ArrayList<>();
+        kundenListe = new ArrayList<>(); // hier sind die KUnden abgespeichert
+        artikelListe = new ArrayList<>(); // hier sind alle vorhandenen Artikel gespeichert
     }
 
     public void initData() {
-
+        // die vorhandenen Kunden, Ober-, Unterteile, Schuhe und Accessoires wurden hier angelegt
         Kunde k1 = new Kunde("Tim", "Müller", "015609354267");
         Kunde k2 = new Kunde("Michelle", "Watson", "01712233593");
         Kunde k3 = new Kunde("Lena", "Caron", "01774622273");
@@ -83,6 +83,7 @@ public class Verwaltung implements Serializable {
         artikelListe.add(a2);
         artikelListe.add(a3);
         artikelListe.add(a4);
+        artikelListe.add(a5);
     }
 
     private void saveDataToXML() throws IOException {
@@ -93,6 +94,7 @@ public class Verwaltung implements Serializable {
     }
 
     public Object loadDataFromXML() throws IOException {
+        //Methode um Daten von XML zu laden
         XMLDecoder o = new XMLDecoder(new FileInputStream("outfittery.xml"));
         o.readObject();
         Object obj = o.readObject();
@@ -102,6 +104,7 @@ public class Verwaltung implements Serializable {
 
     private void save() {
         try {
+           //speichert die Daten ab
             saveDataToXML();
         } catch (java.io.IOException ioe) {
             ioe.printStackTrace();
@@ -110,6 +113,7 @@ public class Verwaltung implements Serializable {
 
     private void load() {
         try {
+           //ladet die vorhandenen Daten  
             Verwaltung v = (Verwaltung) loadDataFromXML();
             // hier starten wir ein neues Programm (eine neue Instanz der Klasse Verwaltung, der wir auch die Kontrolle übergeben), damit wir an die geladenen Daten kommen
             v.mainMenue();
@@ -119,6 +123,7 @@ public class Verwaltung implements Serializable {
     }
 
     private void beenden() {
+        //beendet die Menues
         System.exit(0);
     }
 
@@ -132,7 +137,7 @@ public class Verwaltung implements Serializable {
 
     private void mainMenue() {
         char eingabe;
-
+       //Startmenue, in dem man den weiteren Pfad wählen kann
         do {
             System.out.println("WELCOME BY OUTFITTERY");
             System.out.println("------------------------------------------------------------");
@@ -150,24 +155,25 @@ public class Verwaltung implements Serializable {
                     System.out.println("Vielen Dank für die Nutzung des Outfittery-Portal. Das Programm wird beendet.");
                     beenden();
                 case '1':
-                    warenBestand();
+                    warenBestand();  // bei Wahl Aufruf des Menues Warenbestandes
                     break;
                 case '2':
-                    kundenMenue();
+                    kundenMenue();  // bei Wahl Aufruf des Kundenmenues
                     break;
                 case '3':
-                    verwaltungsMenue();
+                    verwaltungsMenue();   // bei Wahl Aufruf des Verwaltungsmenues
                     break;
                 case '4':
-                    outfitSuche();
+                    outfitSuche();  // bei Wahl Aufruf des Menues um die Outfitsuche zu starten
                     break;
                 default:
-                    printEingabeFehler();
+                    printEingabeFehler(); //wenn keine der möglichen Eingaben getroffen, ausprinten dass die Eingabe nicht korrekt
             }
         } while (true);
     }
 
     private void warenBestand() {
+         //Menue des Warenbestandes
         char eingabe;
         boolean menuewechsel = false;
         do {
@@ -188,19 +194,19 @@ public class Verwaltung implements Serializable {
                     menuewechsel = true;
                     break;
                 case '1':
-                    showOberteileListe();
+                    showOberteileListe();  // bei Wahl Aufruf der Oberteilliste
                     break;
                 case '2':
-                    showUnterteileListe();
+                    showUnterteileListe(); // bei Wahl Aufruf der Unterteilliste
                     break;
                 case '3':
-                    showSchuheListe();
+                    showSchuheListe(); // bei Wahl Aufruf der Schuhliste
                     break;
                 case '4':
-                    showAccessoiresListe();
+                    showAccessoiresListe(); // bei Wahl Aufruf der Accessoiresliste
                     break;
                     case '5':
-                    erstelleNeuenArtikel();
+                    erstelleNeuenArtikel(); // bei Wahl Erstellen eines neuen Artikels
                     break;
                 default:
                     printEingabeFehler();
@@ -272,7 +278,7 @@ public class Verwaltung implements Serializable {
 
     private void verwaltungsMenue() {
         
-       
+       //Verwaltungsmenue um Daten zu laden und speichern in XML
         char eingabe;
         boolean menuewechsel = false;
         do {
