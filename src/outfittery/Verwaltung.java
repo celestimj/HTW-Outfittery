@@ -47,7 +47,7 @@ public class Verwaltung implements Serializable {
         Oberteile o2 = new Oberteile(15.99, "M",  "männlich", 155, "freizeit", "Blauer Pullover mit V-Ausschnitt");  // Kombi business L weiblich möglich zum Testen
         Oberteile o3 = new Oberteile(20.99, "S", "unisex", 145, "freizeit", "Roter Kapuzenpullover");
         Oberteile o4 = new Oberteile(29.99, "L",  "weiblich", 305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste");
-
+        Oberteile o5 = new Oberteile(29.99, "XL",  "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
         artikelListe.add(o1);
         artikelListe.add(o2);
         artikelListe.add(o3);
@@ -64,7 +64,7 @@ public class Verwaltung implements Serializable {
         artikelListe.add(u4);
 
         Schuhe s1 = new Schuhe(18.99, "S", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
-        Schuhe s2 = new Schuhe(79.99, "L", "weiblich", 125, "business", "schwarze Lackschuhe mit Schnürsenkel aus Echtleder");
+        Schuhe s2 = new Schuhe(29.99, "L", "weiblich", 125, "business", "schwarze Lackschuhe mit Schnürsenkel aus Echtleder");
         Schuhe s3 = new Schuhe(12.99, "M", "unisex", 240, "freizeit", "schwarze Flip-Flops");
         Schuhe s4 = new Schuhe(59.99, "S", "unisex", 255, "sportlich", "bordeaux farbende Nikeschuhe");
 
@@ -78,7 +78,7 @@ public class Verwaltung implements Serializable {
         Accessoires a2 = new Accessoires(17.99, "S", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
         Accessoires a3 = new Accessoires(35, "M", "weiblich", 54, "freizeit", "grau Schal");
         Accessoires a4 = new Accessoires(20, "L", "männlich", 38, "freizeit", "Wollmütze");
-
+        Accessoires a5 = new Accessoires(20, "L", "weiblich", 38, "business", "Schlangenleder Tasche");
         artikelListe.add(a1);
         artikelListe.add(a2);
         artikelListe.add(a3);
@@ -177,6 +177,7 @@ public class Verwaltung implements Serializable {
             System.out.println("[2] Zeige alle Unterteile an ");
             System.out.println("[3] Zeige alle Schuhe an ");
             System.out.println("[4] Zeige alle Accessoires an ");
+             System.out.println("[5] Einbuchung von neuem Kleidungstück ");
             System.out.println("[0] HAUPTMENUE");
 
             printAuswahlTreffen();
@@ -198,10 +199,75 @@ public class Verwaltung implements Serializable {
                 case '4':
                     showAccessoiresListe();
                     break;
+                    case '5':
+                    erstelleNeuenArtikel();
+                    break;
                 default:
                     printEingabeFehler();
             }
         } while (!menuewechsel);
+    }
+    
+    //Neue Artikel können in das System eingespeichert werden
+    private void erstelleNeuenArtikel()                  {
+          
+    
+        
+        String artikelart = Stdin.readlnString("Artikelart: oberteil, unterteil, schuhe oder accessores eingeben");
+        
+        //Kontrolle der Eingabe
+        if(artikelart.equals("oberteil")||artikelart.equals("unterteil")||artikelart.equals("schuhe")||artikelart.equals("accessoires")){
+        
+        String price = Stdin.readlnString("Bitte geben Sie den Preis des Kleidungstücks ein");
+        String größe = Stdin.readlnString("Bitte geben Sie die Größe des Kleidungsstücks ein:");
+        String geschlecht = Stdin.readlnString("Bitte geben Sie das geschlecht für das Kleidungsstücks ein");
+        String lagerbestandd = Stdin.readlnString("Bitte geben Sie den Lagerbestand des Kleidungsstücks ein");
+        String stil = Stdin.readlnString("Bitte geben Sie den Stil des Kleidungsstücks ein:");
+        String beschreibung = Stdin.readlnString("Bitte geben Sie die Beschreibung des Kleidungstücks ein:");
+        
+      //in dieser if bedingung könnten auch alle anderen eingaben reglementiert werden
+       if(price.matches("[0-9.]+")&&lagerbestandd.matches("[0-9]+")){//damit das Programm nicht abstürtzt wenn der String 
+      
+           double preis = Double.parseDouble(price);// macht aus einem Sting price einen Double preis für Konstruktor
+           int lagerbestand = Integer.parseInt(lagerbestandd);//String lagerbestandd digitiert zuuuu Integer Lagerbestandunpassende werte für int oder double umwandlung enthält
+       
+       //Speichert Kleidungsstück als entsprechendes ab (Oberteil;Unterteil;Schuhe;Assoires)
+        if(artikelart.equals("oberteil")){
+        
+        Oberteile o5 = new Oberteile(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
+        artikelListe.add(o5);
+        System.out.println("Oberteile wurden zur Artikelliste Hinzugefügt");
+        
+        
+        }
+        if(artikelart.equals("unterteil")){
+            Unterteile u5 = new Unterteile(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
+        artikelListe.add(u5);
+        System.out.println("Unterteile wurden zur Artikelliste Hinzugefügt");
+        }
+        if(artikelart.equals("schuhe")){
+            Schuhe s7 = new Schuhe(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
+        artikelListe.add(s7);
+        System.out.println("Schuhe wurden zur Artikelliste Hinzugefügt");
+        }
+        if(artikelart.equals("accessoires")){
+            Accessoires a5 = new Accessoires(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
+        artikelListe.add(a5);
+        System.out.println("Accessoires wurden zur Artikelliste Hinzugefügt");
+        }
+        }
+       else{
+            
+            System.out.println("Die Eingaben des Preises oder des Lagerbestandes sind ungültig");
+            System.out.println("Kommas müssen als . Geschreiben werden und es sind nur Zahlen gültig");
+        }
+        }
+        else{
+        System.out.println("Ungültige Eingabe der Artikelart");// wenn die Artikelart eingabe ungültig ist
+        }
+        
+        
+                
     }
 
     private void verwaltungsMenue() {
@@ -417,7 +483,15 @@ public class Verwaltung implements Serializable {
 
                 }
             }
+    //Anzeige der outfits durch ouslesen der artikelnummern aus outfitliste
     
+    private void ZeigeOutfitKleider(){
+    
+    
+    
+    
+    
+    }
    //
 //    private void erstelleNeuenKunden()
 //    {
@@ -698,6 +772,7 @@ public class Verwaltung implements Serializable {
         // hier nutzen wir die Format-Anweisung der Klasse String um die Nachkommastellen zu bestimmen etc.
         return String.format("%,8.2f", meinDouble);
     }
+    
 
     private void printLF() {
         System.out.println();
