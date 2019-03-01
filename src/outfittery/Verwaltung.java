@@ -224,8 +224,9 @@ public class Verwaltung implements Serializable {
         String lagerbestandd = Stdin.readlnString("Bitte geben Sie den Lagerbestand des Kleidungsstücks ein");
         String stil = Stdin.readlnString("Bitte geben Sie den Stil des Kleidungsstücks ein:");
         String beschreibung = Stdin.readlnString("Bitte geben Sie die Beschreibung des Kleidungstücks ein:");
-      
-       if(price.matches("[0-10000]+.")&&lagerbestandd.matches("0-3000")){//damit das Programm nicht abstürtzt wenn der String 
+        
+      //in dieser if bedingung könnten auch alle anderen eingaben reglementiert werden
+       if(price.matches("[0-9.]+")&&lagerbestandd.matches("[0-9]+")){//damit das Programm nicht abstürtzt wenn der String 
       
            double preis = Double.parseDouble(price);// macht aus einem Sting price einen Double preis für Konstruktor
            int lagerbestand = Integer.parseInt(lagerbestandd);//String lagerbestandd digitiert zuuuu Integer Lagerbestandunpassende werte für int oder double umwandlung enthält
@@ -235,30 +236,30 @@ public class Verwaltung implements Serializable {
         
         Oberteile o5 = new Oberteile(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
         artikelListe.add(o5);
-        System.out.print("Oberteile wurden zur Artikelliste Hinzugefügt");
+        System.out.println("Oberteile wurden zur Artikelliste Hinzugefügt");
         
         
         }
         if(artikelart.equals("unterteil")){
             Unterteile u5 = new Unterteile(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
         artikelListe.add(u5);
-        System.out.print("Unterteile wurden zur Artikelliste Hinzugefügt");
+        System.out.println("Unterteile wurden zur Artikelliste Hinzugefügt");
         }
         if(artikelart.equals("schuhe")){
             Schuhe s7 = new Schuhe(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
         artikelListe.add(s7);
-        System.out.print("Schuhe wurden zur Artikelliste Hinzugefügt");
+        System.out.println("Schuhe wurden zur Artikelliste Hinzugefügt");
         }
         if(artikelart.equals("accessoires")){
             Accessoires a5 = new Accessoires(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
         artikelListe.add(a5);
-        System.out.print("Accessoires wurden zur Artikelliste Hinzugefügt");
+        System.out.println("Accessoires wurden zur Artikelliste Hinzugefügt");
         }
         }
        else{
             
             System.out.println("Die Eingaben des Preises oder des Lagerbestandes sind ungültig");
-            System.out.println("Kommas müssen als . Geschreiben werden und es sind nur Zahlen bis 3000 gültig");
+            System.out.println("Kommas müssen als . Geschreiben werden und es sind nur Zahlen gültig");
         }
         }
         else{
