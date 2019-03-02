@@ -30,20 +30,20 @@ public abstract class Artikel
   }
   /** 
    *@param par1 ist der Preis
-   * @param par2 ist das Geschlecht
-   * @param par3 ist der Stil
-   * @param par4 ist die Lagerbestand
-   * @param par5 ist die Größe des Kleidungsstücks
+   * @param par2 ist die Größe
+   * @param par3 ist das Geschlecht
+   * @param par4 ist der Lagerbestand
+   * @param par5 ist der Stil des Kleidungsstücks
    * @param par6 ist die Beschreibung
    */
-  public Artikel(double par1, String par2, String par3,int par4, String par5, String par6)
+  public Artikel(double preis, String größe, String geschlecht,int lagerbestand, String stil, String beschreibung)
     { 
-       this.preis=par1;
-       this.geschlecht=par3;
-       this.stil=par5;
-       this.lagerbestand=par4;
-       this.größe=par2;
-       this.beschreibung =par6;
+       this.preis=preis;
+       this.größe=größe;
+       this.geschlecht=geschlecht;
+       this.lagerbestand=lagerbestand;
+       this.stil=stil;  
+       this.beschreibung =beschreibung;
        this.artikelnummer = Artikel.artnr_counter;
         artnr_counter = artnr_counter + 1;
     }

@@ -20,7 +20,7 @@ public class Unterteile extends Artikel
 
    
     /**
-     * Konstruktor der Klasse Accesoires mit sechs Parametern
+     * Konstruktor der Klasse Unterteile mit sechs Parametern
      * @param preis Preis, eines Oberteiles
      * @param größe Größe, des Oberteiles
      * @param geschlecht Geschlecht, welches dieses Oberteil tragen kann

@@ -14,18 +14,17 @@ import de.htw.saarland.stl.Stdin;           // fuer Eingaben von der Konsole
  */
 public class Verwaltung implements Serializable {
 
-    private ArrayList<Outfit> outfitListe;
-    private ArrayList<Kunde> testListe;//für Test2 
-
-    private ArrayList<Kunde> kundenListe;
-    private ArrayList<Artikel> artikelListe;
+    private ArrayList<Outfit> outfitListe; //Liste für gefundene Outfits
+  
+    private ArrayList<Kunde> kundenListe; //Kundenliste
+    private ArrayList<Artikel> artikelListe;  //liste mit allen Artikeln
     final static int FELDLAENGE = 14;
 
     /**
      * Constructor for objects of class Verwaltung
      */
     public Verwaltung() {
-        testListe = new ArrayList<>();//für Test2
+        
         outfitListe = new ArrayList<>();//Hier können die Kleidungstücke gespeichert werden von Outfitsuche
 
         kundenListe = new ArrayList<>(); // hier sind die KUnden abgespeichert
@@ -52,11 +51,12 @@ public class Verwaltung implements Serializable {
         artikelListe.add(o2);
         artikelListe.add(o3);
         artikelListe.add(o4);
+        artikelListe.add(o5);
 
         Unterteile u1 = new Unterteile(24.99, "L", "weiblich", 125, "business", "Beige Chinohose");
         Unterteile u2 = new Unterteile(35, "S", "weiblich", 230, "freizeit", "blaue Skinnyjeans ");
         Unterteile u3 = new Unterteile(80, "M", "männlich", 220, "business", "schwarze Anzugshose");
-        Unterteile u4 = new Unterteile(15.99, "M", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
+        Unterteile u4 = new Unterteile(15.99, "S", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
 
         artikelListe.add(u1);
         artikelListe.add(u2);
@@ -65,7 +65,7 @@ public class Verwaltung implements Serializable {
 
         Schuhe s1 = new Schuhe(18.99, "S", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
         Schuhe s2 = new Schuhe(29.99, "L", "weiblich", 125, "business", "schwarze Lackschuhe mit Schnürsenkel aus Echtleder");
-        Schuhe s3 = new Schuhe(12.99, "M", "unisex", 240, "freizeit", "schwarze Flip-Flops");
+        Schuhe s3 = new Schuhe(12.99, "S", "unisex", 240, "freizeit", "schwarze Flip-Flops");
         Schuhe s4 = new Schuhe(59.99, "S", "unisex", 255, "sportlich", "bordeaux farbende Nikeschuhe");
 
         artikelListe.add(s1);
@@ -76,7 +76,7 @@ public class Verwaltung implements Serializable {
 
         Accessoires a1 = new Accessoires(25, "S", "männlich", 75, "business", "bordeaux farbende Krawatte ");
         Accessoires a2 = new Accessoires(17.99, "S", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
-        Accessoires a3 = new Accessoires(35, "M", "weiblich", 54, "freizeit", "grau Schal");
+        Accessoires a3 = new Accessoires(35, "S", "unisex", 54, "freizeit", "grau Schal");
         Accessoires a4 = new Accessoires(20, "L", "männlich", 38, "freizeit", "Wollmütze");
         Accessoires a5 = new Accessoires(20, "L", "weiblich", 38, "business", "Schlangenleder Tasche");
         artikelListe.add(a1);
@@ -151,7 +151,7 @@ public class Verwaltung implements Serializable {
             eingabe = Stdin.readlnChar();
 
             switch (eingabe) {
-                case 'x':
+                case 'x':                     //Pfad zur Beendung des Outfittery Portals
                     WilleZurSpeicherung();
                     System.out.println("Vielen Dank für die Nutzung des Outfittery-Portal. Das Programm wird beendet.");
                     beenden();
@@ -211,10 +211,10 @@ public class Verwaltung implements Serializable {
                     erstelleNeuenArtikel(); // bei Wahl Erstellen eines neuen Artikels
                     break;
                      case '6':
-                    printOutfitliste();
+                    printOutfitliste();  //bei Wahl Aufruf der Outfitliste
                     break;
                 default:
-                    printEingabeFehler();
+                    printEingabeFehler(); //wenn keine der möglichen Eingaben getroffen, ausprinten dass die Eingabe nicht korrekt
             }
             
             
@@ -250,27 +250,27 @@ public class Verwaltung implements Serializable {
        //Speichert Kleidungsstück als entsprechendes ab (Oberteil;Unterteil;Schuhe;Assoires)
         if(artikelart.equals("oberteil")){
         
-        Oberteile o5 = new Oberteile(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
-        artikelListe.add(o5);
+        Oberteile o5 = new Oberteile(preis,größe,geschlecht,lagerbestand,stil,beschreibung);  //für den Fall, dass Oberteil
+        artikelListe.add(o5); //hinzufügen zur Artikelliste
         System.out.println("Oberteile wurden zur Artikelliste Hinzugefügt");
          WilleZurSpeicherung();
         
         }
         if(artikelart.equals("unterteil")){
-            Unterteile u5 = new Unterteile(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
-        artikelListe.add(u5);
+            Unterteile u5 = new Unterteile(preis,größe,geschlecht,lagerbestand,stil,beschreibung); //für den Fall, dass Unterteil
+        artikelListe.add(u5);    //hinzufügen zur Artikelliste
         System.out.println("Unterteile wurden zur Artikelliste Hinzugefügt");
         WilleZurSpeicherung();
         }
         if(artikelart.equals("schuhe")){
-            Schuhe s7 = new Schuhe(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
-        artikelListe.add(s7);
+            Schuhe s7 = new Schuhe(preis,größe,geschlecht,lagerbestand,stil,beschreibung);  //für den Fall, dass Schuhe
+        artikelListe.add(s7);  //hinzufügen zur Artikelliste
         System.out.println("Schuhe wurden zur Artikelliste Hinzugefügt");
         WilleZurSpeicherung();
         }
         if(artikelart.equals("accessoires")){
-            Accessoires a5 = new Accessoires(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
-        artikelListe.add(a5);
+            Accessoires a5 = new Accessoires(preis,größe,geschlecht,lagerbestand,stil,beschreibung);  //für den Fall, dass Accessoires
+        artikelListe.add(a5);  //hinzufügen zur Artikelliste
         System.out.println("Accessoires wurden zur Artikelliste Hinzugefügt");
         WilleZurSpeicherung();
         }
@@ -293,15 +293,15 @@ public class Verwaltung implements Serializable {
         if(speicher.equals("J")||speicher.equals("Ja")||speicher.equals("j")){//hiermit können fehlerhafte eingaben abgebrochen werden
         
         save();
-        System.out.println("Ihre änderungen am Warenbestand wurden Gespeichert");
+        System.out.println("Ihre Änderungen am Warenbestand wurden gespeichert");
         }
         else{
-        System.out.println("dann halt nit");
+        System.out.println("dann halt nit");  
         }
         }
     
     private void printOutfitliste(){
-        
+        //Methode um Outfitliste anzuzeigen
        Iterator<Outfit> iter = outfitListe.iterator();
         while (iter.hasNext()) {
             Outfit i = iter.next();
@@ -314,7 +314,8 @@ public class Verwaltung implements Serializable {
 
                     
         }
-                  
+     
+        
     }
 
     private void verwaltungsMenue() {
@@ -334,21 +335,22 @@ public class Verwaltung implements Serializable {
 
             switch (eingabe) {
                 case '0':
-                    menuewechsel = true;
+                    menuewechsel = true;  //Pfad zurück zum Hauptmenue
                     break;
                 case '1':
-                    load();
+                    load();   //Pfad um die XML Daten zu laden
                     break;
                 case '2':
-                    save();
+                    save();  //Pfad um Daten in die XML Datei zu speichern
                     break;
                 default:
-                    printEingabeFehler();
+                    printEingabeFehler(); //wenn keine der möglichen Eingaben getroffen, ausprinten dass die Eingabe nicht korrekt
             }
         } while (!menuewechsel);
     }
 
     private void kundenMenue() {
+        //Kundenmenue zur Verwaltung der neuen und angelegten Kunden
         char eingabe;
         boolean menuewechsel = false;
         do {
@@ -364,19 +366,19 @@ public class Verwaltung implements Serializable {
 
             switch (eingabe) {
                 case '0':
-                    menuewechsel = true;
+                    menuewechsel = true;  //Pfad zurück zum Hauptmenue
                     break;
                 case '1':
-                    showKundenListe();
+                    showKundenListe();  //ruft die Kundenliste auf
                     break;
                 case '2':
-                    sucheKundeNachNachname();
+                    sucheKundeNachNachname();  //sucht, ob ein Kunde mit bestimmten Nachnamen vorhanden
                     break;
                 case '3':
-                    erstelleNeuenKunden();
+                    erstelleNeuenKunden();  //Möglichkeit neuen Kunden zu erstellen
                     break;
                 default:
-                    printEingabeFehler();
+                    printEingabeFehler(); //wenn keine der möglichen Eingaben getroffen, ausprinten dass die Eingabe nicht korrekt
             }
         } while (!menuewechsel);
     }
@@ -404,7 +406,7 @@ public class Verwaltung implements Serializable {
                   break;
                   
                 default:
-                    printEingabeFehler();
+                    printEingabeFehler(); //wenn keine der möglichen Eingaben getroffen, ausprinten dass die Eingabe nicht korrekt
             }
         } while (!menuewechsel);
 
@@ -415,7 +417,7 @@ public class Verwaltung implements Serializable {
         String geschlecht = Stdin.readString("Bitte Geschlecht eingeben, nachdem gesucht werden soll:");
         String größe = Stdin.readString("Bitte Größe eingeben, nachder gesucht werden soll:");
         String stil = Stdin.readString("Bitte Stil eingeben, nachdem gesucht werden soll:");
-                
+       for(int durchlauf=0; durchlauf<2 ; durchlauf++){         
         // nach passendem Oberteil suchen
         boolean trefferoberteile = false;
         boolean weiter = true;
@@ -514,12 +516,12 @@ public class Verwaltung implements Serializable {
               weiter = false;
               }
         }
-        
+    
        
                     
         if (!trefferoberteile || !trefferunterteile || !trefferschuhe || !trefferaccessoires) {
 
-            System.out.println("Es gibt kein Outfit mit Deinen Wünschen. \n" + preiskategorie + "\n" + geschlecht + "\n" + größe + "\n" + stil);
+            System.out.println("Es gibt leider kein Outfit mit Deinen Wünschen. \n" + preiskategorie + "\n" + geschlecht + "\n" + größe + "\n" + stil);
                 }
         else {
             
@@ -530,40 +532,28 @@ public class Verwaltung implements Serializable {
 
                 }
             }
-    //Anzeige der outfits durch ouslesen der artikelnummern aus outfitliste
-    
-    private void ZeigeOutfitKleider(){
-    
-    
-    
-    
-    
     }
-   //
-//    private void erstelleNeuenKunden()
-//    {
-//        Kunde k1 = new Kunde("Hans","Becker","0171 9876543");
-//        Kunde k2 = new Kunde("Olaf","Lohrer","0171 1234567");
-//        kundenListe.add(k1);
-//        kundenListe.add(k2);
-//    }
+    
+  
 
+    
     private void erstelleNeuenKunden() {
+        //Methode um neuen KUnden zu erstellen
         String nachname = Stdin.readlnString("Bitte geben Sie den Nachnamen des Kunden ein:");
         String vorname = Stdin.readlnString("Bitte geben Sie den Vornamen des Kunden ein:");
-
+        //Eingabe des Nachnamen, Vornamens und Telefonnummer
         String telefonnummer;
         do {
             telefonnummer = Stdin.readlnString("Bitte geben Sie eine Telefonnummer des Kunden ein (nur Zahlenwerte ohne Leerzeichen sind erlaubt!):");
         } while (!telefonnummer.matches("[0-9]+"));
 
         Kunde k1 = new Kunde(vorname, nachname, telefonnummer);
-        kundenListe.add(k1);
+        kundenListe.add(k1); //Speicherung des Kunden in der Kundenliste
     }
 
     private void showKundenListe() {
         String s;
-
+    // ruft die Kundenliste auf
         printZentriert("Kundennummer");
         printZentriert("Vorname");
         printZentriert("Name");
@@ -575,7 +565,7 @@ public class Verwaltung implements Serializable {
         while (iter.hasNext()) {
             Kunde i = iter.next();
 
-            s = castInt2String(i.getKundennummer());
+            s = castInt2String(i.getKundennummer());  //ruft die gewünschten Attribute zu jedem Kunden auf
             printZentriert(s);
 
             printLinksbuendig(i.getVorname());
@@ -591,7 +581,7 @@ public class Verwaltung implements Serializable {
 
     private void showOberteileListe() {
         String s;
-
+     //ruft die Oberteilliste auf
         printZentriert("Artikelnummer");
         printZentriert("Stil");
         printZentriert("Größe");
@@ -606,7 +596,7 @@ public class Verwaltung implements Serializable {
         Iterator<Artikel> iter = artikelListe.iterator();
         while (iter.hasNext()) {
             Artikel i = iter.next();
-         
+           //ruft anschließend alle Attribute des jeweiligen Oberteils auf
             if (i instanceof Oberteile)
             { s = castInt2String(i.getArtikelnummer());
             printZentriert(s);
@@ -634,7 +624,7 @@ public class Verwaltung implements Serializable {
 
     private void showUnterteileListe() {
         String s;
-
+     //ruft die Unterteilliste auf
         printZentriert("Artikelnummer");
         printZentriert("Stil");
         printZentriert("Größe");
@@ -644,7 +634,7 @@ public class Verwaltung implements Serializable {
         printZentriert("Lagerbestand");
         printLF();
         printLinieLF(10); // Trennlinie für 6 Felder anzeigen
-
+      //ruft anschließend alle Attribute des jeweiligen Unterteils auf
         Iterator<Artikel> iter = artikelListe.iterator();
         while (iter.hasNext()) {
             Artikel i = iter.next();
@@ -677,7 +667,7 @@ public class Verwaltung implements Serializable {
 
     private void showSchuheListe() {
         String s;
-
+      //ruft die Schuhliste auf
         printZentriert("Artikelnummer");
         printZentriert("Stil");
         printZentriert("Größe");
@@ -687,7 +677,7 @@ public class Verwaltung implements Serializable {
         printZentriert("Lagerbestand");
         printLF();
         printLinieLF(10); // Trennlinie für 6 Felder anzeigen
-
+     // ruft anschließend alle Attribute der jeweiligen Schuhe auf
         Iterator<Artikel> iter = artikelListe.iterator();
         while (iter.hasNext()) {
             Artikel i = iter.next();
@@ -721,7 +711,7 @@ public class Verwaltung implements Serializable {
 
     private void showAccessoiresListe() {
         String s;
-
+      //ruft die Accessoiresliste auf
         printZentriert("Artikelnummer");
         printZentriert("Stil");
         printZentriert("Größe");
@@ -731,7 +721,7 @@ public class Verwaltung implements Serializable {
         printZentriert("Lagerbestand");
         printLF();
         printLinieLF(10); // Trennlinie für 6 Felder anzeigen
-
+     //ruft anschließend alle Attribute des jeweiligen Accessoires auf
         Iterator<Artikel> iter = artikelListe.iterator();
         while (iter.hasNext()) {
             Artikel i = iter.next();
@@ -777,8 +767,10 @@ public class Verwaltung implements Serializable {
         }
 
         if (!treffer) {
+            //für den Fall dass kein Kunde mit dem Nachnamen gibt
             System.out.println("Es gibt keinen Kunden mit dem Nachnamen " + nachname);
         } else {
+            //für den Fall dass es einen passenden Kunden gibt
             printZentriert("Kundennummer");
             printZentriert("Vorname");
             printZentriert("Name");
@@ -822,6 +814,7 @@ public class Verwaltung implements Serializable {
     
 
     private void printLF() {
+        //Methode für Zeilensprung
         System.out.println();
     }
 
@@ -901,10 +894,12 @@ public class Verwaltung implements Serializable {
     }
 
     private void printEingabeFehler() {
+        //Methode wenn die Eingabe des Benutzers nicht passt
         System.out.print("Ihre Eingabe wurde nicht erkannt.\n");
     }
 
     private void printAuswahlTreffen() {
+        //Methode für die Menueauswahl
         System.out.print("Bitte treffen Sie eine Auswahl ...\n");
     }
 
