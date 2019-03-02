@@ -47,31 +47,59 @@ public class Verwaltung implements Serializable {
         Oberteile o3 = new Oberteile(20.99, "S", "unisex", 145, "freizeit", "Roter Kapuzenpullover");
         Oberteile o4 = new Oberteile(29.99, "L",  "weiblich", 305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste");
         Oberteile o5 = new Oberteile(29.99, "XL",  "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteile o6 = new Oberteile(29.99, "L",  "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteile o7 = new Oberteile(29.99, "M",  "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteile o8 = new Oberteile(29.99, "S",  "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteile o9 = new Oberteile(45.00, "S", "männlich", 200, "freizeit", "Skijacke");
+        Oberteile o10 = new Oberteile(45.00, "M", "männlich", 200, "freizeit", "Skijacke");
+        Oberteile o11 = new Oberteile(45.00, "L", "männlich", 200, "freizeit", "Skijacke");
+        Oberteile o12 = new Oberteile(45.00, "XL", "männlich", 200, "freizeit", "Skijacke");
+        
+        
+        
+        
         artikelListe.add(o1);
         artikelListe.add(o2);
         artikelListe.add(o3);
         artikelListe.add(o4);
         artikelListe.add(o5);
+        artikelListe.add(o6);
+        artikelListe.add(o7);
+        artikelListe.add(o8);
+        artikelListe.add(o9);
+        artikelListe.add(o10);
+        artikelListe.add(o11);
+        artikelListe.add(o12);
 
         Unterteile u1 = new Unterteile(24.99, "L", "weiblich", 125, "business", "Beige Chinohose");
         Unterteile u2 = new Unterteile(35, "S", "unisex", 230, "freizeit", "blaue Skinnyjeans ");
         Unterteile u3 = new Unterteile(80, "M", "männlich", 220, "business", "schwarze Anzugshose");
         Unterteile u4 = new Unterteile(15.99, "S", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
+        Unterteile u5 = new Unterteile(15.99, "M", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
+        Unterteile u6 = new Unterteile(15.99, "L", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
+        Unterteile u7 = new Unterteile(15.99, "XL", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
 
         artikelListe.add(u1);
         artikelListe.add(u2);
         artikelListe.add(u3);
         artikelListe.add(u4);
+        artikelListe.add(u5);
+        artikelListe.add(u6);
+        artikelListe.add(u7);
 
         Schuhe s1 = new Schuhe(18.99, "S", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
         Schuhe s2 = new Schuhe(29.99, "L", "weiblich", 125, "business", "schwarze Lackschuhe mit Schnürsenkel aus Echtleder");
         Schuhe s3 = new Schuhe(12.99, "S", "unisex", 240, "freizeit", "schwarze Flip-Flops");
         Schuhe s4 = new Schuhe(59.99, "S", "unisex", 255, "sportlich", "bordeaux farbende Nikeschuhe");
+        Schuhe s5 = new Schuhe(59.99, "M", "unisex", 255, "sportlich", "bordeaux farbende Nikeschuhe");
+        Schuhe s6 = new Schuhe(59.99, "L", "unisex", 255, "sportlich", "bordeaux farbende Nikeschuhe");
 
         artikelListe.add(s1);
         artikelListe.add(s2);
         artikelListe.add(s3);
         artikelListe.add(s4);
+        artikelListe.add(s5);
+        artikelListe.add(s6);
                 
 
         Accessoires a1 = new Accessoires(25, "S", "männlich", 75, "business", "bordeaux farbende Krawatte ");
