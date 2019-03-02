@@ -134,6 +134,13 @@ public class Verwaltung implements Serializable {
     public void setKundenListe(ArrayList liste) {
         this.kundenListe = liste;
     }
+    
+    public void setArtikelListe(ArrayList liste) {
+        this.artikelListe = liste;
+    }
+    public ArrayList getArtikelListe() {
+        return this.artikelListe;
+    }
 
     private void mainMenue() {
         char eingabe;
