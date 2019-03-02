@@ -54,7 +54,7 @@ public class Verwaltung implements Serializable {
         artikelListe.add(o5);
 
         Unterteile u1 = new Unterteile(24.99, "L", "weiblich", 125, "business", "Beige Chinohose");
-        Unterteile u2 = new Unterteile(35, "S", "weiblich", 230, "freizeit", "blaue Skinnyjeans ");
+        Unterteile u2 = new Unterteile(35, "S", "unisex", 230, "freizeit", "blaue Skinnyjeans ");
         Unterteile u3 = new Unterteile(80, "M", "männlich", 220, "business", "schwarze Anzugshose");
         Unterteile u4 = new Unterteile(15.99, "S", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
 
@@ -76,7 +76,7 @@ public class Verwaltung implements Serializable {
 
         Accessoires a1 = new Accessoires(25, "S", "männlich", 75, "business", "bordeaux farbende Krawatte ");
         Accessoires a2 = new Accessoires(17.99, "S", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
-        Accessoires a3 = new Accessoires(35, "S", "unisex", 54, "freizeit", "grau Schal");
+        Accessoires a3 = new Accessoires(32.99, "S", "unisex", 54, "freizeit", "grau Schal");
         Accessoires a4 = new Accessoires(20, "L", "männlich", 38, "freizeit", "Wollmütze");
         Accessoires a5 = new Accessoires(20, "L", "weiblich", 38, "business", "Schlangenleder Tasche");
         artikelListe.add(a1);
@@ -536,14 +536,51 @@ public class Verwaltung implements Serializable {
                     
                     Outfit x1 = new Outfit(ArtikelnrOberteilFind, ArtikelnrUnterteilFind,ArtikelnrSchuhFind, ArtikelnrAccessoiresFind); //legt ein neues Outfit mit den Artiklnummern der teile an
                     outfitListe.add(x1);
-
+                  OutfitsWählen();
                 }
             }
     }
     
   
+  private void OutfitsWählen(){
+     //Methode um Outfit zu akzeptieren oder nicht
+     char eingabe;
+        boolean menuewechsel = false;
+        do {
+            System.out.println("Möchten Sie ein Outfit kaufen?");
+            System.out.println("------------------------------------------------------------");
+            System.out.println("[1]  Ja");
+             System.out.println("[2] Nein");
+            System.out.println("[0] HAUPTMENUE");
 
+            printAuswahlTreffen();
+            eingabe = Stdin.readlnChar();
+
+            switch (eingabe) {
+                case '0':
+                    menuewechsel = true;
+                    break;
+                case '1':
+                     OutfitKaufen();  //weiter um ein Outfit zu kaufen
+                  break;
+                 case '2':
+                     beenden();  //Verabschiedung
+                  break; 
+                default:
+                    printEingabeFehler(); //wenn keine der möglichen Eingaben getroffen, ausprinten dass die Eingabe nicht korrekt
+            }
+        } while (!menuewechsel);
+
+  }
     
+  private void OutfitKaufen()
+  { //Methode um Outfit kaufen zu können
+  
+  
+  
+  }
+  
+  
     private void erstelleNeuenKunden() {
         //Methode um neuen KUnden zu erstellen
         String nachname = Stdin.readlnString("Bitte geben Sie den Nachnamen des Kunden ein:");
