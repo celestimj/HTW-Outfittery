@@ -102,10 +102,10 @@ public class Verwaltung implements Serializable {
         XMLDecoder verwaltungAusDemXmlDecoder = new XMLDecoder(new FileInputStream("outfittery.xml"));
         Verwaltung obj = (Verwaltung) verwaltungAusDemXmlDecoder.readObject();
         verwaltungAusDemXmlDecoder.close();
-
-        XMLDecoder artikelsAusDemXmlDecoder = new XMLDecoder(new FileInputStream("artikels.xml"));
-        artikelListeListe2 = (ArrayList<Artikel>) artikelsAusDemXmlDecoder.readObject();
-        artikelsAusDemXmlDecoder.close();
+// XMLDecoder artikelsAusDemXmlDecoder = new XMLDecoder(new FileInputStream("artikels.xml"));
+ //       artikelListeListe2 = (ArrayList<Artikel>) artikelsAusDemXmlDecoder.readObject();
+  //      artikelsAusDemXmlDecoder.close();
+       
 
         return obj;
     }

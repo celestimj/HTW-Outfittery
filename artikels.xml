@@ -2,7 +2,7 @@
 <java version="1.8.0_191" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="outfittery.Oberteile">
+   <object class="outfittery.Oberteil">
     <void property="artikelnummer">
      <int>1000</int>
     </void>
@@ -27,7 +27,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="outfittery.Oberteile">
+   <object class="outfittery.Oberteil">
     <void property="artikelnummer">
      <int>1001</int>
     </void>
@@ -52,7 +52,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="outfittery.Oberteile">
+   <object class="outfittery.Oberteil">
     <void property="artikelnummer">
      <int>1002</int>
     </void>
@@ -77,7 +77,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="outfittery.Oberteile">
+   <object class="outfittery.Oberteil">
     <void property="artikelnummer">
      <int>1003</int>
     </void>
@@ -102,7 +102,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="outfittery.Oberteile">
+   <object class="outfittery.Oberteil">
     <void property="artikelnummer">
      <int>1004</int>
     </void>
@@ -127,7 +127,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="outfittery.Unterteile">
+   <object class="outfittery.Unterteil">
     <void property="artikelnummer">
      <int>1005</int>
     </void>
@@ -152,7 +152,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="outfittery.Unterteile">
+   <object class="outfittery.Unterteil">
     <void property="artikelnummer">
      <int>1006</int>
     </void>
@@ -177,7 +177,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="outfittery.Unterteile">
+   <object class="outfittery.Unterteil">
     <void property="artikelnummer">
      <int>1007</int>
     </void>
@@ -202,7 +202,7 @@
    </object>
   </void>
   <void method="add">
-   <object class="outfittery.Unterteile">
+   <object class="outfittery.Unterteil">
     <void property="artikelnummer">
      <int>1008</int>
     </void>
@@ -394,7 +394,7 @@
      <int>54</int>
     </void>
     <void property="preis">
-     <double>35.0</double>
+     <double>25.0</double>
     </void>
     <void property="stil">
      <string>freizeit</string>
@@ -448,6 +448,31 @@
     </void>
     <void property="stil">
      <string>business</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Oberteil">
+    <void property="artikelnummer">
+     <int>1018</int>
+    </void>
+    <void property="beschreibung">
+     <string>Gr�nes Top mit Spagettitr�gern</string>
+    </void>
+    <void property="geschlecht">
+     <string>unisex</string>
+    </void>
+    <void property="größe">
+     <string>S</string>
+    </void>
+    <void property="lagerbestand">
+     <int>2</int>
+    </void>
+    <void property="preis">
+     <double>22.0</double>
+    </void>
+    <void property="stil">
+     <string>freizeit</string>
     </void>
    </object>
   </void>

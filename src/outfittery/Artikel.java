@@ -29,12 +29,12 @@ public abstract class Artikel
   {
   }
   /** 
-   *@param par1 ist der Preis
-   * @param par2 ist die Größe
-   * @param par3 ist das Geschlecht
-   * @param par4 ist der Lagerbestand
-   * @param par5 ist der Stil des Kleidungsstücks
-   * @param par6 ist die Beschreibung
+   *@param preis ist der Preis
+   * @param größe ist die Größe
+   * @param geschlecht ist das Geschlecht
+   * @param lagerbestand ist der Lagerbestand
+   * @param stil ist der Stil des Kleidungsstücks
+   * @param beschreibung ist die Beschreibung
    */
   public Artikel(double preis, String größe, String geschlecht,int lagerbestand, String stil, String beschreibung)
     { 
@@ -96,11 +96,11 @@ public void setPreiskategorie(String preiskategorie)
     
 public String getPreiskategorie()
     {
-        if(preis< 30)
+        if(preis< 29.99)
         {
         return this.preiskategorie = "niedrig";
         }
-        if(preis>30 && preis<80)
+        if(preis>=29.99 && preis<80.00)
         {
          return this.preiskategorie= "mittel";
         }
