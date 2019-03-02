@@ -571,7 +571,7 @@ public class Verwaltung implements Serializable {
     
   
   private void OutfitsWählen(){
-     //Methode um Outfit zu akzeptieren oder nicht
+     //Methode um Outfit zu wählen oder nicht
      char eingabe;
         boolean menuewechsel = false;
         do {
