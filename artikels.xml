@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="outfittery.Oberteile">
+    <void property="artikelnummer">
+     <int>1000</int>
+    </void>
+    <void property="beschreibung">
+     <string>Blauer Kapuzenpullover mit Aufschrift</string>
+    </void>
+    <void property="geschlecht">
+     <string>unisex</string>
+    </void>
+    <void property="größe">
+     <string>S</string>
+    </void>
+    <void property="lagerbestand">
+     <int>255</int>
+    </void>
+    <void property="preis">
+     <double>24.99</double>
+    </void>
+    <void property="stil">
+     <string>sportlich</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Oberteile">
+    <void property="artikelnummer">
+     <int>1001</int>
+    </void>
+    <void property="beschreibung">
+     <string>Blauer Pullover mit V-Ausschnitt</string>
+    </void>
+    <void property="geschlecht">
+     <string>männlich</string>
+    </void>
+    <void property="größe">
+     <string>M</string>
+    </void>
+    <void property="lagerbestand">
+     <int>155</int>
+    </void>
+    <void property="preis">
+     <double>15.99</double>
+    </void>
+    <void property="stil">
+     <string>freizeit</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Oberteile">
+    <void property="artikelnummer">
+     <int>1002</int>
+    </void>
+    <void property="beschreibung">
+     <string>Roter Kapuzenpullover</string>
+    </void>
+    <void property="geschlecht">
+     <string>unisex</string>
+    </void>
+    <void property="größe">
+     <string>S</string>
+    </void>
+    <void property="lagerbestand">
+     <int>145</int>
+    </void>
+    <void property="preis">
+     <double>20.99</double>
+    </void>
+    <void property="stil">
+     <string>freizeit</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Oberteile">
+    <void property="artikelnummer">
+     <int>1003</int>
+    </void>
+    <void property="beschreibung">
+     <string>Weiße Bluse mit 3/4 Ärmel und Knopfleiste</string>
+    </void>
+    <void property="geschlecht">
+     <string>weiblich</string>
+    </void>
+    <void property="größe">
+     <string>L</string>
+    </void>
+    <void property="lagerbestand">
+     <int>305</int>
+    </void>
+    <void property="preis">
+     <double>29.99</double>
+    </void>
+    <void property="stil">
+     <string>business</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Oberteile">
+    <void property="artikelnummer">
+     <int>1004</int>
+    </void>
+    <void property="beschreibung">
+     <string>Weißes Hemd mit Brusttasche und Knopfleiste</string>
+    </void>
+    <void property="geschlecht">
+     <string>männlich</string>
+    </void>
+    <void property="größe">
+     <string>XL</string>
+    </void>
+    <void property="lagerbestand">
+     <int>305</int>
+    </void>
+    <void property="preis">
+     <double>29.99</double>
+    </void>
+    <void property="stil">
+     <string>business</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Unterteile">
+    <void property="artikelnummer">
+     <int>1005</int>
+    </void>
+    <void property="beschreibung">
+     <string>Beige Chinohose</string>
+    </void>
+    <void property="geschlecht">
+     <string>weiblich</string>
+    </void>
+    <void property="größe">
+     <string>L</string>
+    </void>
+    <void property="lagerbestand">
+     <int>125</int>
+    </void>
+    <void property="preis">
+     <double>24.99</double>
+    </void>
+    <void property="stil">
+     <string>business</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Unterteile">
+    <void property="artikelnummer">
+     <int>1006</int>
+    </void>
+    <void property="beschreibung">
+     <string>blaue Skinnyjeans </string>
+    </void>
+    <void property="geschlecht">
+     <string>weiblich</string>
+    </void>
+    <void property="größe">
+     <string>S</string>
+    </void>
+    <void property="lagerbestand">
+     <int>230</int>
+    </void>
+    <void property="preis">
+     <double>35.0</double>
+    </void>
+    <void property="stil">
+     <string>freizeit</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Unterteile">
+    <void property="artikelnummer">
+     <int>1007</int>
+    </void>
+    <void property="beschreibung">
+     <string>schwarze Anzugshose</string>
+    </void>
+    <void property="geschlecht">
+     <string>männlich</string>
+    </void>
+    <void property="größe">
+     <string>M</string>
+    </void>
+    <void property="lagerbestand">
+     <int>220</int>
+    </void>
+    <void property="preis">
+     <double>80.0</double>
+    </void>
+    <void property="stil">
+     <string>business</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Unterteile">
+    <void property="artikelnummer">
+     <int>1008</int>
+    </void>
+    <void property="beschreibung">
+     <string>hellgraue Hose mit Gummibund</string>
+    </void>
+    <void property="geschlecht">
+     <string>unisex</string>
+    </void>
+    <void property="größe">
+     <string>S</string>
+    </void>
+    <void property="lagerbestand">
+     <int>420</int>
+    </void>
+    <void property="preis">
+     <double>15.99</double>
+    </void>
+    <void property="stil">
+     <string>freizeit</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Schuhe">
+    <void property="artikelnummer">
+     <int>1009</int>
+    </void>
+    <void property="beschreibung">
+     <string>beige Ballerinas aus Wildleder</string>
+    </void>
+    <void property="geschlecht">
+     <string>weiblich</string>
+    </void>
+    <void property="größe">
+     <string>S</string>
+    </void>
+    <void property="lagerbestand">
+     <int>133</int>
+    </void>
+    <void property="preis">
+     <double>18.99</double>
+    </void>
+    <void property="stil">
+     <string>freizeit</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Schuhe">
+    <void property="artikelnummer">
+     <int>1010</int>
+    </void>
+    <void property="beschreibung">
+     <string>schwarze Lackschuhe mit Schnürsenkel aus Echtleder</string>
+    </void>
+    <void property="geschlecht">
+     <string>weiblich</string>
+    </void>
+    <void property="größe">
+     <string>L</string>
+    </void>
+    <void property="lagerbestand">
+     <int>125</int>
+    </void>
+    <void property="preis">
+     <double>29.99</double>
+    </void>
+    <void property="stil">
+     <string>business</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Schuhe">
+    <void property="artikelnummer">
+     <int>1011</int>
+    </void>
+    <void property="beschreibung">
+     <string>schwarze Flip-Flops</string>
+    </void>
+    <void property="geschlecht">
+     <string>unisex</string>
+    </void>
+    <void property="größe">
+     <string>S</string>
+    </void>
+    <void property="lagerbestand">
+     <int>240</int>
+    </void>
+    <void property="preis">
+     <double>12.99</double>
+    </void>
+    <void property="stil">
+     <string>freizeit</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Schuhe">
+    <void property="artikelnummer">
+     <int>1012</int>
+    </void>
+    <void property="beschreibung">
+     <string>bordeaux farbende Nikeschuhe</string>
+    </void>
+    <void property="geschlecht">
+     <string>unisex</string>
+    </void>
+    <void property="größe">
+     <string>S</string>
+    </void>
+    <void property="lagerbestand">
+     <int>255</int>
+    </void>
+    <void property="preis">
+     <double>59.99</double>
+    </void>
+    <void property="stil">
+     <string>sportlich</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Accessoires">
+    <void property="artikelnummer">
+     <int>1013</int>
+    </void>
+    <void property="beschreibung">
+     <string>bordeaux farbende Krawatte </string>
+    </void>
+    <void property="geschlecht">
+     <string>männlich</string>
+    </void>
+    <void property="größe">
+     <string>S</string>
+    </void>
+    <void property="lagerbestand">
+     <int>75</int>
+    </void>
+    <void property="preis">
+     <double>25.0</double>
+    </void>
+    <void property="stil">
+     <string>business</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Accessoires">
+    <void property="artikelnummer">
+     <int>1014</int>
+    </void>
+    <void property="beschreibung">
+     <string>goldene Kette mit kleinem Glitzerstein</string>
+    </void>
+    <void property="geschlecht">
+     <string>weiblich</string>
+    </void>
+    <void property="größe">
+     <string>S</string>
+    </void>
+    <void property="lagerbestand">
+     <int>57</int>
+    </void>
+    <void property="preis">
+     <double>17.99</double>
+    </void>
+    <void property="stil">
+     <string>business</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Accessoires">
+    <void property="artikelnummer">
+     <int>1015</int>
+    </void>
+    <void property="beschreibung">
+     <string>grau Schal</string>
+    </void>
+    <void property="geschlecht">
+     <string>unisex</string>
+    </void>
+    <void property="größe">
+     <string>S</string>
+    </void>
+    <void property="lagerbestand">
+     <int>54</int>
+    </void>
+    <void property="preis">
+     <double>35.0</double>
+    </void>
+    <void property="stil">
+     <string>freizeit</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Accessoires">
+    <void property="artikelnummer">
+     <int>1016</int>
+    </void>
+    <void property="beschreibung">
+     <string>Wollmütze</string>
+    </void>
+    <void property="geschlecht">
+     <string>männlich</string>
+    </void>
+    <void property="größe">
+     <string>L</string>
+    </void>
+    <void property="lagerbestand">
+     <int>38</int>
+    </void>
+    <void property="preis">
+     <double>20.0</double>
+    </void>
+    <void property="stil">
+     <string>freizeit</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="outfittery.Accessoires">
+    <void property="artikelnummer">
+     <int>1017</int>
+    </void>
+    <void property="beschreibung">
+     <string>Schlangenleder Tasche</string>
+    </void>
+    <void property="geschlecht">
+     <string>weiblich</string>
+    </void>
+    <void property="größe">
+     <string>L</string>
+    </void>
+    <void property="lagerbestand">
+     <int>38</int>
+    </void>
+    <void property="preis">
+     <double>20.0</double>
+    </void>
+    <void property="stil">
+     <string>business</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

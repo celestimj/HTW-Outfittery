@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
+ <object class="outfittery.Kunde">
+  <void property="name">
+   <string>Reppert</string>
+  </void>
+  <void property="telefonnummer">
+   <string>45645456</string>
+  </void>
+  <void property="vorname">
+   <string>Holger</string>
+  </void>
+ </object>
+</java>
