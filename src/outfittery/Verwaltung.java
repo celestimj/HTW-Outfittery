@@ -53,15 +53,201 @@ public class Verwaltung implements Serializable {
         Oberteil o3 = new Oberteil(20.99, "S", "unisex", 145, "freizeit", "Roter Kapuzenpullover");
         Oberteil o4 = new Oberteil(29.99, "L", "weiblich", 305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste");
         Oberteil o5 = new Oberteil(29.99, "XL", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o6 = new Oberteil(29.99, "L", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o7 = new Oberteil(29.99, "M", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o8 = new Oberteil(29.99, "S", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o9 = new Oberteil(29.99, "S", "weiblich", 305, "business", "Weißes Bluse mit Brusttasche und Knopfleiste");
+        Oberteil o10 = new Oberteil(29.99, "M", "weiblich", 305, "business", "Weißes Bluse mit Brusttasche und Knopfleiste");
+        Oberteil o11= new Oberteil(29.99, "L", "weiblich", 305, "business", "Weißes Bluse mit Brusttasche und Knopfleiste");
+        Oberteil o12= new Oberteil(29.99, "XL", "weiblich", 305, "business", "Weißes Bluse mit Brusttasche und Knopfleiste");
+        Oberteil o13= new Oberteil(29.99, "S", "unisex", 305, "business", "Polohemd weiss");
+        Oberteil o14= new Oberteil(29.99, "M", "unisex", 305, "business", "Polohemd weiss");
+        Oberteil o15= new Oberteil(29.99, "L", "unisex", 305, "business", "Polohemd weiss");
+        Oberteil o16= new Oberteil(29.99, "XL", "unisex", 305, "business", "Polohemd weiss");
+        Oberteil o17= new Oberteil(29.99, "S", "männlich", 305, "business", "Blaues Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o18= new Oberteil(29.99, "M", "männlich", 305, "business", "Blaues Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o19= new Oberteil(29.99, "L", "männlich", 305, "business", "Blaues Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o20= new Oberteil(29.99, "XL", "männlich", 305, "business", "Blaues Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o21= new Oberteil(29.99, "S", "weiblich", 305, "business", "Blaues Bluse mit Brusttasche und Knopfleiste");
+        Oberteil o22= new Oberteil(29.99, "M", "weiblich", 305, "business", "Blaues Bluse mit Brusttasche und Knopfleiste");
+        Oberteil o23= new Oberteil(29.99, "L", "weiblich", 305, "business", "Blaues Bluse mit Brusttasche und Knopfleiste");
+        Oberteil o24= new Oberteil(29.99, "XL", "weiblich", 305, "business", "Blaues Bluse mit Brusttasche und Knopfleiste");
+        Oberteil o25= new Oberteil(29.99, "S", "unisex", 305, "business", "Polohemd blau");
+        Oberteil o26= new Oberteil(29.99, "M", "unisex", 305, "business", "Polohemd blau");
+        Oberteil o27 = new Oberteil(29.99, "L", "unisex", 305, "business", "Polohemd blau");
+        Oberteil o28 = new Oberteil(29.99, "XL", "unisex", 305, "business", "Polohemd blau");
+        Oberteil o29 = new Oberteil(29.99, "S", "männlich", 305, "freizeit", "Schwarzer Hoodie");
+        Oberteil o30= new Oberteil(29.99, "M", "männlich", 305, "freizeit", "Schwarzer Hoodie");
+        Oberteil o31= new Oberteil(29.99, "L", "männlich", 305, "freizeit", "Schwarzer Hoodie");
+        Oberteil o32= new Oberteil(29.99, "XL", "männlich", 305, "freizeit", "Schwarzer Hoodie");
+        Oberteil o33 = new Oberteil(29.99, "S", "weiblich", 305, "freizeit", "Rosa Bluse");
+        Oberteil o34= new Oberteil(29.99, "M", "weiblich", 305, "freizeit", "Rosa Bluse");
+        Oberteil o35 = new Oberteil(29.99, "L", "weiblich", 305, "freizeit", "Rosa Bluse");
+        Oberteil o36 = new Oberteil(29.99, "XL", "weiblich", 305, "freizeit", "Rosa Bluse");
+        Oberteil o37= new Oberteil(29.99, "S", "unisex", 305, "freizeit", "rotes Tshirt");
+        Oberteil o38= new Oberteil(29.99, "M", "unisex", 305, "freizeit", "rotes Tshirt");
+        Oberteil o39 = new Oberteil(29.99, "L", "unisex", 305, "freizeit", "rotes Tshirt");
+        Oberteil o40 = new Oberteil(29.99, "XL", "unisex", 305, "freizeit", "rotes Tshirt");
+        Oberteil o41 = new Oberteil(29.99, "S", "männlich", 305, "freizeit", "grünes Sweatshirt");
+        Oberteil o42= new Oberteil(29.99, "M", "männlich", 305, "freizeit", "grünes Sweatshirt");
+        Oberteil o43= new Oberteil(29.99, "L", "männlich", 305, "freizeit", "grünes Sweatshirt");
+        Oberteil o44= new Oberteil(29.99, "XL", "männlich", 305, "freizeit", "grünes Sweatshirt");
+        Oberteil o45 = new Oberteil(29.99, "S", "weiblich", 305, "freizeit", "Rosa Tunika");
+        Oberteil o46= new Oberteil(29.99, "M", "weiblich", 305, "freizeit", "Rosa Tunika");
+        Oberteil o47 = new Oberteil(29.99, "L", "weiblich", 305, "freizeit", "Rosa Tunika");
+        Oberteil o48 = new Oberteil(29.99, "XL", "weiblich", 305, "freizeit", "Rosa Tunika");
+        Oberteil o49= new Oberteil(29.99, "S", "unisex", 305, "freizeit", "Hellblauer Pulli");
+        Oberteil o50= new Oberteil(29.99, "M", "unisex", 305, "freizeit", "Hellblauer Pulli");
+        Oberteil o51 = new Oberteil(29.99, "L", "unisex", 305, "freizeit", "Hellblauer Pulli");
+        Oberteil o52 = new Oberteil(29.99, "XL", "unisex", 305, "freizeit", "Hellblauer Pulli");
+        Oberteil o53 = new Oberteil(29.99, "S", "männlich", 305, "sportlich", "Schwarzer NIKE Hoodie");
+        Oberteil o54= new Oberteil(29.99, "M", "männlich", 305, "sportlich", "Schwarzer NIKE Hoodie");
+        Oberteil o55= new Oberteil(29.99, "L", "männlich", 305, "sportlich", "Schwarzer NIKE Hoodie");
+        Oberteil o56= new Oberteil(29.99, "XL", "männlich", 305, "sportlich", "Schwarzer NIKE Hoodie");
+        Oberteil o57 = new Oberteil(29.99, "S", "weiblich", 305, "sportlich", "Rosa ADIDAS Shirt");
+        Oberteil o58= new Oberteil(29.99, "M", "weiblich", 305, "sportlich", "Rosa ADIDAS Shirt");
+        Oberteil o59 = new Oberteil(29.99, "L", "weiblich", 305, "sportlich", "Rosa ADIDAS Shirt");
+        Oberteil o60 = new Oberteil(29.99, "XL", "weiblich", 305, "sportlich", "Rosa ADIDAS Shirt");
+        Oberteil o61= new Oberteil(29.99, "S", "unisex", 305, "sportlich", "rotes PUMA Tshirt");
+        Oberteil o62= new Oberteil(29.99, "M", "unisex", 305, "sportlich", "rotes PUMA Tshirt");
+        Oberteil o63 = new Oberteil(29.99, "L", "unisex", 305, "sportlich", "rotes PUMA Tshirt");
+        Oberteil o64 = new Oberteil(29.99, "XL", "unisex", 305, "sportlich", "rotes PUMA Tshirt");
+        Oberteil o65 = new Oberteil(29.99, "S", "männlich", 305, "sportlich", "grünes PUMA Sweatshirt");
+        Oberteil o66= new Oberteil(29.99, "M", "männlich", 305, "sportlich", "grünes PUMA Sweatshirt");
+        Oberteil o67= new Oberteil(29.99, "L", "männlich", 305, "sportlich", "grünes PUMA Sweatshirt");
+        Oberteil o68= new Oberteil(29.99, "XL", "männlich", 305, "sportlich", "grünes PUMA Sweatshirt");
+        Oberteil o69 = new Oberteil(29.99, "S", "weiblich", 305, "sportlich", "lila NIKE Shirt");
+        Oberteil o70= new Oberteil(29.99, "M", "weiblich", 305, "sportlich", "lila NIKE Shirt");
+        Oberteil o71 = new Oberteil(29.99, "L", "weiblich", 305, "sportlich", "lila NIKE Shirt");
+        Oberteil o72 = new Oberteil(29.99, "XL", "weiblich", 305, "sportlich", "LIla NIKE Shirt");
+        Oberteil o73= new Oberteil(29.99, "S", "unisex", 305, "sportlich", "Hellblauer PUMA Pulli");
+        Oberteil o74= new Oberteil(29.99, "M", "unisex", 305, "sportlich", "Hellblauer PUMA Pulli");
+        Oberteil o75 = new Oberteil(29.99, "L", "unisex", 305, "sportlich", "Hellblauer PUMA Pulli");
+        Oberteil o76 = new Oberteil(29.99, "XL", "unisex", 305, "sportlich", "Hellblauer PUMA Pulli");
+        
+        
         artikelListe.add(o1);
         artikelListe.add(o2);
         artikelListe.add(o3);
         artikelListe.add(o4);
         artikelListe.add(o5);
+        artikelListe.add(o6);
+        artikelListe.add(o7);
+        artikelListe.add(o8);
+        artikelListe.add(o9);
+        artikelListe.add(o10);
+        artikelListe.add(o11);
+        artikelListe.add(o12);
+        artikelListe.add(o13);
+        artikelListe.add(o14);
+        artikelListe.add(o15);
+        artikelListe.add(o16);
+        artikelListe.add(o17);
+        artikelListe.add(o18);
+        artikelListe.add(o19);
+        artikelListe.add(o20);
+        artikelListe.add(o21);
+        artikelListe.add(o22);
+        artikelListe.add(o23);
+        artikelListe.add(o24);
+        artikelListe.add(o25);
+        artikelListe.add(o26);
+        artikelListe.add(o27);
+        artikelListe.add(o28);
+        artikelListe.add(o29);
+        artikelListe.add(o30);
+        artikelListe.add(o31);
+        artikelListe.add(o32);
+        artikelListe.add(o33);
+        artikelListe.add(o34);
+        artikelListe.add(o35);
+        artikelListe.add(o36);
+        artikelListe.add(o37);
+        artikelListe.add(o38);
+        artikelListe.add(o39);
+        artikelListe.add(o40);
+        artikelListe.add(o41);
+        artikelListe.add(o42);
+        artikelListe.add(o43);
+        artikelListe.add(o44);
+        artikelListe.add(o45);
+        artikelListe.add(o46);
+        artikelListe.add(o47);
+        artikelListe.add(o48);
+        artikelListe.add(o49);
+        artikelListe.add(o50);
+        artikelListe.add(o51);
+        artikelListe.add(o52);
+        artikelListe.add(o53);
+        artikelListe.add(o54);
+        artikelListe.add(o55);
+        artikelListe.add(o56);
+        artikelListe.add(o57);
+        artikelListe.add(o58);
+        artikelListe.add(o59);
+        artikelListe.add(o60);
+        artikelListe.add(o61);
+        artikelListe.add(o62);
+        artikelListe.add(o63);
+        artikelListe.add(o64);
+        artikelListe.add(o65);
+        artikelListe.add(o66);
+        artikelListe.add(o67);
+        artikelListe.add(o68);
+        artikelListe.add(o69);
+        artikelListe.add(o70);
+        artikelListe.add(o71);
+        artikelListe.add(o72);
+        artikelListe.add(o73);
+        artikelListe.add(o74);
+        artikelListe.add(o75);
+        artikelListe.add(o76);
 
+        Unterteil u1 = new Unterteil(80, "S", "männlich", 220, "business", "schwarze Anzugshose");
+        Unterteil u2 = new Unterteil(80, "M", "männlich", 220, "business", "schwarze Anzugshose");
+        Unterteil u3 = new Unterteil(80, "L", "männlich", 220, "business", "schwarze Anzugshose");
+        Unterteil u4 = new Unterteil(80, "XL", "männlich", 220, "business", "schwarze Anzugshose");
+        Unterteil u5 = new Unterteil(80, "S", "weiblich", 220, "business", "schwarze Chinohose");
+        Unterteil u6 = new Unterteil(80, "M", "weiblich", 220, "business", "schwarze Chinohose");
+        Unterteil u7 = new Unterteil(80, "L", "weiblich", 220, "business", "schwarze Chinohose");
+        Unterteil u8 = new Unterteil(80, "XL", "weiblich", 220, "business", "schwarze Chinohose");
+        Unterteil u9 = new Unterteil(80, "S", "unisex", 220, "business", "Braun karierte Pullon-Hose");
+        Unterteil u10 = new Unterteil(80, "M", "unisex", 220, "business", "Braun karierte Pullon-Hose");
+        Unterteil u11 = new Unterteil(80, "L", "unisex", 220, "business", "Braun karierte Pullon-Hose");
+        Unterteil u12= new Unterteil(80, "XL", "unisex", 220, "business", "Braun karierte Pullon-Hose");
+        Unterteil u13 = new Unterteil(80, "S", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
+        Unterteil u14 = new Unterteil(80, "M", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
+        Unterteil u15 = new Unterteil(80, "L", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
+        Unterteil u16 = new Unterteil(80, "XL", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
+        Unterteil u17 = new Unterteil(80, "S", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
+        Unterteil u18 = new Unterteil(80, "M", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
+        Unterteil u19 = new Unterteil(80, "L", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
+        Unterteil u20 = new Unterteil(80, "XL", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
+        Unterteil u21 = new Unterteil(80, "S", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
+        Unterteil u22 = new Unterteil(80, "M", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
+        Unterteil u23 = new Unterteil(80, "L", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
+        Unterteil u24= new Unterteil(80, "XL", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         Unterteil u1 = new Unterteil(24.99, "L", "weiblich", 125, "business", "Beige Chinohose");
+        
+        
+        
         Unterteil u2 = new Unterteil(35, "S", "weiblich", 230, "freizeit", "blaue Skinnyjeans ");
-        Unterteil u3 = new Unterteil(80, "M", "männlich", 220, "business", "schwarze Anzugshose");
+        
         Unterteil u4 = new Unterteil(15.99, "S", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
 
         artikelListe.add(u1);
