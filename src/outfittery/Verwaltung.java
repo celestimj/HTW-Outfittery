@@ -248,7 +248,8 @@ public class Verwaltung implements Serializable {
             System.out.println("[3] Zeige alle Schuhe an ");
             System.out.println("[4] Zeige alle Accessoires an ");
             System.out.println("[5] Einbuchung von neuem Kleidungstück ");
-            System.out.println("[6] Outfitliste ");
+            System.out.println("[6] Entfernen von einem Kleidungsstück ");
+            System.out.println("[7] Zeige die Outfitliste an ");
             System.out.println("[0] HAUPTMENUE");
 
             printAuswahlTreffen();
@@ -274,6 +275,9 @@ public class Verwaltung implements Serializable {
                     erstelleNeuenArtikel(); // bei Wahl Erstellen eines neuen Artikels
                     break;
                 case '6':
+                    ArtikelEntfernen();  //bei Wahl Aufruf der Outfitliste
+                    break; 
+                case '7':
                     printOutfitliste();  //bei Wahl Aufruf der Outfitliste
                     break;
                 default:
@@ -392,6 +396,7 @@ public class Verwaltung implements Serializable {
             System.out.println("------------------------------------------------------------");
             System.out.println("[1] Lade Daten aus XML-Datei");
             System.out.println("[2] Speichere Daten in XML-Datei");
+            System.out.println("[3] Zeige die Kasse an");
             System.out.println("[0] HAUPTMENUE");
 
             printAuswahlTreffen();
@@ -407,12 +412,25 @@ public class Verwaltung implements Serializable {
                 case '2':
                     save();  //Pfad um Daten in die XML Datei zu speichern
                     break;
+                case '3':
+                    showKasse();  //Pfad um Daten in die XML Datei zu speichern
+                    break;
                 default:
                     printEingabeFehler(); //wenn keine der möglichen Eingaben getroffen, ausprinten dass die Eingabe nicht korrekt
             }
         } while (!menuewechsel);
     }
 
+    
+    /**
+     * 
+     */
+    public void showKasse()
+    {
+    
+    }
+    
+    
     /**
      * 
      */
@@ -426,6 +444,7 @@ public class Verwaltung implements Serializable {
             System.out.println("[1] Zeige alle Kunden an");
             System.out.println("[2] Suche Kunden nach Nachname");
             System.out.println("[3] Erstelle neuen Kunden");
+            System.out.println("[4] Entfernen eines Kunden");
             System.out.println("[0] HAUPTMENUE");
 
             printAuswahlTreffen();
@@ -443,6 +462,9 @@ public class Verwaltung implements Serializable {
                     break;
                 case '3':
                     erstelleNeuenKunden();  //Möglichkeit neuen Kunden zu erstellen
+                    break;
+                case '4':
+                    KundenEntfernen();  //Möglichkeit neuen Kunden zu erstellen
                     break;
                 default:
                     printEingabeFehler(); //wenn keine der möglichen Eingaben getroffen, ausprinten dass die Eingabe nicht korrekt
@@ -628,6 +650,24 @@ public class Verwaltung implements Serializable {
 
     }
 
+    
+    /**
+     * 
+     */
+   public void ArtikelEntfernen()
+   {
+   
+   
+   }
+   
+    /**
+     * 
+     */
+   public void KundenEntfernen()
+   {
+   
+   }
+   
     /**
      * 
      */
