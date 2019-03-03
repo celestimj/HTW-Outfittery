@@ -252,29 +252,220 @@ public class Verwaltung implements Serializable {
 
         artikelListe.add(u1);
         artikelListe.add(u2);
+       
         artikelListe.add(u3);
         artikelListe.add(u4);
+        
+        
 
-        Schuhe s1 = new Schuhe(18.99, "S", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
-        Schuhe s2 = new Schuhe(29.99, "L", "weiblich", 125, "business", "schwarze Lackschuhe mit Schnürsenkel aus Echtleder");
-        Schuhe s3 = new Schuhe(12.99, "S", "unisex", 240, "freizeit", "schwarze Flip-Flops");
-        Schuhe s4 = new Schuhe(59.99, "S", "unisex", 255, "sportlich", "bordeaux farbende Nikeschuhe");
-
-        artikelListe.add(s1);
-        artikelListe.add(s2);
-        artikelListe.add(s3);
-        artikelListe.add(s4);
-
+        Schuhe s49 = new Schuhe(18.99, "S", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
+        Schuhe s50 = new Schuhe(18.99, "M", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
+        Schuhe s51 = new Schuhe(18.99, "L", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
+        Schuhe s52 = new Schuhe(18.99, "XL", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
+        Schuhe s53 = new Schuhe(12.99, "S", "unisex", 240, "freizeit", "schwarze Flip-Flops");
+        Schuhe s54 = new Schuhe(12.99, "M", "unisex", 240, "freizeit", "schwarze Flip-Flops");
+        Schuhe s55 = new Schuhe(12.99, "L", "unisex", 240, "freizeit", "schwarze Flip-Flops");
+        Schuhe s56 = new Schuhe(12.99, "XL", "unisex", 240, "freizeit", "schwarze Flip-Flops");
+        Schuhe s57 = new Schuhe(29.99, "S", "männlich", 240, "freizeit", "schwarze Vans");
+        Schuhe s58 = new Schuhe(29.99, "M", "männlich", 240, "freizeit", "schwarze Vans");
+        Schuhe s59 = new Schuhe(29.99, "L", "männlich", 240, "freizeit", "schwarze Vans");
+        Schuhe s60 = new Schuhe(29.99, "XL", "männlich", 240, "freizeit", "schwarze Vans");
+        Schuhe s61 = new Schuhe(18.99, "S", "weiblich", 133, "freizeit", "bordeuax farbende Slipper aus Wildleder");
+        Schuhe s62 = new Schuhe(18.99, "M", "weiblich", 133, "freizeit", "bordeuax farbende Slipper aus Wildleder");
+        Schuhe s63 = new Schuhe(18.99, "L", "weiblich", 133, "freizeit", "bordeuax farbende Slipper aus Wildleder");
+        Schuhe s64 = new Schuhe(18.99, "XL", "weiblich", 133, "freizeit", "bordeuax farbende Slipper aus Wildleder");
+        Schuhe s65 = new Schuhe(12.99, "S", "unisex", 240, "freizeit", "weiße Adidas Superstar");
+        Schuhe s66 = new Schuhe(12.99, "M", "unisex", 240, "freizeit", "weiße Adidas Superstar");
+        Schuhe s67 = new Schuhe(12.99, "L", "unisex", 240, "freizeit", "weiße Adidas Superstar");
+        Schuhe s68 = new Schuhe(12.99, "XL", "unisex", 240, "freizeit", "weiße Adidas Superstar");
+        Schuhe s69 = new Schuhe(29.99, "S", "männlich", 240, "freizeit", "graue Nike");
+        Schuhe s70 = new Schuhe(29.99, "M", "männlich", 240, "freizeit", "graue Nike");
+        Schuhe s71 = new Schuhe(29.99, "L", "männlich", 240, "freizeit", "graue Nike");
+        Schuhe s72 = new Schuhe(29.99, "XL", "männlich", 240, "freizeit", "graue Nike");
+        
+        
+        
+        artikelListe.add(s49);
+        artikelListe.add(s50);
+        artikelListe.add(s51);
+        artikelListe.add(s52);
+        artikelListe.add(s53);
+        artikelListe.add(s54);
+        artikelListe.add(s55);
+        artikelListe.add(s56);
+        artikelListe.add(s57);
+        artikelListe.add(s58);
+        artikelListe.add(s59);
+        artikelListe.add(s60);
+        artikelListe.add(s61);
+        artikelListe.add(s62);
+        artikelListe.add(s63);
+        artikelListe.add(s64);
+        artikelListe.add(s65);
+        artikelListe.add(s66);
+        artikelListe.add(s67);
+        artikelListe.add(s68);
+        artikelListe.add(s69);
+        artikelListe.add(s70);
+        artikelListe.add(s71);
+        artikelListe.add(s72);
+        
+        
+        
+        
+        
         Accessoires a1 = new Accessoires(25, "S", "männlich", 75, "business", "bordeaux farbende Krawatte ");
-        Accessoires a2 = new Accessoires(17.99, "S", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
-        Accessoires a3 = new Accessoires(25, "S", "unisex", 54, "freizeit", "grau Schal");
-        Accessoires a4 = new Accessoires(20, "L", "männlich", 38, "freizeit", "Wollmütze");
-        Accessoires a5 = new Accessoires(20, "L", "weiblich", 38, "business", "Schlangenleder Tasche");
+        Accessoires a2 = new Accessoires(25, "M", "männlich", 75, "business", "bordeaux farbende Krawatte ");
+        Accessoires a3 = new Accessoires(25, "L", "männlich", 75, "business", "bordeaux farbende Krawatte ");
+        Accessoires a4 = new Accessoires(25, "XL", "männlich", 75, "business", "bordeaux farbende Krawatte ");
+        Accessoires a5 = new Accessoires(17.99, "S", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
+        Accessoires a6 = new Accessoires(17.99, "M", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
+        Accessoires a7 = new Accessoires(17.99, "L", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
+        Accessoires a8 = new Accessoires(17.99, "XL", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
+        Accessoires a9 = new Accessoires(17.99, "S", "unisex", 57, "business", "silberne Uhr mit Ziffernblatt aus Bernsetin");
+        Accessoires a10 = new Accessoires(17.99, "M", "unisex", 57, "business", "silberne Uhr mit Ziffernblatt aus Bernsetin");
+        Accessoires a11 = new Accessoires(17.99, "L", "unisex", 57, "business", "silberne Uhr mit Ziffernblatt aus Bernsetin");
+        Accessoires a12 = new Accessoires(17.99, "XL", "unisex", 57, "business", "silberne Uhr mit Ziffernblatt aus Bernsetin");
+        Accessoires a13 = new Accessoires(25, "S", "männlich", 75, "business", "blaues Einstecktuch ");
+        Accessoires a14 = new Accessoires(25, "M", "männlich", 75, "business", "blaues Einstecktuch ");
+        Accessoires a15 = new Accessoires(25, "L", "männlich", 75, "business", "blaues Einstecktuch ");
+        Accessoires a16 = new Accessoires(25, "XL", "männlich", 75, "business", "blaues Einstecktuch ");
+        Accessoires a17 = new Accessoires(17.99, "S", "weiblich", 57, "business", "silberne Kette mit kleinem Glitzerstein");
+        Accessoires a18 = new Accessoires(17.99, "M", "weiblich", 57, "business", "silberne Kette mit kleinem Glitzerstein");
+        Accessoires a19 = new Accessoires(17.99, "L", "weiblich", 57, "business", "silberne Kette mit kleinem Glitzerstein");
+        Accessoires a20 = new Accessoires(17.99, "XL", "weiblich", 57, "business", "silberne Kette mit kleinem Glitzerstein");
+        Accessoires a21 = new Accessoires(17.99, "S", "unisex", 57, "business", "brauner Gürtel von Hugo Boss");
+        Accessoires a22 = new Accessoires(17.99, "M", "unisex", 57, "business", "brauner Gürtel von Hugo Boss");
+        Accessoires a23 = new Accessoires(17.99, "L", "unisex", 57, "business", "brauner Gürtel von Hugo Boss");
+        Accessoires a24 = new Accessoires(17.99, "XL", "unisex", 57, "business", "brauner Gürtel von Hugo Boss"); 
+        Accessoires a25 = new Accessoires(25, "S", "unisex", 54, "freizeit", "grau Schal");
+        Accessoires a26 = new Accessoires(25, "M", "unisex", 54, "freizeit", "grau Schal");
+        Accessoires a27 = new Accessoires(25, "L", "unisex", 54, "freizeit", "grau Schal");
+        Accessoires a28 = new Accessoires(25, "XL", "unisex", 54, "freizeit", "grau Schal");
+        Accessoires a29 = new Accessoires(20, "S", "männlich", 38, "freizeit", "Wollmütze");
+        Accessoires a30 = new Accessoires(20, "M", "männlich", 38, "freizeit", "Wollmütze");
+        Accessoires a31 = new Accessoires(20, "L", "männlich", 38, "freizeit", "Wollmütze");
+        Accessoires a32 = new Accessoires(20, "XL", "männlich", 38, "freizeit", "Wollmütze");
+        Accessoires a33 = new Accessoires(20, "S", "weiblich", 38, "freizeit", "Schlangenleder Tasche");
+        Accessoires a34 = new Accessoires(20, "M", "weiblich", 38, "freizeit", "Schlangenleder Tasche");
+        Accessoires a35 = new Accessoires(20, "L", "weiblich", 38, "freizeit", "Schlangenleder Tasche");
+        Accessoires a36 = new Accessoires(20, "XL", "weiblich", 38, "freizeit", "Schlangenleder Tasche");
+        Accessoires a37 = new Accessoires(25, "S", "unisex", 54, "freizeit", "brauner Gürtel");
+        Accessoires a38 = new Accessoires(25, "M", "unisex", 54, "freizeit", "brauner Gürtel");
+        Accessoires a39 = new Accessoires(25, "L", "unisex", 54, "freizeit", "brauner Gürtel");
+        Accessoires a40 = new Accessoires(25, "XL", "unisex", 54, "freizeit", "brauner Gürtel");
+        Accessoires a41 = new Accessoires(20, "S", "männlich", 38, "freizeit", "braunes Lederarmband");
+        Accessoires a42 = new Accessoires(20, "M", "männlich", 38, "freizeit", "braunes Lederarmband");
+        Accessoires a43 = new Accessoires(20, "L", "männlich", 38, "freizeit", "braunes Lederarmband");
+        Accessoires a44 = new Accessoires(20, "XL", "männlich", 38, "freizeit", "braunes Lederarmband");
+        Accessoires a45 = new Accessoires(20, "S", "weiblich", 38, "freizeit", "rosegoldener Armreif");
+        Accessoires a46 = new Accessoires(20, "M", "weiblich", 38, "freizeit", "rosegoldener Armreif");
+        Accessoires a47 = new Accessoires(20, "L", "weiblich", 38, "freizeit", "rosegoldener Armreif");
+        Accessoires a48 = new Accessoires(20, "XL", "weiblich", 38, "freizeit", "rosegoldener Armreif");
+        Accessoires a49 = new Accessoires(25, "S", "unisex", 54, "sportlich", "graues Schweißband");
+        Accessoires a50 = new Accessoires(25, "M", "unisex", 54, "sportlich", "graues Schweißband");
+        Accessoires a51 = new Accessoires(25, "L", "unisex", 54, "sportlich", "graues Schweißband");
+        Accessoires a52 = new Accessoires(25, "XL", "unisex", 54, "sportlich", "graues Schweißband");
+        Accessoires a53 = new Accessoires(20, "S", "männlich", 38, "sortlich", "Nike Sportsocken");
+        Accessoires a54 = new Accessoires(20, "M", "männlich", 38, "sportlich", "Nike Sportsocken");
+        Accessoires a55 = new Accessoires(20, "L", "männlich", 38, "sportlich", "Nike Sportsocken");
+        Accessoires a56 = new Accessoires(20, "XL", "männlich", 38, "sportlich", "Nike Sportsocken");
+        Accessoires a57 = new Accessoires(20, "S", "weiblich", 38, "sportlich", "Slimmer Gürtel");
+        Accessoires a58 = new Accessoires(20, "M", "weiblich", 38, "sportlich", "Slimmer Gürtel");
+        Accessoires a59 = new Accessoires(20, "L", "weiblich", 38, "sportlich", "Slimmer Gürtel");
+        Accessoires a60 = new Accessoires(20, "XL", "weiblich", 38, "sportlich", "Slimmer Gürtel");
+        Accessoires a61 = new Accessoires(25, "S", "unisex", 54, "sportlich", "schwarze Sportsocken");
+        Accessoires a62 = new Accessoires(25, "M", "unisex", 54, "sportlich", "schwarze Sportsocken");
+        Accessoires a63 = new Accessoires(25, "L", "unisex", 54, "sportlich", "schwarze Sportsocken");
+        Accessoires a64 = new Accessoires(25, "XL", "unisex", 54, "sportlich", "schwarze Sportsocken");
+        Accessoires a65 = new Accessoires(20, "S", "männlich", 38, "sportlich", "schwarze Schweißbänder für Stirn und Arme");
+        Accessoires a66 = new Accessoires(20, "M", "männlich", 38, "sportlich", "schwarze Schweißbänder für Stirn und Arme");
+        Accessoires a67 = new Accessoires(20, "L", "männlich", 38, "sportlich", "schwarze Schweißbänder für Stirn und Arme");
+        Accessoires a68 = new Accessoires(20, "XL", "männlich", 38, "sportlich", "schwarze Schweißbänder für Stirn und Arme");
+        Accessoires a69 = new Accessoires(20, "S", "weiblich", 38, "sportlich", "blaues Stretchband");
+        Accessoires a70 = new Accessoires(20, "M", "weiblich", 38, "sportlich", "blaues Stretchband");
+        Accessoires a71 = new Accessoires(20, "L", "weiblich", 38, "sportlich", "blaues Stretchband");
+        Accessoires a72 = new Accessoires(20, "XL", "weiblich", 38, "sportlich", "blaues Stretchband");
+        
+        
+        
+        
+        
+        
         artikelListe.add(a1);
         artikelListe.add(a2);
         artikelListe.add(a3);
         artikelListe.add(a4);
         artikelListe.add(a5);
+        artikelListe.add(a6);
+        artikelListe.add(a7);
+        artikelListe.add(a8);
+        artikelListe.add(a9);
+        artikelListe.add(a10);
+        artikelListe.add(a11);
+        artikelListe.add(a12);
+        artikelListe.add(a13);
+        artikelListe.add(a14);
+        artikelListe.add(a15);
+        artikelListe.add(a16);
+        artikelListe.add(a17);
+        artikelListe.add(a18);
+        artikelListe.add(a19);
+        artikelListe.add(a20);
+        artikelListe.add(a21);
+        artikelListe.add(a22);
+        artikelListe.add(a23);
+        artikelListe.add(a24);
+        artikelListe.add(a25);
+        artikelListe.add(a26);
+        artikelListe.add(a27);
+        artikelListe.add(a28);
+        artikelListe.add(a29);
+        artikelListe.add(a30);
+        artikelListe.add(a31);
+        artikelListe.add(a32);
+        artikelListe.add(a33);
+        artikelListe.add(a34);
+        artikelListe.add(a35);
+        artikelListe.add(a36);
+        artikelListe.add(a37);
+        artikelListe.add(a38);
+        artikelListe.add(a39);
+        artikelListe.add(a40);
+        artikelListe.add(a41);
+        artikelListe.add(a42);
+        artikelListe.add(a43);
+        artikelListe.add(a44);
+        artikelListe.add(a45);
+        artikelListe.add(a46);
+        artikelListe.add(a47);
+        artikelListe.add(a48);
+        artikelListe.add(a49);
+        artikelListe.add(a50);
+        artikelListe.add(a51);
+        artikelListe.add(a52);
+        artikelListe.add(a53);
+        artikelListe.add(a54);
+        artikelListe.add(a55);
+        artikelListe.add(a56);
+        artikelListe.add(a57);
+        artikelListe.add(a58);
+        artikelListe.add(a59);
+        artikelListe.add(a60);
+        artikelListe.add(a61);
+        artikelListe.add(a62);
+        artikelListe.add(a63);
+        artikelListe.add(a64);
+        artikelListe.add(a65);
+        artikelListe.add(a66);
+        artikelListe.add(a67);
+        artikelListe.add(a68);
+        artikelListe.add(a69);
+        artikelListe.add(a70);
+        artikelListe.add(a71);
+        artikelListe.add(a72);
+        
+       
     }
 
     /**
