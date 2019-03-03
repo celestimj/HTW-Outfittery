@@ -48,7 +48,8 @@ public class Verwaltung implements Serializable {
         kundenListe.add(k3);
         kundenListe.add(k4);
 
-        Oberteil o1 = new Oberteil(24.99, "S", "unisex", 255, "sportlich", "Blauer Kapuzenpullover mit Aufschrift"); 
+        
+       Oberteil o1 = new Oberteil(24.99, "S", "unisex", 255, "sportlich", "Blauer Kapuzenpullover mit Aufschrift"); 
         Oberteil o2 = new Oberteil(15.99, "M", "männlich", 155, "freizeit", "Blauer Pullover mit V-Ausschnitt");  
         Oberteil o3 = new Oberteil(20.99, "S", "unisex", 145, "freizeit", "Roter Kapuzenpullover");
         Oberteil o4 = new Oberteil(29.99, "L", "weiblich", 305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste");
@@ -227,37 +228,178 @@ public class Verwaltung implements Serializable {
         Unterteil u22 = new Unterteil(80, "M", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
         Unterteil u23 = new Unterteil(80, "L", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
         Unterteil u24= new Unterteil(80, "XL", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        Unterteil u1 = new Unterteil(24.99, "L", "weiblich", 125, "business", "Beige Chinohose");
-        
-        
-        
-        Unterteil u2 = new Unterteil(35, "S", "weiblich", 230, "freizeit", "blaue Skinnyjeans ");
-        
-        Unterteil u4 = new Unterteil(15.99, "S", "unisex", 420, "freizeit", "hellgraue Hose mit Gummibund");
+        Unterteil u25 = new Unterteil(80, "S", "männlich", 220, "freizeit", "Schmal zulaufende Jeans in mittlerer ");
+        Unterteil u26 = new Unterteil(80, "M", "männlich", 220, "freizeit", "Schmal zulaufende Jeans in mittlerer ");
+        Unterteil u27 = new Unterteil(80, "L", "männlich", 220, "freizeit", "Schmal zulaufende Jeans in mittlerer ");
+        Unterteil u28 = new Unterteil(80, "XL", "männlich", 220, "freizeit", "Schmal zulaufende Jeans in mittlerer ");
+        Unterteil u29 = new Unterteil(80, "S", "weiblich", 220, "freizeit", "Plissierter Hosenrock gelb");
+        Unterteil u30 = new Unterteil(80, "M", "weiblich", 220, "freizeit", "Plissierter Hosenrock gelb");
+        Unterteil u31 = new Unterteil(80, "L", "weiblich", 220, "freizeit", "Plissierter Hosenrock gelb");
+        Unterteil u32 = new Unterteil(80, "XL", "weiblich", 220, "freizeit", "Plissierter Hosenrock gelb");
+        Unterteil u33 = new Unterteil(80, "S", "unisex", 220, "freizeit", "enge Hose mit elastischen Bündchen");
+        Unterteil u34 = new Unterteil(80, "M", "unisex", 220, "freizeit", "enge Hose mit elastischen Bündchen");
+        Unterteil u35 = new Unterteil(80, "L", "unisex", 220, "freizeit", "enge Hose mit elastischen Bündchen");
+        Unterteil u36= new Unterteil(80, "XL", "unisex", 220, "freizeit", "enge Hose mit elastischen Bündchen");
+        Unterteil u37 = new Unterteil(80, "S", "männlich", 220, "freizeit", "Jeans in hellblauer Vintage-Waschung mit tiefem Schritt und auffälligen Rissen");
+        Unterteil u38 = new Unterteil(80, "M", "männlich", 220, "freizeit", "Jeans in hellblauer Vintage-Waschung mit tiefem Schritt und auffälligen Rissen");
+        Unterteil u39 = new Unterteil(80, "L", "männlich", 220, "freizeit", "Jeans in hellblauer Vintage-Waschung mit tiefem Schritt und auffälligen Rissen");
+        Unterteil u40 = new Unterteil(80, "XL", "männlich", 220, "freizeit", "Jeans in hellblauer Vintage-Waschung mit tiefem Schritt und auffälligen Rissen");
+        Unterteil u41 = new Unterteil(80, "S", "weiblich", 220, "freizeit", "Jeans Rock knielang");
+        Unterteil u42 = new Unterteil(80, "M", "weiblich", 220, "freizeit", "Jeans Rock knielang");
+        Unterteil u43 = new Unterteil(80, "L", "weiblich", 220, "freizeit", "Jeans Rock knielang");
+        Unterteil u44 = new Unterteil(80, "XL", "weiblich", 220, "freizeit", "Jeans Rock knielang");
+        Unterteil u45 = new Unterteil(80, "S", "unisex", 220, "freizeit", "Schmal geschnittene Cargohose in grün");
+        Unterteil u46 = new Unterteil(80, "M", "unisex", 220, "freizeit", "Schmal geschnittene Cargohose in grün");
+        Unterteil u47 = new Unterteil(80, "L", "unisex", 220, "freizeit", "Schmal geschnittene Cargohose in gün");
+        Unterteil u48= new Unterteil(80, "XL", "unisex", 220, "freizeit", "Schmal geschnittene Cargohose in grün");
+        Unterteil u49 = new Unterteil(80, "S", "männlich", 220, "sportlich", "Grau melierte, enge Jogginghose mit seitlichen Streifen");
+        Unterteil u50 = new Unterteil(80, "M", "männlich", 220, "sportlich", "Grau melierte, enge Jogginghose mit seitlichen Streifen");
+        Unterteil u51 = new Unterteil(80, "L", "männlich", 220, "sportlich", "Grau melierte, enge Jogginghose mit seitlichen Streifen ");
+        Unterteil u52 = new Unterteil(80, "XL", "männlich", 220, "sportlich", "Grau melierte, enge Jogginghose mit seitlichen Streifen ");
+        Unterteil u53 = new Unterteil(80, "S", "weiblich", 220, "sportlich", "Leggings in Schwarz");
+        Unterteil u54 = new Unterteil(80, "M", "weiblich", 220, "sportlich", "Leggings in Schwarz");
+        Unterteil u55 = new Unterteil(80, "L", "weiblich", 220, "sportlich", "Leggings in Schwarz");
+        Unterteil u56 = new Unterteil(80, "XL", "weiblich", 220, "sportlich", "Leggings in Schwarz");
+        Unterteil u57 = new Unterteil(80, "S", "unisex", 220, "sportlich", "Nike Jogginghose");
+        Unterteil u58 = new Unterteil(80, "M", "unisex", 220, "sportlich", "Nike Jogginghose");
+        Unterteil u59 = new Unterteil(80, "L", "unisex", 220, "sportlich", "Nike Jogginghose");
+        Unterteil u60= new Unterteil(80, "XL", "unisex", 220, "sportlich", "Nike Jogginghose");
+        Unterteil u61 = new Unterteil(80, "S", "männlich", 220, "sportlich", "Schwarze Jogginghose in enger Passform");
+        Unterteil u62 = new Unterteil(80, "M", "männlich", 220, "sportlich", "Schwarze Jogginghose in enger Passform");
+        Unterteil u63 = new Unterteil(80, "L", "männlich", 220, "sportlich", "Schwarze Jogginghose in enger Passform");
+        Unterteil u64 = new Unterteil(80, "XL", "männlich", 220, "sportlich", "Schwarze Jogginghose in enger Passform");
+        Unterteil u65 = new Unterteil(80, "S", "weiblich", 220, "sportlich", "Rosa Leggings mit drei Streifen");
+        Unterteil u66 = new Unterteil(80, "M", "weiblich", 220, "sportlich", "Rosa Leggings mit drei Streifen");
+        Unterteil u67 = new Unterteil(80, "L", "weiblich", 220, "sportlich", "Rosa Leggings mit drei Streifen");
+        Unterteil u68 = new Unterteil(80, "XL", "weiblich", 220, "sportlich", "Rosa Leggings mit drei Streifen");
+        Unterteil u69 = new Unterteil(80, "S", "unisex", 220, "sportlich", "College-Trainingshose blau");
+        Unterteil u70 = new Unterteil(80, "M", "unisex", 220, "sportlich", "College-Trainingshose blau");
+        Unterteil u71 = new Unterteil(80, "L", "unisex", 220, "sportlich", "College-Trainingshose blau");
+        Unterteil u72= new Unterteil(80, "XL", "unisex", 220, "sportlich", "College-Trainingshose blau");
+
 
         artikelListe.add(u1);
         artikelListe.add(u2);
-       
         artikelListe.add(u3);
         artikelListe.add(u4);
-        
-        
+        artikelListe.add(u5);
+        artikelListe.add(u6);
+        artikelListe.add(u7);
+        artikelListe.add(u8);
+        artikelListe.add(u9);
+        artikelListe.add(u10);
+        artikelListe.add(u11);
+        artikelListe.add(u12);
+        artikelListe.add(u13);
+        artikelListe.add(u14);
+        artikelListe.add(u15);
+        artikelListe.add(u16);
+        artikelListe.add(u17);
+        artikelListe.add(u18);
+        artikelListe.add(u19);
+        artikelListe.add(u20);
+        artikelListe.add(u21);
+        artikelListe.add(u22);
+        artikelListe.add(u23);
+        artikelListe.add(u24);
+        artikelListe.add(u25);
+        artikelListe.add(u26);
+        artikelListe.add(u27);
+        artikelListe.add(u28);
+        artikelListe.add(u29);
+        artikelListe.add(u30);
+        artikelListe.add(u31);
+        artikelListe.add(u32);
+        artikelListe.add(u33);
+        artikelListe.add(u34);
+        artikelListe.add(u35);
+        artikelListe.add(u36);
+        artikelListe.add(u37);
+        artikelListe.add(u38);
+        artikelListe.add(u39);
+        artikelListe.add(u40);
+        artikelListe.add(u41);
+        artikelListe.add(u42);
+        artikelListe.add(u43);
+        artikelListe.add(u44);
+        artikelListe.add(u45);
+        artikelListe.add(u46);
+        artikelListe.add(u47);
+        artikelListe.add(u48);
+        artikelListe.add(u49);
+        artikelListe.add(u50);
+        artikelListe.add(u51);
+        artikelListe.add(u52);
+        artikelListe.add(u53);
+        artikelListe.add(u54);
+        artikelListe.add(u55);
+        artikelListe.add(u56);
+        artikelListe.add(u57);
+        artikelListe.add(u58);
+        artikelListe.add(u59);
+        artikelListe.add(u60);
+        artikelListe.add(u61);
+        artikelListe.add(u62);
+        artikelListe.add(u63);
+        artikelListe.add(u64);
+        artikelListe.add(u65);
+        artikelListe.add(u66);
+        artikelListe.add(u67);
+        artikelListe.add(u68);
+        artikelListe.add(u69);
+        artikelListe.add(u70);
+        artikelListe.add(u71);
+        artikelListe.add(u72);
+          
 
+        Schuhe s1 = new Schuhe(18.99, "S", "männlich", 133, "business", "Derby-Schuhe aus hellbraunem Kunstleder");
+        Schuhe s2 = new Schuhe(18.99, "M", "männlich", 133, "business", "Derby-Schuhe aus hellbraunem Kunstleder");
+        Schuhe s3 = new Schuhe(18.99, "L", "männlich", 133, "business", "Derby-Schuhe aus hellbraunem Kunstleder");
+        Schuhe s4 = new Schuhe(18.99, "XL", "männlich", 133, "business", "Derby-Schuhe aus hellbraunem Kunstleder");
+        Schuhe s5 = new Schuhe(18.99, "S", "weiblich", 133, "business", "Spitze Pumps mit rundem Absatz in braun");
+        Schuhe s6 = new Schuhe(18.99, "M", "weiblich", 133, "business", "Spitze Pumps mit rundem Absatz in braun");
+        Schuhe s7 = new Schuhe(18.99, "L", "weiblich", 133, "business", "Spitze Pumps mit rundem Absatz in braun");
+        Schuhe s8 = new Schuhe(18.99, "XL", "weiblich", 133, "business","Spitze Pumps mit rundem Absatz in braun");
+        Schuhe s9 = new Schuhe(18.99, "S", "unisex", 133, "business", "Schwarze Schnürschuhe mit dicker Sohle");
+        Schuhe s10 = new Schuhe(18.99, "M", "unisex", 133, "business", "Schwarze Schnürschuhe mit dicker Sohle");
+        Schuhe s11 = new Schuhe(18.99, "L", "unisex", 133, "business", "Schwarze Schnürschuhe mit dicker Sohle");
+        Schuhe s12= new Schuhe(18.99, "XL", "unisex", 133, "business","Schwarze Schnürschuhe mit dicker Sohle");
+        Schuhe s13 = new Schuhe(18.99, "S", "männlich", 133, "business", "Schuhe im Budapester Stil aus braunem Leder mit Natursohle und farbigen Verzierungen");
+        Schuhe s14= new Schuhe(18.99, "M", "männlich", 133, "business", "Schuhe im Budapester Stil aus braunem Leder mit Natursohle und farbigen Verzierungen");
+        Schuhe s15 = new Schuhe(18.99, "L", "männlich", 133, "business", "Schuhe im Budapester Stil aus braunem Leder mit Natursohle und farbigen Verzierungen");
+        Schuhe s16 = new Schuhe(18.99, "XL", "männlich", 133, "business", "Schuhe im Budapester Stil aus braunem Leder mit Natursohle und farbigen Verzierungen");
+        Schuhe s17= new Schuhe(18.99, "S", "weiblich", 133, "business", "Loafer mit Ziernaht in Marine");
+        Schuhe s18= new Schuhe(18.99, "M", "weiblich", 133, "business", "Loafer mit Ziernaht in Marine");
+        Schuhe s19 = new Schuhe(18.99, "L", "weiblich", 133, "business", "Loafer mit Ziernaht in Marine");
+        Schuhe s20 = new Schuhe(18.99, "XL", "weiblich", 133, "business","Loafer mit Ziernaht in Marine");
+        Schuhe s21 = new Schuhe(18.99, "S", "unisex", 133, "business", "Flache Loafer in Schwarz");
+        Schuhe s22 = new Schuhe(18.99, "M", "unisex", 133, "business", "Flache Loafer in Schwarz");
+        Schuhe s23 = new Schuhe(18.99, "L", "unisex", 133, "business", "Flache Loafer in Schwarz");
+        Schuhe s24= new Schuhe(18.99, "XL", "unisex", 133, "business","Flache Loafer in Schwarz");
+        Schuhe s25 = new Schuhe(18.99, "S", "männlich", 133, "sportlich", "Nike Running – Air Zoom 35 Pegasus");
+        Schuhe s26 = new Schuhe(18.99, "M", "männlich", 133, "sportlich", "Nike Running – Air Zoom 35 Pegasus");
+        Schuhe s27 = new Schuhe(18.99, "L", "männlich", 133, "sportlich", "Nike Running – Air Zoom 35 Pegasus");
+        Schuhe s28 = new Schuhe(18.99, "XL", "männlich", 133, "sportlich", "Nike Running – Air Zoom 35 Pegasus");
+        Schuhe s29 = new Schuhe(18.99, "S", "weiblich", 133, "sportlich", "Nike Training – Metcon Free");
+        Schuhe s30 = new Schuhe(18.99, "M", "weiblich", 133, "sportlich", "Nike Training – Metcon Free");
+        Schuhe s31 = new Schuhe(18.99, "L", "weiblich", 133, "sportlich", "Nike Training – Metcon Free");
+        Schuhe s32 = new Schuhe(18.99, "XL", "weiblich", 133, "sportlich","Nike Training – Metcon Free");
+        Schuhe s33 = new Schuhe(18.99, "S", "unisex", 133, "sporltich", "Nike Running – Epic React 2 Flyknit");
+        Schuhe s34 = new Schuhe(18.99, "M", "unisex", 133, "sportlich", "Nike Running – Epic React 2 Flyknit");
+        Schuhe s35 = new Schuhe(18.99, "L", "unisex", 133, "sportlich", "Nike Running – Epic React 2 Flyknit");
+        Schuhe s36= new Schuhe(18.99, "XL", "unisex", 133, "sportlich","Nike Running – Epic React 2 Flyknit");
+        Schuhe s37 = new Schuhe(18.99, "S", "männlich", 133, "sportlich", "Nike Training – Retaliation 2");
+        Schuhe s38= new Schuhe(18.99, "M", "männlich", 133, "sportlich", "Nike Training – Retaliation 2");
+        Schuhe s39 = new Schuhe(18.99, "L", "männlich", 133, "sportlich", "Nike Training – Retaliation 2");
+        Schuhe s40 = new Schuhe(18.99, "XL", "männlich", 133, "sportlich", "Nike Training – Retaliation 2");
+        Schuhe s41= new Schuhe(18.99, "S", "weiblich", 133, "sportlich", "Loafer mit Ziernaht in Marine");
+        Schuhe s42= new Schuhe(18.99, "M", "weiblich", 133, "sportlich", "Loafer mit Ziernaht in Marine");
+        Schuhe s43 = new Schuhe(18.99, "L", "weiblich", 133, "sportlich", "Loafer mit Ziernaht in Marine");
+        Schuhe s44 = new Schuhe(18.99, "XL", "weiblich", 133, "sportlich","Loafer mit Ziernaht in Marine");
+        Schuhe s45 = new Schuhe(18.99, "S", "unisex", 133, "sportlich", "converse in weiss");
+        Schuhe s46 = new Schuhe(18.99, "M", "unisex", 133, "sportlich", "converse in weiss");
+        Schuhe s47 = new Schuhe(18.99, "L", "unisex", 133, "sportlich", "converse in weiss");
+        Schuhe s48= new Schuhe(18.99, "XL", "unisex", 133, "sportlich","converse in weiss");
         Schuhe s49 = new Schuhe(18.99, "S", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
         Schuhe s50 = new Schuhe(18.99, "M", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
         Schuhe s51 = new Schuhe(18.99, "L", "weiblich", 133, "freizeit", "beige Ballerinas aus Wildleder");
@@ -284,7 +426,54 @@ public class Verwaltung implements Serializable {
         Schuhe s72 = new Schuhe(29.99, "XL", "männlich", 240, "freizeit", "graue Nike");
         
         
-        
+        artikelListe.add(s1);
+        artikelListe.add(s2);
+        artikelListe.add(s3);
+        artikelListe.add(s4);
+        artikelListe.add(s5);
+        artikelListe.add(s6);
+        artikelListe.add(s7);
+        artikelListe.add(s8);
+        artikelListe.add(s9);
+        artikelListe.add(s10);
+        artikelListe.add(s11);
+        artikelListe.add(s12);
+        artikelListe.add(s13);
+        artikelListe.add(s14);
+        artikelListe.add(s15);
+        artikelListe.add(s16);
+        artikelListe.add(s17);
+        artikelListe.add(s18);
+        artikelListe.add(s19);
+        artikelListe.add(s20);
+        artikelListe.add(s21);
+        artikelListe.add(s22);
+        artikelListe.add(s23);
+        artikelListe.add(s24);
+        artikelListe.add(s25);
+        artikelListe.add(s26);
+        artikelListe.add(s27);
+        artikelListe.add(s28);
+        artikelListe.add(s29);
+        artikelListe.add(s30);
+         artikelListe.add(s31);
+        artikelListe.add(s32);
+        artikelListe.add(s33);
+        artikelListe.add(s34);
+        artikelListe.add(s35);
+        artikelListe.add(s36);
+        artikelListe.add(s37);
+        artikelListe.add(s38);
+        artikelListe.add(s39);
+        artikelListe.add(s40);
+         artikelListe.add(s41);
+        artikelListe.add(s42);
+        artikelListe.add(s43);
+        artikelListe.add(s44);
+        artikelListe.add(s45);
+        artikelListe.add(s46);
+        artikelListe.add(s47);
+        artikelListe.add(s48);
         artikelListe.add(s49);
         artikelListe.add(s50);
         artikelListe.add(s51);
@@ -309,8 +498,6 @@ public class Verwaltung implements Serializable {
         artikelListe.add(s70);
         artikelListe.add(s71);
         artikelListe.add(s72);
-        
-        
         
         
         
