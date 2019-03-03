@@ -22,7 +22,7 @@ public class Outfit extends Artikel {
 
     
     /**
-     * 
+     * Konstruktor für ein Outfit
      * @param oberteil
      * @param unterteil
      * @param schuhe
@@ -37,7 +37,7 @@ public class Outfit extends Artikel {
 
     
     /**
-     * 
+     * Konstruktor für Outfitsuche 2
      * @param ArtikelnrOberteilFind
      * @param ArtikelnrUnterteilFind
      * @param ArtikelnrSchuhFind
@@ -55,7 +55,7 @@ public class Outfit extends Artikel {
     }
 
     /**
-     * 
+     * Methode setzt die OutfitID.
      * @param outfitid 
      */
     public void setOutfitid(int outfitid) {
@@ -63,7 +63,7 @@ public class Outfit extends Artikel {
     }
 
     /**
-     * 
+     * Methode gibt die OutfitID zurück.
      * @return 
      */
     public int getOutfitid() {
