@@ -647,10 +647,51 @@ public class Verwaltung implements Serializable {
             printLF();
 
         }
-
+     OutfitWählen();
     }
 
     
+    
+    /**
+     * 
+     */
+   public void OutfitWählen()
+   {  char eingabe;
+        boolean menuewechsel = false;
+        do {
+            System.out.println("Möchten Sie eines dieser Outfits bestellen?");
+            System.out.println("------------------------------------------------------------");
+
+            System.out.println("[1]  Ja, in Warenkorb Outfit 1 hinzufügen");
+            System.out.println("[2]  Ja, in Warenkorb Outfit 2 hinzufügen");
+            System.out.println("[3]  Nein ");
+            System.out.println("[0] HAUPTMENUE");
+            printAuswahlTreffen();
+            eingabe = Stdin.readlnChar();
+
+            switch (eingabe) {
+                case '0':
+                    menuewechsel = true;
+                    break;
+                case '1':
+                    Outfit1InWarenkorb();  //speichere die Angaben und suche Outfit
+                    break;
+                case '2':
+                    Outfit1InWarenkorb(); //speichere die Angaben und suche Outfit
+                    break;
+                case '3':
+                    beenden();   //speichere die Angaben und suche Outfit
+                    break;
+                       
+                default:
+                    printEingabeFehler(); //wenn keine der möglichen Eingaben getroffen, ausprinten dass die Eingabe nicht korrekt
+            }
+        } while (!menuewechsel);
+
+   
+      }
+   
+   
     /**
      * 
      */
