@@ -51,7 +51,7 @@ public abstract class Artikel
     }
   
   /**
-   * 
+   * Methode setzt Artikelnummer des Artikel.
    * @param artikelnummer 
    */
   public void setArtikelnummer(int artikelnummer)
@@ -60,7 +60,7 @@ public abstract class Artikel
     }
     
   /**
-   * 
+   * Methode gibt die Artikelnummer des Artikel zurück.
    * @return 
    */
     public int getArtikelnummer()
@@ -70,7 +70,7 @@ public abstract class Artikel
     }
     
     /**
-     * 
+     * Methode setzt den Preis des Artikels.
      * @param preis 
      */
      public void setPreis(double preis)
@@ -79,6 +79,7 @@ public abstract class Artikel
     }
     
    /**
+    * Methode gibt den Preis des Artikel zurück.
     * @return 
     */
     public double getPreis()
@@ -88,7 +89,7 @@ public abstract class Artikel
     }
     
     /**
-     *   
+     * Methode setzt das Geschlecht des Artikels.
      * @param geschlecht 
      */
     public void setGeschlecht(String geschlecht)
@@ -97,7 +98,7 @@ public abstract class Artikel
     }
     
     /**
-     * 
+     * Methode gibt das Geschlecht des Artikel zurück.
      * @return 
      */
     public String getGeschlecht()
@@ -106,7 +107,7 @@ public abstract class Artikel
     }
     
     /**
-     * 
+     * Methode setzt den Stil des Artikel.
      * @param stil 
      */
     public void setStil(String stil)
@@ -115,7 +116,7 @@ public abstract class Artikel
     }
     
     /**
-     * 
+     * Methode gibt den Stil des Artikel zurück.
      * @return 
      */
     public String getStil()       
@@ -124,7 +125,7 @@ public abstract class Artikel
     }
     
     /**
-     *  
+     *  Methode setzt die Preiskategorie des Artikel.
      * @param preiskategorie 
      */
     public void setPreiskategorie(String preiskategorie)
@@ -134,7 +135,7 @@ public abstract class Artikel
     }
     
     /**
-     * 
+     * Methode gibt die Preiskategorie des Artikel zurück am Preis orientiert.
      * @return 
      */
     public String getPreiskategorie()
@@ -155,7 +156,7 @@ public abstract class Artikel
        
    
     /**
-     * 
+     * Methode setzt den Lagerbestand des Artikel.
      * @param lagerbestand 
      */
     public void setLagerbestand(int lagerbestand) 
@@ -164,7 +165,7 @@ public abstract class Artikel
     }
     
     /**
-     * 
+     * Methode gibt den Lagerbestand des Artikel zurück.
      * @return 
      */
     public int getLagerbestand()
@@ -174,7 +175,7 @@ public abstract class Artikel
     }
     
     /**
-     * 
+     * Methode setzt die Größe des Artikel.
      * @param größe 
      */
     public void setGröße(String größe)
@@ -183,7 +184,7 @@ public abstract class Artikel
     }
     
     /**
-     * 
+     * Methode gibt die Größe des Artikel zurück.
      * @return 
      */
     public String getGröße()
@@ -193,7 +194,7 @@ public abstract class Artikel
     }
     
     /**
-     * 
+     * Methode gibt die Beschreibund des Artikel zurück.
      * @return 
      */
     public String getBeschreibung()
@@ -202,7 +203,7 @@ public abstract class Artikel
     }
 
     /**
-     * 
+     * Methode setzt die Beschreibung des Artikel.
      * @param beschreibung 
      */
     public void setBeschreibung( String beschreibung)
