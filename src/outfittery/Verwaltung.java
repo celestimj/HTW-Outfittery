@@ -14,7 +14,7 @@ import de.htw.saarland.stl.Stdin;           // fuer Eingaben von der Konsole
  */
 
 /**
- * Instanzvariablen der Klasse Verwaltung
+ * Variablen der Klasse Verwaltung
  */
 public class Verwaltung implements Serializable {
 
@@ -30,7 +30,6 @@ public class Verwaltung implements Serializable {
     public Verwaltung() {
 
         outfitListe = new ArrayList<>();//Hier können die Kleidungstücke gespeichert werden von Outfitsuche
-
         kundenListe = new ArrayList<>(); // hier sind die KUnden abgespeichert
         artikelListe = new ArrayList<>(); // hier sind alle vorhandenen Artikel gespeichert
     }
@@ -49,8 +48,8 @@ public class Verwaltung implements Serializable {
         kundenListe.add(k3);
         kundenListe.add(k4);
 
-        Oberteil o1 = new Oberteil(24.99, "S", "unisex", 255, "sportlich", "Blauer Kapuzenpullover mit Aufschrift"); // Kombi, S bzw M freizeit für männlich und weiblich möglich
-        Oberteil o2 = new Oberteil(15.99, "M", "männlich", 155, "freizeit", "Blauer Pullover mit V-Ausschnitt");  // Kombi business L weiblich möglich zum Testen
+        Oberteil o1 = new Oberteil(24.99, "S", "unisex", 255, "sportlich", "Blauer Kapuzenpullover mit Aufschrift"); 
+        Oberteil o2 = new Oberteil(15.99, "M", "männlich", 155, "freizeit", "Blauer Pullover mit V-Ausschnitt");  
         Oberteil o3 = new Oberteil(20.99, "S", "unisex", 145, "freizeit", "Roter Kapuzenpullover");
         Oberteil o4 = new Oberteil(29.99, "L", "weiblich", 305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste");
         Oberteil o5 = new Oberteil(29.99, "XL", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
