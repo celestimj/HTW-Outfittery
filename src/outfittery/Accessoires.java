@@ -1,7 +1,7 @@
 
 package outfittery;
 /**
- * Die KLasse Accessoires ist eine Spezialisierung eines Artikels.
+ * Die Klasse Accessoires ist eine Spezialisierung eines Artikels.
  * @author loreen
  * @version v1 - Dezember 2018
  */

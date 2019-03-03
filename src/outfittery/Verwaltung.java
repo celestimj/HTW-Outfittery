@@ -12,6 +12,10 @@ import de.htw.saarland.stl.Stdin;           // fuer Eingaben von der Konsole
  * @author Loreen
  * @version v1 - Dezember 2018
  */
+
+/**
+ * Instanzvariablen der Klasse Verwaltung
+ */
 public class Verwaltung implements Serializable {
 
     private ArrayList<Outfit> outfitListe; //Liste für gefundene Outfits
@@ -21,7 +25,7 @@ public class Verwaltung implements Serializable {
     final static int FELDLAENGE = 14;
 
     /**
-     * Constructor for objects of class Verwaltung
+     * Konstruktor für die Objekte der Klasse Verwaltung
      */
     public Verwaltung() {
 
@@ -31,8 +35,11 @@ public class Verwaltung implements Serializable {
         artikelListe = new ArrayList<>(); // hier sind alle vorhandenen Artikel gespeichert
     }
 
+     /**
+      * die vorhandenen Kunden, Ober-, Unterteile, Schuhe und Accessoires wurden hier initialisiert
+      */
     public void initData() {
-        // die vorhandenen Kunden, Ober-, Unterteile, Schuhe und Accessoires wurden hier angelegt
+       
         Kunde k1 = new Kunde("Tim", "Müller", "015609354267");
         Kunde k2 = new Kunde("Michelle", "Watson", "01712233593");
         Kunde k3 = new Kunde("Lena", "Caron", "01774622273");
@@ -85,6 +92,10 @@ public class Verwaltung implements Serializable {
         artikelListe.add(a5);
     }
 
+    /**
+     * 
+     * @throws IOException 
+     */
     private void saveDataToXML() throws IOException {
         XMLEncoder xmlEncoder = new XMLEncoder(new FileOutputStream("outfittery.xml"));
         XMLEncoder xmlEncoderArtikels = new XMLEncoder(new FileOutputStream("artikels.xml"));
@@ -97,6 +108,11 @@ public class Verwaltung implements Serializable {
         xmlEncoder.close();
     }
 
+    /**
+     * 
+     * @return
+     * @throws IOException 
+     */
     public Verwaltung loadDataFromXML() throws IOException {
         //Methode um Daten von XML zu laden
         XMLDecoder verwaltungAusDemXmlDecoder = new XMLDecoder(new FileInputStream("outfittery.xml"));
@@ -110,6 +126,9 @@ public class Verwaltung implements Serializable {
         return obj;
     }
 
+    /**
+     * 
+     */
     private void save() {
         try {
             //speichert die Daten ab
@@ -119,6 +138,9 @@ public class Verwaltung implements Serializable {
         }
     }
 
+    /**
+     * 
+     */
     private void load() {
         try {
             //ladet die vorhandenen Daten  
@@ -130,27 +152,49 @@ public class Verwaltung implements Serializable {
         }
     }
 
+    /**
+     * 
+     */
     private void beenden() {
         //beendet die Menues
         System.exit(0);
     }
 
+    /**
+     * 
+     * @return 
+     */
     public ArrayList getKundenListe() {
         return this.kundenListe;
     }
 
+    /**
+     * 
+     * @param liste 
+     */
     public void setKundenListe(ArrayList liste) {
         this.kundenListe = liste;
     }
 
+    /**
+     * 
+     * @param liste 
+     */
     public void setArtikelListe(ArrayList liste) {
         this.artikelListe = liste;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public ArrayList getArtikelListe() {
         return this.artikelListe;
     }
 
+    /**
+     * 
+     */
     private void mainMenue() {
         char eingabe;
         //Startmenue, in dem man den weiteren Pfad wählen kann
@@ -189,6 +233,9 @@ public class Verwaltung implements Serializable {
         } while (true);
     }
 
+    /**
+     * 
+     */
     private void warenBestand() {
         //Menue des Warenbestandes
         char eingabe;
@@ -236,7 +283,9 @@ public class Verwaltung implements Serializable {
         } while (!menuewechsel);
     }
 
-    //Neue Artikel können in das System eingespeichert werden
+    /**
+     * Neue Artikel können in das System eingespeichert werden
+     */
     private void erstelleNeuenArtikel() {
 
         String artikelart = Stdin.readlnString("Artikelart: oberteil, unterteil, schuhe oder accessoires eingeben:");
@@ -297,6 +346,9 @@ public class Verwaltung implements Serializable {
         }
     }
 
+    /**
+     * 
+     */
     private void WilleZurSpeicherung() {
         String speicher = Stdin.readlnString("Wollen sie ihre Eingaben Für immer und ewig in der Xml Speicher? (J/N):");
         if (speicher.equals("J") || speicher.equals("Ja") || speicher.equals("j")) {//hiermit können fehlerhafte eingaben abgebrochen werden
@@ -308,6 +360,9 @@ public class Verwaltung implements Serializable {
         }
     }
 
+    /**
+     * 
+     */
     private void printOutfitliste() {
         //Methode um Outfitliste anzuzeigen
         Iterator<Outfit> iter = outfitListe.iterator();
@@ -324,6 +379,9 @@ public class Verwaltung implements Serializable {
 
     }
 
+    /**
+     * 
+     */
     private void verwaltungsMenue() {
 
         //Verwaltungsmenue um Daten zu laden und speichern in XML
@@ -355,6 +413,9 @@ public class Verwaltung implements Serializable {
         } while (!menuewechsel);
     }
 
+    /**
+     * 
+     */
     private void kundenMenue() {
         //Kundenmenue zur Verwaltung der neuen und angelegten Kunden
         char eingabe;
@@ -389,6 +450,9 @@ public class Verwaltung implements Serializable {
         } while (!menuewechsel);
     }
 
+    /**
+     * 
+     */
     private void outfitSuche() {
         char eingabe;
         boolean menuewechsel = false;
@@ -398,7 +462,6 @@ public class Verwaltung implements Serializable {
 
             System.out.println("[1]  Outfitsuche starten");
             System.out.println("[0] HAUPTMENUE");
-            System.out.println(" [2]Outfitsuche2 ");
             printAuswahlTreffen();
             eingabe = Stdin.readlnChar();
 
@@ -407,12 +470,9 @@ public class Verwaltung implements Serializable {
                     menuewechsel = true;
                     break;
                 case '1':
-                    findeOutfits();  //speichere die Angaben und suche OUtfit
+                    findeOutfits();  //speichere die Angaben und suche Outfit
                     break;
-                case '2':
-                    findeOutfits2();  //speichere die Angaben und suche OUtfit
-                    break;
-
+                
                 default:
                     printEingabeFehler(); //wenn keine der möglichen Eingaben getroffen, ausprinten dass die Eingabe nicht korrekt
             }
@@ -420,7 +480,10 @@ public class Verwaltung implements Serializable {
 
     }
 
-    private void findeOutfits2() {
+    /**
+     * 
+     */
+    private void findeOutfits() {
         String preiskategorie = Stdin.readString("Bitte Preiskategorie eingeben, nachder gesucht werden soll:");
         String geschlecht = Stdin.readString("Bitte Geschlecht eingeben, nachdem gesucht werden soll:");
         String größe = Stdin.readString("Bitte Größe eingeben, nachder gesucht werden soll:");
@@ -565,7 +628,10 @@ public class Verwaltung implements Serializable {
 
     }
 
-    private void findeOutfits() {
+    /**
+     * 
+     */
+    private void findeOutfits2() {
         String preiskategorie = Stdin.readString("Bitte Preiskategorie eingeben, nachder gesucht werden soll:");
         String geschlecht = Stdin.readString("Bitte Geschlecht eingeben, nachdem gesucht werden soll:");
         String größe = Stdin.readString("Bitte Größe eingeben, nachder gesucht werden soll:");
@@ -677,6 +743,9 @@ public class Verwaltung implements Serializable {
         }
     }
 
+    /**
+     * 
+     */
     private void erstelleNeuenKunden() {
         //Methode um neuen KUnden zu erstellen
         String nachname = Stdin.readlnString("Bitte geben Sie den Nachnamen des Kunden ein:");
@@ -691,6 +760,9 @@ public class Verwaltung implements Serializable {
         kundenListe.add(k1); //Speicherung des Kunden in der Kundenliste
     }
 
+    /**
+     * 
+     */
     private void showKundenListe() {
         String s;
         // ruft die Kundenliste auf
@@ -719,6 +791,9 @@ public class Verwaltung implements Serializable {
         printLF();
     }
 
+    /**
+     * 
+     */
     private void showOberteileListe() {
         String s;
         //ruft die Oberteilliste auf
@@ -762,6 +837,9 @@ public class Verwaltung implements Serializable {
         printLF();
     }
 
+    /**
+     * 
+     */
     private void showUnterteileListe() {
         String s;
         //ruft die Unterteilliste auf
@@ -805,6 +883,9 @@ public class Verwaltung implements Serializable {
         printLF();
     }
 
+    /**
+     * 
+     */
     private void showSchuheListe() {
         String s;
         //ruft die Schuhliste auf
@@ -848,6 +929,9 @@ public class Verwaltung implements Serializable {
         printLF();
     }
 
+    /**
+     * 
+     */
     private void showAccessoiresListe() {
         String s;
         //ruft die Accessoiresliste auf
@@ -891,6 +975,9 @@ public class Verwaltung implements Serializable {
         printLF();
     }
 
+    /**
+     * 
+     */
     private void sucheKundeNachNachname() {
         String nachname = Stdin.readString("Bitte Nachnamen eingeben, nachdem gesucht werden soll:");
 
@@ -938,6 +1025,11 @@ public class Verwaltung implements Serializable {
         }
     }
 
+    /**
+     * 
+     * @param meinInt
+     * @return 
+     */
     private String castInt2String(int meinInt) {
         return Integer.toString(meinInt);
         // die obige Zeile ist von der Funktion identisch zu
@@ -945,28 +1037,52 @@ public class Verwaltung implements Serializable {
         // return i.toString();
     }
 
+    /**
+     * 
+     * @param meinDouble
+     * @return 
+     */
     private String castDouble2String(double meinDouble) {
         // hier nutzen wir die Format-Anweisung der Klasse String um die Nachkommastellen zu bestimmen etc.
         return String.format("%,8.2f", meinDouble);
     }
 
+    /**
+     * 
+     */
     private void printLF() {
         //Methode für Zeilensprung
         System.out.println();
     }
 
+    /**
+     * 
+     * @param s 
+     */
     private void printZentriert(String s) {
         System.out.print(baueZentriertenString(s, FELDLAENGE));
     }
 
+    /**
+     * 
+     * @param s 
+     */
     private void printLinksbuendig(String s) {
         System.out.print(baueLinksbuendigenString(s, FELDLAENGE));
     }
 
+    /**
+     * 
+     * @param s 
+     */
     private void printRechtsbuendig(String s) {
         System.out.print(baueRechtsbuendigenString(s, FELDLAENGE));
     }
 
+    /**
+     * 
+     * @param anzahlFelder 
+     */
     private void printLinieLF(int anzahlFelder) {
         /* Besonderheit: hier Nutzung des StringBuilders statt direkt mit String zu arbeiten.
          * Ist sparsamer im Umgang mit Speicher.
@@ -979,6 +1095,12 @@ public class Verwaltung implements Serializable {
         System.out.println(s);
     }
 
+    /**
+     * 
+     * @param s
+     * @param laenge
+     * @return 
+     */
     private String baueZentriertenString(String s, int laenge) {
         // wir entfernen Leerzeichen am Anfang und Ende des Strings
         s.trim();
@@ -998,6 +1120,12 @@ public class Verwaltung implements Serializable {
         return s + " | ";
     }
 
+    /**
+     * 
+     * @param s
+     * @param laenge
+     * @return 
+     */
     private String baueRechtsbuendigenString(String s, int laenge) {
         // wir entfernen Leerzeichen am Anfang und Ende des Strings
         s.trim();                  //s.trim = gelöscht
@@ -1014,6 +1142,12 @@ public class Verwaltung implements Serializable {
         return s + " | ";
     }
 
+    /**
+     * 
+     * @param s
+     * @param laenge
+     * @return 
+     */
     private String baueLinksbuendigenString(String s, int laenge) {
         // wir entfernen Leerzeichen am Anfang und Ende des Strings
         s = s.trim();
@@ -1030,16 +1164,25 @@ public class Verwaltung implements Serializable {
         return s + " | ";
     }
 
+    /**
+     * 
+     */
     private void printEingabeFehler() {
         //Methode wenn die Eingabe des Benutzers nicht passt
         System.out.print("Ihre Eingabe wurde nicht erkannt.\n");
     }
 
+    /**
+     * 
+     */
     private void printAuswahlTreffen() {
         //Methode für die Menueauswahl
         System.out.print("Bitte treffen Sie eine Auswahl ...\n");
     }
 
+    /**
+     * 
+     */
     private void printProgrammInfo() {
         System.out.println("**************************************************************");
         System.out.println("* Outfittery-Portal v1.0 written by Christian Paulssen,Marius*");

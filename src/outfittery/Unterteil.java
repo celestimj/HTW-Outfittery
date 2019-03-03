@@ -3,7 +3,7 @@
 package outfittery;
 
 /**
- * Die KLasse Unterteile ist eine Spezialisierung eines Artikels.
+ * Die Klasse Unterteile ist eine Spezialisierung eines Artikels.
  * @author loreen
  * @version v1 - Dezember 2018
  */

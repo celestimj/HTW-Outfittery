@@ -6,8 +6,6 @@ package outfittery;
  * @author Loreen Gerard
  * @version v1 - Dezember 2018
  */
- 
-
 public abstract class Artikel 
 { //Instanzvariablen
     private int artikelnummer;
@@ -25,10 +23,14 @@ public abstract class Artikel
   
  private static int artnr_counter = 1000;
  
+ /**
+  * Standartkonstruktor (für XML Speicherung)
+  */
   public Artikel()
   {
   }
-  /** 
+  
+  /** Konstruktor für einen Artikel
    *@param preis ist der Preis
    * @param größe ist die Größe
    * @param geschlecht ist das Geschlecht
@@ -48,53 +50,94 @@ public abstract class Artikel
         artnr_counter = artnr_counter + 1;
     }
   
+  /**
+   * 
+   * @param artikelnummer 
+   */
   public void setArtikelnummer(int artikelnummer)
     {
         this.artikelnummer = artikelnummer;
     }
     
+  /**
+   * 
+   * @return 
+   */
     public int getArtikelnummer()
     {
         return this.artikelnummer;
  
     }
-public void setPreis(double preis)
+    
+    /**
+     * 
+     * @param preis 
+     */
+     public void setPreis(double preis)
     {
         this.preis = preis;
     }
     
+   /**
+    * @return 
+    */
     public double getPreis()
     {
         return this.preis;
  
     }
     
-public void setGeschlecht(String geschlecht)
+    /**
+     *   
+     * @param geschlecht 
+     */
+    public void setGeschlecht(String geschlecht)
     {
         this.geschlecht = geschlecht;
     }
     
-public String getGeschlecht()
+    /**
+     * 
+     * @return 
+     */
+    public String getGeschlecht()
     {
         return this.geschlecht;
     }
-public void setStil(String stil)
+    
+    /**
+     * 
+     * @param stil 
+     */
+    public void setStil(String stil)
     {
         this.stil = stil;
     }
     
-public String getStil()
-           
+    /**
+     * 
+     * @return 
+     */
+    public String getStil()       
     {
         return this.stil;
     }
-public void setPreiskategorie(String preiskategorie)
+    
+    /**
+     *  
+     * @param preiskategorie 
+     */
+    public void setPreiskategorie(String preiskategorie)
     {  
        this.preiskategorie = preiskategorie;
      
     }
     
-public String getPreiskategorie()
+    /**
+     * 
+     * @return 
+     */
+    public String getPreiskategorie()
     {
         if(preis< 29.99)
         {
@@ -111,36 +154,62 @@ public String getPreiskategorie()
     }
        
    
-
-public void setLagerbestand(int lagerbestand) 
+    /**
+     * 
+     * @param lagerbestand 
+     */
+    public void setLagerbestand(int lagerbestand) 
     {
         this.lagerbestand = lagerbestand;
     }
     
-public int getLagerbestand()
+    /**
+     * 
+     * @return 
+     */
+    public int getLagerbestand()
     {
         return this.lagerbestand;
  
     }
-public void setGröße(String größe)
+    
+    /**
+     * 
+     * @param größe 
+     */
+    public void setGröße(String größe)
     {
         this.größe = größe;
     }
     
-public String getGröße()
+    /**
+     * 
+     * @return 
+     */
+    public String getGröße()
     {
         return this.größe;
  
     }
-public String getBeschreibung()
-{ return this.beschreibung;
-}
+    
+    /**
+     * 
+     * @return 
+     */
+    public String getBeschreibung()
+    {
+        return this.beschreibung;
+    }
 
-public void setBeschreibung( String beschreibung)
-{
+    /**
+     * 
+     * @param beschreibung 
+     */
+    public void setBeschreibung( String beschreibung)
+    {
 
     this.beschreibung = beschreibung;
-}
+    }
 
 }
     

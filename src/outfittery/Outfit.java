@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package outfittery;
 
 /**
- *
- * @author niki9
+ * Die Klasse Outfit hilft bei der Erstellung eines Outfits durch die Artikel.
+ * 
+ * @author loreen
  */
 public class Outfit extends Artikel {
 
@@ -23,6 +20,14 @@ public class Outfit extends Artikel {
     public Schuhe schuhe;
     public Accessoires accessoires;
 
+    
+    /**
+     * 
+     * @param oberteil
+     * @param unterteil
+     * @param schuhe
+     * @param accessoires 
+     */
     public Outfit(Oberteil oberteil, Unterteil unterteil, Schuhe schuhe, Accessoires accessoires) {
         this.oberteil = oberteil;
         this.unterteil = unterteil;
@@ -30,6 +35,14 @@ public class Outfit extends Artikel {
         this.accessoires = accessoires;
     }
 
+    
+    /**
+     * 
+     * @param ArtikelnrOberteilFind
+     * @param ArtikelnrUnterteilFind
+     * @param ArtikelnrSchuhFind
+     * @param ArtikelnrAccessoiresFind 
+     */
     public Outfit(int ArtikelnrOberteilFind, int ArtikelnrUnterteilFind, int ArtikelnrSchuhFind, int ArtikelnrAccessoiresFind)//speicherung der artikelnummer
     {
         this.artikelnummerOberteil = ArtikelnrOberteilFind;//Speicherung der Artikelnr Oberteil
@@ -41,10 +54,18 @@ public class Outfit extends Artikel {
 
     }
 
+    /**
+     * 
+     * @param outfitid 
+     */
     public void setOutfitid(int outfitid) {
         this.outfitid = outfitid;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public int getOutfitid() {
         return this.outfitid;
 
