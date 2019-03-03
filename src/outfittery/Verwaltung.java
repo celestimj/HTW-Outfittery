@@ -92,7 +92,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode speichert die Daten in der XML Speicherung.
      * @throws IOException 
      */
     private void saveDataToXML() throws IOException {
@@ -108,6 +108,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
+     * Methode lädt die Daten der XML Speicherung.
      * 
      * @return
      * @throws IOException 
@@ -126,7 +127,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode speichert die Daten in der XML Speicherung. 
      */
     private void save() {
         try {
@@ -138,7 +139,8 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode verwendet die andere Methode,bei der die Daten der XML Speicherung geladen wird.
+     * Sie dient somit nur als Verkürzung,um die Daten zu laden.
      */
     private void load() {
         try {
@@ -152,7 +154,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode beendet die Menues.
      */
     private void beenden() {
         //beendet die Menues
@@ -160,7 +162,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode gibt die Kundenliste zurück.
      * @return 
      */
     public ArrayList getKundenListe() {
@@ -168,7 +170,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode setzt die Kundenliste fest.
      * @param liste 
      */
     public void setKundenListe(ArrayList liste) {
@@ -176,7 +178,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode setzt die Artikelliste fest. 
      * @param liste 
      */
     public void setArtikelListe(ArrayList liste) {
@@ -184,7 +186,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode gibt die Artikelliste zurück.
      * @return 
      */
     public ArrayList getArtikelListe() {
@@ -192,7 +194,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Mit dem MainMenue startet das Outfittery Portal und man kann auf die weiteren Untermenues zugreifen.
      */
     private void mainMenue() {
         char eingabe;
@@ -233,7 +235,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Das Untermenue Warenbestand befasst sich mit den Bestandsdaten der Artikel.
      */
     private void warenBestand() {
         //Menue des Warenbestandes
@@ -287,7 +289,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * Neue Artikel können in das System eingespeichert werden
+     *Die Methode erstellt und speichert neue Artikel ab.
      */
     private void erstelleNeuenArtikel() {
 
@@ -350,7 +352,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode,die den Teil der Speicherung übernimmt zb. bei der Erstellung eines neuen Artikels.
      */
     private void WilleZurSpeicherung() {
         String speicher = Stdin.readlnString("Wollen sie ihre Eingaben Für immer und ewig in der Xml Speicher? (J/N):");
@@ -364,7 +366,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode, die die Outfitliste darstellt.
      */
     private void printOutfitliste() {
         //Methode um Outfitliste anzuzeigen
@@ -383,7 +385,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     *  Das Untermenue Verwaltung befasst sich mit der XML-Speicherung und der Kasse.
      */
     private void verwaltungsMenue() {
 
@@ -422,7 +424,7 @@ public class Verwaltung implements Serializable {
 
     
     /**
-     * 
+     * Methode, die den Kassenbestand anzeigt
      */
     public void showKasse()
     {
@@ -431,7 +433,7 @@ public class Verwaltung implements Serializable {
     
     
     /**
-     * 
+     * Das Untermenue Kundenmenue befasst sich mit der Verwaltung der Kundenprofile.
      */
     private void kundenMenue() {
         //Kundenmenue zur Verwaltung der neuen und angelegten Kunden
@@ -472,7 +474,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Das Untermenue Outfitsuche kann die Methode findeOutfit und somit die Outfitsuche starten.
      */
     private void outfitSuche() {
         char eingabe;
@@ -502,7 +504,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode zum Finden von passenden Outfits für den Kunden.
      */
     private void findeOutfits() {
         String preiskategorie = Stdin.readString("Bitte Preiskategorie eingeben, nachder gesucht werden soll:");
@@ -652,7 +654,7 @@ public class Verwaltung implements Serializable {
     
     
     /**
-     * 
+     * weiterer Menuepfad nach der Outfitsuche, um zu entscheiden, ob ein Outfit gefällt und in den Warenkorb gelegt werden soll.
      */
    public void OutfitWählen()
    {  char eingabe;
@@ -663,7 +665,8 @@ public class Verwaltung implements Serializable {
 
             System.out.println("[1]  Ja, in Warenkorb Outfit 1 hinzufügen");
             System.out.println("[2]  Ja, in Warenkorb Outfit 2 hinzufügen");
-            System.out.println("[3]  Nein ");
+            System.out.println("[3]  Ja, in Warenkorb beide hinzufügen");
+            System.out.println("[4]  Nein ");
             System.out.println("[0] HAUPTMENUE");
             printAuswahlTreffen();
             eingabe = Stdin.readlnChar();
@@ -673,13 +676,17 @@ public class Verwaltung implements Serializable {
                     menuewechsel = true;
                     break;
                 case '1':
-                    Outfit1InWarenkorb();  //speichere die Angaben und suche Outfit
+                    Outfit1InWarenkorb();  //speichere das 1. Outfit in den Warenkorb
                     break;
                 case '2':
-                    Outfit1InWarenkorb(); //speichere die Angaben und suche Outfit
+                    Outfit2InWarenkorb(); //speichere das 2. Outfit in den Warenkorb
                     break;
                 case '3':
-                    beenden();   //speichere die Angaben und suche Outfit
+                  Outfit1InWarenkorb(); Outfit2InWarenkorb();  //speichere beide Outfits in den Warenkorb ab
+                    break;
+                         
+                case '4':
+                    beenden();   //beende das Outfittery Portal
                     break;
                        
                 default:
@@ -690,9 +697,26 @@ public class Verwaltung implements Serializable {
    
       }
    
+   /**
+    * Methode fügt Outfit 1 in Warenkorb hinzu
+    */
+   public void Outfit1InWarenkorb()
+   {
    
-    /**
-     * 
+   }
+   
+   
+   /**
+    * Methode fügt Outfit 2 in Warenkorb hinzu
+    */
+   public void Outfit2InWarenkorb()
+   {
+   
+   
+   }
+   
+   /**
+     * Methode entfernt einen bestimmten Artikel
      */
    public void ArtikelEntfernen()
    {
@@ -701,15 +725,16 @@ public class Verwaltung implements Serializable {
    }
    
     /**
-     * 
+     * Methode entfernt bestimmten Kunden
      */
    public void KundenEntfernen()
    {
    
+       
    }
    
     /**
-     * 
+     *  2. Methode um Outfit zu finden (unrelevant)
      */
     private void findeOutfits2() {
         String preiskategorie = Stdin.readString("Bitte Preiskategorie eingeben, nachder gesucht werden soll:");
@@ -824,7 +849,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode erstellt neuen Kunden.
      */
     private void erstelleNeuenKunden() {
         //Methode um neuen KUnden zu erstellen
@@ -841,7 +866,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode zeigt die Kundenliste auf.
      */
     private void showKundenListe() {
         String s;
@@ -872,7 +897,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode zeigt alle Oberteile in einer Liste.
      */
     private void showOberteileListe() {
         String s;
@@ -918,7 +943,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode zeigt alle Unterteile in einer Liste.
      */
     private void showUnterteileListe() {
         String s;
@@ -964,7 +989,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode zeigt alle Schuhe in einer Liste auf.
      */
     private void showSchuheListe() {
         String s;
@@ -1010,7 +1035,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode zeigt alle Accessoires in einer Liste.
      */
     private void showAccessoiresListe() {
         String s;
@@ -1056,7 +1081,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode prüft, ob ein Kunde mit bestimmten Nachnamen vorhanden ist.
      */
     private void sucheKundeNachNachname() {
         String nachname = Stdin.readString("Bitte Nachnamen eingeben, nachdem gesucht werden soll:");
@@ -1106,7 +1131,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode ändert Datentyp von int in string.
      * @param meinInt
      * @return 
      */
@@ -1118,7 +1143,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode ändert Datentyp von double in string.
      * @param meinDouble
      * @return 
      */
@@ -1128,15 +1153,15 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode macht einen Zeilenumbruch.
      */
     private void printLF() {
-        //Methode für Zeilensprung
+        //Methode für Zeilenumbruch
         System.out.println();
     }
 
     /**
-     * 
+     * Methode printet zentral das Gewünschte aus.
      * @param s 
      */
     private void printZentriert(String s) {
@@ -1144,7 +1169,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode printet linksbündig das Gewünschte aus.
      * @param s 
      */
     private void printLinksbuendig(String s) {
@@ -1152,7 +1177,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode printet rechtsbündig das Gewünschte aus.
      * @param s 
      */
     private void printRechtsbuendig(String s) {
@@ -1160,7 +1185,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode printet eine Linie aus je nach Anzahl der Felder.
      * @param anzahlFelder 
      */
     private void printLinieLF(int anzahlFelder) {
@@ -1176,7 +1201,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * WAS MACHT DIESE METHODE????
      * @param s
      * @param laenge
      * @return 
@@ -1201,7 +1226,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * WAS MACHT DIESE METHODE????
      * @param s
      * @param laenge
      * @return 
@@ -1223,7 +1248,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * WAS MACHT DIESE METHODE????
      * @param s
      * @param laenge
      * @return 
@@ -1245,7 +1270,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode printet aus, dass ein Eingabefehler vorliegt.
      */
     private void printEingabeFehler() {
         //Methode wenn die Eingabe des Benutzers nicht passt
@@ -1253,7 +1278,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Methode printet aus, dass man nun eine Auswahl treffen kann.
      */
     private void printAuswahlTreffen() {
         //Methode für die Menueauswahl
@@ -1261,7 +1286,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     * 
+     * Printet unsere Pogramminfo aus bei Start des Outfittery Portals.
      */
     private void printProgrammInfo() {
         System.out.println("**************************************************************");
@@ -1273,7 +1298,7 @@ public class Verwaltung implements Serializable {
     }
 
     /**
-     *
+     * Methode gibt Reihenfolge an bei Start des Outfittery Portals.
      * @param args
      */
     public static void main(String[] args) {
