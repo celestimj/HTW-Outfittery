@@ -1330,8 +1330,19 @@ public class Verwaltung implements Serializable {
      * Methode entfernt einen bestimmten Artikel
      */
    public void ArtikelEntfernen()
-   {
-   
+   {int nr = Stdin.readlnInt("Bitte geben Sie die ID des zu entfernenden Kunden ein:");
+   int a = artikelListe.size();
+        
+        for (int i = 0; i < a; i++) {
+            System.out.println("id=" + artikelListe.get(i).getArtikelnummer());
+            System.out.println("i=" + i);
+            if (nr == artikelListe.get(i).getArtikelnummer()) {
+                artikelListe.remove(i);
+                break;
+            }
+             
+        }
+       warenBestand();
    
    }
    
