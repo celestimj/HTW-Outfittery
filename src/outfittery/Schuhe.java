@@ -17,6 +17,7 @@ public class Schuhe extends Artikel
     
     public Schuhe()
     {
+     
     }
     
         
@@ -31,12 +32,12 @@ public class Schuhe extends Artikel
      * @param stil gewünschter Stil (sportlich, business,freizeit?)
      * @param beschreibung 
      */
-    public Schuhe (double preis,String größe,String geschlecht, int lagerbestand, String stil, String beschreibung)
+    public Schuhe (double preis,String größe,String geschlecht, int lagerbestand, String stil, String beschreibung, String verschluss)
     {     
             super(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
            
-    
+    this.verschluss = verschluss;
     }
     
-   
+  
 }
