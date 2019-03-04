@@ -864,17 +864,19 @@ public class Verwaltung implements Serializable {
         if (artikelart.equals("oberteil") || artikelart.equals("unterteil") || artikelart.equals("schuhe") || artikelart.equals("accessoires")) {
 
             String price = Stdin.readlnString("Bitte geben Sie den Preis des Kleidungstücks ein:");
+            String lagerbestandd = Stdin.readlnString("Bitte geben Sie den Lagerbestand des Kleidungsstücks ein:");
+            if (price.matches("[0-9.]+") && lagerbestandd.matches("[0-9]+")) {//damit das Programm nicht abstürtzt wenn der String nicht doubel oder int compatibel ist
+
             String größe = Stdin.readlnString("Bitte geben Sie die Größe des Kleidungsstücks ein:");
             String geschlecht = Stdin.readlnString("Bitte geben Sie das Geschlecht für das Kleidungsstücks ein:");
-            String lagerbestandd = Stdin.readlnString("Bitte geben Sie den Lagerbestand des Kleidungsstücks ein:");
+            
             String stil = Stdin.readlnString("Bitte geben Sie den Stil des Kleidungsstücks ein:");
             String beschreibung = Stdin.readlnString("Bitte geben Sie die Beschreibung des Kleidungstücks ein:");
             String bestätigung = Stdin.readlnString("Wollen sie ihre Eingaben Verwerfen? (J/N):");
             if (bestätigung.equals("N") || bestätigung.equals("Nein") || bestätigung.equals("n") || bestätigung.equals("nein")) {//hiermit können fehlerhafte eingaben abgebrochen werden
 
                 //in dieser if bedingung könnten auch alle anderen eingaben reglementiert werden
-                if (price.matches("[0-9.]+") && lagerbestandd.matches("[0-9]+")) {//damit das Programm nicht abstürtzt wenn der String nicht doubel oder int compatibel ist
-
+                
                     double preis = Double.parseDouble(price);// macht aus einem Sting price einen Double preis für Konstruktor
                     int lagerbestand = Integer.parseInt(lagerbestandd);//String lagerbestandd digitiert zuuuu Integer Lagerbestandunpassende werte für int oder double umwandlung enthält
 
