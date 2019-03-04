@@ -12,10 +12,14 @@ public class Schuhe extends Artikel
     /**
      * Standardkonstruktor (eigentlich nur notwendig für die XML-Speicherung)
      */
+    private String verschluss;
+    
+    
     public Schuhe()
     {
     }
     
+        
 
    
     /**
@@ -30,6 +34,9 @@ public class Schuhe extends Artikel
     public Schuhe (double preis,String größe,String geschlecht, int lagerbestand, String stil, String beschreibung)
     {     
             super(preis,größe,geschlecht,lagerbestand,stil,beschreibung);
+           
     
     }
+    
+   
 }

@@ -1120,7 +1120,7 @@ public class Verwaltung implements Serializable {
                 Outfit outfit2 = new Outfit(gefundeneOberteile.get(1), gefundeneUnterteile.get(1), gefundeneSchuhe.get(1), gefundeneAccessoires.get(1));
               
         outfits.add(outfit2);
-        OutfitWählen();
+        
             }
 //            if (gefundeneOberteile.size() > 1) {
 //                Outfit outfit1 = new Outfit(gefundeneOberteile.get(1), gefundeneUnterteile.get(0), gefundeneSchuhe.get(0), gefundeneAccessoires.get(0));
@@ -1224,7 +1224,7 @@ public class Verwaltung implements Serializable {
             
             
         }
-      
+            OutfitWählen();
         }
      
     }
