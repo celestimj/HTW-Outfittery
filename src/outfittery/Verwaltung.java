@@ -17,7 +17,7 @@ import de.htw.saarland.stl.Stdin;           // fuer Eingaben von der Konsole
  * Variablen der Klasse Verwaltung
  */
 public class Verwaltung implements Serializable {
-
+    private ArrayList<Warenkorb> warenkorbListe; //Warenkorb
     private ArrayList<Outfit> outfitListe; //Liste für gefundene Outfits
     private ArrayList<Artikel> artikelListeListe2; //Kundenliste
     private ArrayList<Kunde> kundenListe; //Kundenliste
@@ -1117,13 +1117,13 @@ public class Verwaltung implements Serializable {
             //Es gibt von allen mindestens eines
             Outfit outfit = new Outfit(gefundeneOberteile.get(0), gefundeneUnterteile.get(0), gefundeneSchuhe.get(0), gefundeneAccessoires.get(0));
             outfits.add(outfit);
-
+outfitListe.add(outfit);
             if (gefundeneOberteile.size() > 1 && gefundeneUnterteile.size() > 1 && gefundeneSchuhe.size() > 1 && gefundeneAccessoires.size() > 1) {
                 //Es gibt von allen mindestens eines
                 Outfit outfit2 = new Outfit(gefundeneOberteile.get(1), gefundeneUnterteile.get(1), gefundeneSchuhe.get(1), gefundeneAccessoires.get(1));
               
         outfits.add(outfit2);
-        
+        outfitListe.add(outfit2);
             }
 //            if (gefundeneOberteile.size() > 1) {
 //                Outfit outfit1 = new Outfit(gefundeneOberteile.get(1), gefundeneUnterteile.get(0), gefundeneSchuhe.get(0), gefundeneAccessoires.get(0));
@@ -1143,87 +1143,66 @@ public class Verwaltung implements Serializable {
             int i = 1;
             for (Outfit outfit : outfits) {
             
-            System.out.println("Outfit "+i+":");
+                 System.out.println("Outfit "+i+":");
+            System.out.print("Artikel "+i+":  ");            
             String s = castInt2String(outfit.oberteil.getArtikelnummer());
             printZentriert(s);
-
             printLinksbuendig(outfit.oberteil.getGröße());
-
             printLinksbuendig(outfit.oberteil.getGeschlecht());
-
             printLinksbuendig(outfit.oberteil.getStil());
-
             printLinksbuendig(outfit.oberteil.getPreiskategorie());
-
             s = castDouble2String(outfit.oberteil.getPreis());
             printLinksbuendig(s);
-
             s = castInt2String(outfit.oberteil.getLagerbestand());
             printLinksbuendig(s);
-
             printLinksbuendig(outfit.oberteil.getBeschreibung());
             printLF();
             
+            System.out.print("Artikel "+(i+1)+":  ");
             s = castInt2String(outfit.unterteil.getArtikelnummer());
             printZentriert(s);
-
             printLinksbuendig(outfit.unterteil.getGröße());
-
             printLinksbuendig(outfit.unterteil.getGeschlecht());
-
             printLinksbuendig(outfit.unterteil.getStil());
-
             printLinksbuendig(outfit.unterteil.getPreiskategorie());
-
             s = castDouble2String(outfit.unterteil.getPreis());
             printLinksbuendig(s);
-
             s = castInt2String(outfit.unterteil.getLagerbestand());
             printLinksbuendig(s);
-
             printLinksbuendig(outfit.unterteil.getBeschreibung());
             printLF();
+            
+            System.out.print("Artikel "+(i+3)+":  ");
             s = castInt2String(outfit.schuhe.getArtikelnummer());
             printZentriert(s);
-
             printLinksbuendig(outfit.schuhe.getGröße());
-
             printLinksbuendig(outfit.schuhe.getGeschlecht());
-
             printLinksbuendig(outfit.schuhe.getStil());
-
             printLinksbuendig(outfit.schuhe.getPreiskategorie());
-
             s = castDouble2String(outfit.schuhe.getPreis());
             printLinksbuendig(s);
-
             s = castInt2String(outfit.schuhe.getLagerbestand());
             printLinksbuendig(s);
-
             printLinksbuendig(outfit.schuhe.getBeschreibung());
             printLF();
+            
+            System.out.print("Artikel "+(i+3)+":  ");
             s = castInt2String(outfit.accessoires.getArtikelnummer());
             printZentriert(s);
-
             printLinksbuendig(outfit.accessoires.getGröße());
-
             printLinksbuendig(outfit.accessoires.getGeschlecht());
-
             printLinksbuendig(outfit.accessoires.getStil());
-
             printLinksbuendig(outfit.accessoires.getPreiskategorie());
-
             s = castDouble2String(outfit.accessoires.getPreis());
             printLinksbuendig(s);
-
             s = castInt2String(outfit.accessoires.getLagerbestand());
             printLinksbuendig(s);
-
             printLinksbuendig(outfit.accessoires.getBeschreibung());
             printLF();
             
             
             i++;
+                System.out.println();
             
             
         }
@@ -1278,12 +1257,81 @@ public class Verwaltung implements Serializable {
    
       }
    
-   /**
+    /**
     * Methode fügt Outfit 1 in Warenkorb hinzu
     */
    public void Outfit1InWarenkorb()
-   {
-   
+   {    
+       if (outfitListe.size()>0) {
+           
+             
+            int i = 1;
+            for (Outfit outfit : outfitListe) {
+            
+            System.out.println("Outfit "+i+":");
+            System.out.print("Artikel "+i+":  ");            
+            String s = castInt2String(outfit.oberteil.getArtikelnummer());
+            printZentriert(s);
+            printLinksbuendig(outfit.oberteil.getGröße());
+            printLinksbuendig(outfit.oberteil.getGeschlecht());
+            printLinksbuendig(outfit.oberteil.getStil());
+            printLinksbuendig(outfit.oberteil.getPreiskategorie());
+            s = castDouble2String(outfit.oberteil.getPreis());
+            printLinksbuendig(s);
+            s = castInt2String(outfit.oberteil.getLagerbestand());
+            printLinksbuendig(s);
+            printLinksbuendig(outfit.oberteil.getBeschreibung());
+            printLF();
+            
+            System.out.print("Artikel "+(i+1)+":  ");
+            s = castInt2String(outfit.unterteil.getArtikelnummer());
+            printZentriert(s);
+            printLinksbuendig(outfit.unterteil.getGröße());
+            printLinksbuendig(outfit.unterteil.getGeschlecht());
+            printLinksbuendig(outfit.unterteil.getStil());
+            printLinksbuendig(outfit.unterteil.getPreiskategorie());
+            s = castDouble2String(outfit.unterteil.getPreis());
+            printLinksbuendig(s);
+            s = castInt2String(outfit.unterteil.getLagerbestand());
+            printLinksbuendig(s);
+            printLinksbuendig(outfit.unterteil.getBeschreibung());
+            printLF();
+            
+            System.out.print("Artikel "+(i+3)+":  ");
+            s = castInt2String(outfit.schuhe.getArtikelnummer());
+            printZentriert(s);
+            printLinksbuendig(outfit.schuhe.getGröße());
+            printLinksbuendig(outfit.schuhe.getGeschlecht());
+            printLinksbuendig(outfit.schuhe.getStil());
+            printLinksbuendig(outfit.schuhe.getPreiskategorie());
+            s = castDouble2String(outfit.schuhe.getPreis());
+            printLinksbuendig(s);
+            s = castInt2String(outfit.schuhe.getLagerbestand());
+            printLinksbuendig(s);
+            printLinksbuendig(outfit.schuhe.getBeschreibung());
+            printLF();
+            
+            System.out.print("Artikel "+(i+3)+":  ");
+            s = castInt2String(outfit.accessoires.getArtikelnummer());
+            printZentriert(s);
+            printLinksbuendig(outfit.accessoires.getGröße());
+            printLinksbuendig(outfit.accessoires.getGeschlecht());
+            printLinksbuendig(outfit.accessoires.getStil());
+            printLinksbuendig(outfit.accessoires.getPreiskategorie());
+            s = castDouble2String(outfit.accessoires.getPreis());
+            printLinksbuendig(s);
+            s = castInt2String(outfit.accessoires.getLagerbestand());
+            printLinksbuendig(s);
+            printLinksbuendig(outfit.accessoires.getBeschreibung());
+            printLF();
+            
+            
+            i++;
+                System.out.println();
+            
+        }
+        }
+       else{System.out.println("schwingdeiding");}
    }
    
    
@@ -1295,6 +1343,7 @@ public class Verwaltung implements Serializable {
     
    
    }
+    
    
    /**
      * Methode entfernt einen bestimmten Artikel
@@ -1308,12 +1357,9 @@ public class Verwaltung implements Serializable {
     /**
      * Methode entfernt bestimmten Kunden
      */
-   public void KundenEntfernen()
-   {
-   
-       
+   public void KundenEntfernen() {
+ 
    }
-   
     /**
      *  2. Methode um Outfit zu finden (unrelevant)
      */
