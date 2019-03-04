@@ -1081,6 +1081,33 @@ public class Verwaltung implements Serializable {
         String geschlecht = Stdin.readString("Bitte Geschlecht eingeben, nachdem gesucht werden soll:");
         String größe = Stdin.readString("Bitte Größe eingeben, nachder gesucht werden soll:");
         String stil = Stdin.readString("Bitte Stil eingeben, nachdem gesucht werden soll:");
+        
+       
+     
+//       String c;
+//         
+//        if ( ) {
+//            f(artikelart.equals("schuhe")){
+//                char option;
+//            
+//       
+//        do {
+//            System.out.println("[1] Schnürer ");
+//            System.out.println("[2] Klettverschluss ");
+//            printAuswahlTreffen();
+//            option = Stdin.readlnChar();
+//            switch (option) {
+//                case '1':
+//                    String verschluss = "Schnürer";
+//                    break; 
+//                case '2':
+//                    String verschluss = "Klettverschluss";  // bei Wahl Aufruf der Oberteilliste
+//                    break;
+//                    default:
+//            }
+        
+       
+        
 
         ArrayList<Oberteil> gefundeneOberteile = new ArrayList<Oberteil>();
         ArrayList<Unterteil> gefundeneUnterteile = new ArrayList<Unterteil>();
@@ -1100,9 +1127,10 @@ public class Verwaltung implements Serializable {
         }
 
         for (Artikel artikel : artikelListe) {
-            if ((artikel instanceof Schuhe) && artikel.getPreiskategorie().equalsIgnoreCase(preiskategorie) && artikel.getGeschlecht().equalsIgnoreCase(geschlecht) && artikel.getGröße().equalsIgnoreCase(größe) && artikel.getStil().equalsIgnoreCase(stil)) {
+            if ((artikel instanceof Schuhe) && artikel.getPreiskategorie().equalsIgnoreCase(preiskategorie)  && artikel.getGeschlecht().equalsIgnoreCase(geschlecht) && artikel.getGröße().equalsIgnoreCase(größe) && artikel.getStil().equalsIgnoreCase(stil)) {
                 gefundeneSchuhe.add((Schuhe) artikel);
-            }
+         
+            }   
         }
 
         for (Artikel artikel : artikelListe) {
@@ -1308,11 +1336,23 @@ public class Verwaltung implements Serializable {
     /**
      * Methode entfernt bestimmten Kunden
      */
-   public void KundenEntfernen()
-   {
+      public void KundenEntfernen() {
+          int nr = Stdin.readlnInt("Bitte geben Sie die ID des zu entfernenden Kunden ein:");
+        
+        int a = kundenListe.size();
+        
+        for (int i = 0; i < a; i++) {
+            System.out.println("id=" + kundenListe.get(i).getKundennummer());
+            System.out.println("i=" + i);
+            if (nr == kundenListe.get(i).getKundennummer()) {
+                kundenListe.remove(i);
+                break;
+            }
+            
+        }
+        showKundenListe();
+    } 
    
-       
-   }
    
     /**
      *  2. Methode um Outfit zu finden (unrelevant)
