@@ -865,7 +865,7 @@ public class Verwaltung implements Serializable {
 
             String price = Stdin.readlnString("Bitte geben Sie den Preis des Kleidungstücks ein:");
             String lagerbestandd = Stdin.readlnString("Bitte geben Sie den Lagerbestand des Kleidungsstücks ein:");
-            if (price.matches("[0-9.]+") && lagerbestandd.matches("[0-9]+")) {//damit das Programm nicht abstürtzt wenn der String nicht doubel oder int compatibel ist
+            if (price.matches("[0-9.]+") && lagerbestandd.matches("[0-9]+")) {                                                                          //damit das Programm nicht abstürtzt wenn der String nicht doubel oder int compatibel ist
 
             String größe = Stdin.readlnString("Bitte geben Sie die Größe des Kleidungsstücks ein:");
             String geschlecht = Stdin.readlnString("Bitte geben Sie das Geschlecht für das Kleidungsstücks ein:");
@@ -874,48 +874,50 @@ public class Verwaltung implements Serializable {
             String beschreibung = Stdin.readlnString("Bitte geben Sie die Beschreibung des Kleidungstücks ein:");
             String verschluss = Stdin.readlnString("Bitte geben Sie den gewünschten Verschluss des Schuhs ein:");
             String bestätigung = Stdin.readlnString("Wollen sie ihre Eingaben Verwerfen? (J/N):");
-            if (bestätigung.equals("N") || bestätigung.equals("Nein") || bestätigung.equals("n") || bestätigung.equals("nein")) {//hiermit können fehlerhafte eingaben abgebrochen werden
+            if (bestätigung.equals("N") || bestätigung.equals("Nein") || bestätigung.equals("n") || bestätigung.equals("nein")) {                       //hiermit können fehlerhafte eingaben abgebrochen werden
 
-                //in dieser if bedingung könnten auch alle anderen eingaben reglementiert werden
+                                                                                                                                                        //in dieser if bedingung könnten auch alle anderen eingaben reglementiert werden
                 
-                    double preis = Double.parseDouble(price);// macht aus einem Sting price einen Double preis für Konstruktor
-                    int lagerbestand = Integer.parseInt(lagerbestandd);//String lagerbestandd digitiert zuuuu Integer Lagerbestandunpassende werte für int oder double umwandlung enthält
+                    double preis = Double.parseDouble(price);                                                                                           // macht aus einem Sting price einen Double preis für Konstruktor
+                    int lagerbestand = Integer.parseInt(lagerbestandd);                                                                                 //String lagerbestandd digitiert zuuuu Integer Lagerbestandunpassende werte für int oder double umwandlung enthält
 
-                    //Speichert Kleidungsstück als entsprechendes ab (Oberteil;Unterteil;Schuhe;Assoires)
+                                                                                                                                                        //Speichert Kleidungsstück als entsprechendes ab (Oberteil;Unterteil;Schuhe;Assoires)
                     if (artikelart.equals("oberteil")) {
 
-                        Oberteil o5 = new Oberteil(preis, größe, geschlecht, lagerbestand, stil, beschreibung);  //für den Fall, dass Oberteil
+                        Oberteil o5 = new Oberteil(preis, größe, geschlecht, lagerbestand, stil, beschreibung);                                         //für den Fall, dass Oberteil
                         artikelListe.add(o5); //hinzufügen zur Artikelliste
                         System.out.println("Oberteile wurden zur Artikelliste Hinzugefügt");
                         WilleZurSpeicherung();
 
                     }
                     if (artikelart.equals("unterteil")) {
-                        Unterteil u5 = new Unterteil(preis, größe, geschlecht, lagerbestand, stil, beschreibung); //für den Fall, dass Unterteil
+                        Unterteil u5 = new Unterteil(preis, größe, geschlecht, lagerbestand, stil, beschreibung);                                       //für den Fall, dass Unterteil
                         artikelListe.add(u5);    //hinzufügen zur Artikelliste
                         System.out.println("Unterteile wurden zur Artikelliste Hinzugefügt");
                         WilleZurSpeicherung();
                     }
                     if (artikelart.equals("schuhe")) {
-                        Schuhe s7 = new Schuhe(preis, größe, geschlecht, lagerbestand, stil, beschreibung, verschluss );  //für den Fall, dass Schuhe
+                        Schuhe s7 = new Schuhe(preis, größe, geschlecht, lagerbestand, stil, beschreibung, verschluss );                                //für den Fall, dass Schuhe
                         artikelListe.add(s7);  //hinzufügen zur Artikelliste
                         System.out.println("Schuhe wurden zur Artikelliste Hinzugefügt");
                         WilleZurSpeicherung();
                     }
                     if (artikelart.equals("accessoires")) {
-                        Accessoires a5 = new Accessoires(preis, größe, geschlecht, lagerbestand, stil, beschreibung);  //für den Fall, dass Accessoires
+                        Accessoires a5 = new Accessoires(preis, größe, geschlecht, lagerbestand, stil, beschreibung);                                   //für den Fall, dass Accessoires
                         artikelListe.add(a5);  //hinzufügen zur Artikelliste
                         System.out.println("Accessoires wurden zur Artikelliste Hinzugefügt");
                         WilleZurSpeicherung();
                     }
-                } else {
+                } 
+            }
+            else {
 
                     System.out.println("Die Eingaben des Preises oder des Lagerbestandes sind ungültig");
                     System.out.println("Kommas müssen als . Geschreiben werden und es sind nur Zahlen gültig");
                 }
-            }
+            
         } else {
-            System.out.println("Ungültige Eingabe der Artikelart");// wenn die Artikelart eingabe ungültig ist
+            System.out.println("Ungültige Eingabe der Artikelart");                                                                                    // wenn die Artikelart eingabe ungültig ist
         }
     }
 
@@ -924,7 +926,7 @@ public class Verwaltung implements Serializable {
      */
     private void WilleZurSpeicherung() {
         String speicher = Stdin.readlnString("Wollen sie ihre Eingaben Für immer und ewig in der Xml Speicher? (J/N):");
-        if (speicher.equals("J") || speicher.equals("Ja") || speicher.equals("j")) {//hiermit können fehlerhafte eingaben abgebrochen werden
+        if (speicher.equals("J") || speicher.equals("Ja") || speicher.equals("j")) {                                                                  //hiermit können fehlerhafte eingaben abgebrochen werden
 
             save();
             System.out.println("Ihre Änderungen am Warenbestand wurden gespeichert");
