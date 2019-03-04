@@ -48,12 +48,12 @@ public class Verwaltung implements Serializable {
         kundenListe.add(k3);
         kundenListe.add(k4);
 
-        
+        Oberteil o0 = new Oberteil(6.66,"L","unisex",66,"business","Unsichtbarer Eisbärenfell Peltzmantel");
        Oberteil o1 = new Oberteil(24.99, "S", "unisex", 255, "sportlich", "Blauer Kapuzenpullover mit Aufschrift"); 
         Oberteil o2 = new Oberteil(15.99, "M", "männlich", 155, "freizeit", "Blauer Pullover mit V-Ausschnitt");  
         Oberteil o3 = new Oberteil(20.99, "S", "unisex", 145, "freizeit", "Roter Kapuzenpullover");
         Oberteil o4 = new Oberteil(29.99, "L", "weiblich", 305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste");
-        Oberteil o5 = new Oberteil(29.99, "XL", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o5 = new Oberteil(6.66, "XL", "männlich", 305, "business", "Schwarze Kutte zerfetzt");
         Oberteil o6 = new Oberteil(29.99, "L", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
         Oberteil o7 = new Oberteil(29.99, "M", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
         Oberteil o8 = new Oberteil(29.99, "S", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
@@ -63,7 +63,7 @@ public class Verwaltung implements Serializable {
         Oberteil o12= new Oberteil(29.99, "XL", "weiblich", 305, "business", "Weißes Bluse mit Brusttasche und Knopfleiste");
         Oberteil o13= new Oberteil(29.99, "S", "unisex", 305, "business", "Polohemd weiss");
         Oberteil o14= new Oberteil(29.99, "M", "unisex", 305, "business", "Polohemd weiss");
-        Oberteil o15= new Oberteil(29.99, "L", "unisex", 305, "business", "Polohemd weiss");
+        Oberteil o15= new Oberteil(19.99, "L", "unisex", 305, "business", "Polohemd weiss");
         Oberteil o16= new Oberteil(29.99, "XL", "unisex", 305, "business", "Polohemd weiss");
         Oberteil o17= new Oberteil(29.99, "S", "männlich", 305, "business", "Blaues Hemd mit Brusttasche und Knopfleiste");
         Oberteil o18= new Oberteil(29.99, "M", "männlich", 305, "business", "Blaues Hemd mit Brusttasche und Knopfleiste");
@@ -124,9 +124,9 @@ public class Verwaltung implements Serializable {
         Oberteil o73= new Oberteil(29.99, "S", "unisex", 305, "sportlich", "Hellblauer PUMA Pulli");
         Oberteil o74= new Oberteil(29.99, "M", "unisex", 305, "sportlich", "Hellblauer PUMA Pulli");
         Oberteil o75 = new Oberteil(29.99, "L", "unisex", 305, "sportlich", "Hellblauer PUMA Pulli");
-        Oberteil o76 = new Oberteil(29.99, "XL", "unisex", 305, "sportlich", "Hellblauer PUMA Pulli");
+        Oberteil o76 = new Oberteil(99.99, "XL", "unisex", 305, "sportlich", "Hellblauer PUMA Pulli");
         
-        
+        artikelListe.add(o0);
         artikelListe.add(o1);
         artikelListe.add(o2);
         artikelListe.add(o3);
@@ -204,30 +204,30 @@ public class Verwaltung implements Serializable {
         artikelListe.add(o75);
         artikelListe.add(o76);
 
-        Unterteil u1 = new Unterteil(80, "S", "männlich", 220, "business", "schwarze Anzugshose");
-        Unterteil u2 = new Unterteil(80, "M", "männlich", 220, "business", "schwarze Anzugshose");
-        Unterteil u3 = new Unterteil(80, "L", "männlich", 220, "business", "schwarze Anzugshose");
-        Unterteil u4 = new Unterteil(80, "XL", "männlich", 220, "business", "schwarze Anzugshose");
-        Unterteil u5 = new Unterteil(80, "S", "weiblich", 220, "business", "schwarze Chinohose");
-        Unterteil u6 = new Unterteil(80, "M", "weiblich", 220, "business", "schwarze Chinohose");
-        Unterteil u7 = new Unterteil(80, "L", "weiblich", 220, "business", "schwarze Chinohose");
-        Unterteil u8 = new Unterteil(80, "XL", "weiblich", 220, "business", "schwarze Chinohose");
-        Unterteil u9 = new Unterteil(80, "S", "unisex", 220, "business", "Braun karierte Pullon-Hose");
-        Unterteil u10 = new Unterteil(80, "M", "unisex", 220, "business", "Braun karierte Pullon-Hose");
-        Unterteil u11 = new Unterteil(80, "L", "unisex", 220, "business", "Braun karierte Pullon-Hose");
-        Unterteil u12= new Unterteil(80, "XL", "unisex", 220, "business", "Braun karierte Pullon-Hose");
-        Unterteil u13 = new Unterteil(80, "S", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
-        Unterteil u14 = new Unterteil(80, "M", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
-        Unterteil u15 = new Unterteil(80, "L", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
-        Unterteil u16 = new Unterteil(80, "XL", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
-        Unterteil u17 = new Unterteil(80, "S", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
-        Unterteil u18 = new Unterteil(80, "M", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
-        Unterteil u19 = new Unterteil(80, "L", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
-        Unterteil u20 = new Unterteil(80, "XL", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
+        Unterteil u1 = new Unterteil(8.88, "S", "männlich", 220, "business", "schwarze Anzugshose");
+        Unterteil u2 = new Unterteil(28.66, "M", "männlich", 220, "business", "schwarze Anzugshose");
+        Unterteil u3 = new Unterteil(18.66, "L", "männlich", 220, "business", "schwarze Anzugshose");
+        Unterteil u4 = new Unterteil(20.55, "XL", "männlich", 220, "business", "schwarze Anzugshose");
+        Unterteil u5 = new Unterteil(13.99, "S", "weiblich", 220, "business", "schwarze Chinohose");
+        Unterteil u6 = new Unterteil(20.5, "M", "weiblich", 220, "business", "schwarze Chinohose");
+        Unterteil u7 = new Unterteil(28.6, "L", "weiblich", 220, "business", "schwarze Chinohose");
+        Unterteil u8 = new Unterteil(26.50, "XL", "weiblich", 220, "business", "schwarze Chinohose");
+        Unterteil u9 = new Unterteil(24.30, "S", "unisex", 220, "business", "Braun karierte Pullon-Hose");
+        Unterteil u10 = new Unterteil(12.60, "M", "unisex", 220, "business", "Braun karierte Pullon-Hose");
+        Unterteil u11 = new Unterteil(6.66, "L", "unisex", 220, "business", "Unsichtbare Hose aus Schlangenleder");
+        Unterteil u12= new Unterteil(3.33, "L", "unisex", 220, "business", "Braun karierte Pullon-Hose");
+        Unterteil u13 = new Unterteil(22.2, "S", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
+        Unterteil u14 = new Unterteil(12.55, "M", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
+        Unterteil u15 = new Unterteil(19.99, "L", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
+        Unterteil u16 = new Unterteil(15.88, "XL", "männlich", 220, "business", "graue enggeschnittene Anzugshose");
+        Unterteil u17 = new Unterteil(23.12, "S", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
+        Unterteil u18 = new Unterteil(15.70, "M", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
+        Unterteil u19 = new Unterteil(18.20, "L", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
+        Unterteil u20 = new Unterteil(13.40, "XL", "weiblich", 220, "business", "Schlichte Leinen-Zigarettenhose");
         Unterteil u21 = new Unterteil(80, "S", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
         Unterteil u22 = new Unterteil(80, "M", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
         Unterteil u23 = new Unterteil(80, "L", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
-        Unterteil u24= new Unterteil(80, "XL", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
+        Unterteil u24 = new Unterteil(80, "XL", "unisex", 220, "business", "Chino-Karottenhose in Marineblau");
         Unterteil u25 = new Unterteil(80, "S", "männlich", 220, "freizeit", "Schmal zulaufende Jeans in mittlerer ");
         Unterteil u26 = new Unterteil(80, "M", "männlich", 220, "freizeit", "Schmal zulaufende Jeans in mittlerer ");
         Unterteil u27 = new Unterteil(80, "L", "männlich", 220, "freizeit", "Schmal zulaufende Jeans in mittlerer ");
@@ -362,8 +362,8 @@ public class Verwaltung implements Serializable {
         Schuhe s8 = new Schuhe(18.99, "XL", "weiblich", 133, "business","Spitze Pumps mit rundem Absatz in braun");
         Schuhe s9 = new Schuhe(18.99, "S", "unisex", 133, "business", "Schwarze Schnürschuhe mit dicker Sohle");
         Schuhe s10 = new Schuhe(18.99, "M", "unisex", 133, "business", "Schwarze Schnürschuhe mit dicker Sohle");
-        Schuhe s11 = new Schuhe(18.99, "L", "unisex", 133, "business", "Schwarze Schnürschuhe mit dicker Sohle");
-        Schuhe s12= new Schuhe(18.99, "XL", "unisex", 133, "business","Schwarze Schnürschuhe mit dicker Sohle");
+        Schuhe s11 = new Schuhe(18.99, "L", "unisex", 133, "business", "Jesus Sandalen");
+        Schuhe s12= new Schuhe(18.99, "L", "unisex", 133, "business","Schwarze Schnürschuhe mit dicker Sohle");
         Schuhe s13 = new Schuhe(18.99, "S", "männlich", 133, "business", "Schuhe im Budapester Stil aus braunem Leder mit Natursohle und farbigen Verzierungen");
         Schuhe s14= new Schuhe(18.99, "M", "männlich", 133, "business", "Schuhe im Budapester Stil aus braunem Leder mit Natursohle und farbigen Verzierungen");
         Schuhe s15 = new Schuhe(18.99, "L", "männlich", 133, "business", "Schuhe im Budapester Stil aus braunem Leder mit Natursohle und farbigen Verzierungen");
@@ -374,7 +374,7 @@ public class Verwaltung implements Serializable {
         Schuhe s20 = new Schuhe(18.99, "XL", "weiblich", 133, "business","Loafer mit Ziernaht in Marine");
         Schuhe s21 = new Schuhe(18.99, "S", "unisex", 133, "business", "Flache Loafer in Schwarz");
         Schuhe s22 = new Schuhe(18.99, "M", "unisex", 133, "business", "Flache Loafer in Schwarz");
-        Schuhe s23 = new Schuhe(18.99, "L", "unisex", 133, "business", "Flache Loafer in Schwarz");
+        Schuhe s23 = new Schuhe(18.99, "L", "unisex", 133, "business", "Flasche Urpils");
         Schuhe s24= new Schuhe(18.99, "XL", "unisex", 133, "business","Flache Loafer in Schwarz");
         Schuhe s25 = new Schuhe(18.99, "S", "männlich", 133, "sportlich", "Nike Running – Air Zoom 35 Pegasus");
         Schuhe s26 = new Schuhe(18.99, "M", "männlich", 133, "sportlich", "Nike Running – Air Zoom 35 Pegasus");
@@ -501,17 +501,17 @@ public class Verwaltung implements Serializable {
         
         
         
-        Accessoires a1 = new Accessoires(25, "S", "männlich", 75, "business", "bordeaux farbende Krawatte ");
+        Accessoires a1 = new Accessoires(25, "S", "männlich", 75, "business", "bordeaux farbende Krawatte mit Lila Häschen ");
         Accessoires a2 = new Accessoires(25, "M", "männlich", 75, "business", "bordeaux farbende Krawatte ");
         Accessoires a3 = new Accessoires(25, "L", "männlich", 75, "business", "bordeaux farbende Krawatte ");
-        Accessoires a4 = new Accessoires(25, "XL", "männlich", 75, "business", "bordeaux farbende Krawatte ");
+        Accessoires a4 = new Accessoires(6.66, "XL", "männlich", 75, "business", "Sense mit Blutspritzern");
         Accessoires a5 = new Accessoires(17.99, "S", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
         Accessoires a6 = new Accessoires(17.99, "M", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
         Accessoires a7 = new Accessoires(17.99, "L", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
         Accessoires a8 = new Accessoires(17.99, "XL", "weiblich", 57, "business", "goldene Kette mit kleinem Glitzerstein");
         Accessoires a9 = new Accessoires(17.99, "S", "unisex", 57, "business", "silberne Uhr mit Ziffernblatt aus Bernsetin");
         Accessoires a10 = new Accessoires(17.99, "M", "unisex", 57, "business", "silberne Uhr mit Ziffernblatt aus Bernsetin");
-        Accessoires a11 = new Accessoires(17.99, "L", "unisex", 57, "business", "silberne Uhr mit Ziffernblatt aus Bernsetin");
+        Accessoires a11 = new Accessoires(17.99, "L", "unisex", 57, "business", "Der Ring sie alle zu knechten");
         Accessoires a12 = new Accessoires(17.99, "XL", "unisex", 57, "business", "silberne Uhr mit Ziffernblatt aus Bernsetin");
         Accessoires a13 = new Accessoires(25, "S", "männlich", 75, "business", "blaues Einstecktuch ");
         Accessoires a14 = new Accessoires(25, "M", "männlich", 75, "business", "blaues Einstecktuch ");
@@ -536,7 +536,7 @@ public class Verwaltung implements Serializable {
         Accessoires a33 = new Accessoires(20, "S", "weiblich", 38, "freizeit", "Schlangenleder Tasche");
         Accessoires a34 = new Accessoires(20, "M", "weiblich", 38, "freizeit", "Schlangenleder Tasche");
         Accessoires a35 = new Accessoires(20, "L", "weiblich", 38, "freizeit", "Schlangenleder Tasche");
-        Accessoires a36 = new Accessoires(20, "XL", "weiblich", 38, "freizeit", "Schlangenleder Tasche");
+        Accessoires a36 = new Accessoires(20, "XL", "weiblich", 38, "freizeit", "Schlangenleder Tasche mit Lebendiger schlange (Inhalt)");
         Accessoires a37 = new Accessoires(25, "S", "unisex", 54, "freizeit", "brauner Gürtel");
         Accessoires a38 = new Accessoires(25, "M", "unisex", 54, "freizeit", "brauner Gürtel");
         Accessoires a39 = new Accessoires(25, "L", "unisex", 54, "freizeit", "brauner Gürtel");
@@ -554,7 +554,7 @@ public class Verwaltung implements Serializable {
         Accessoires a51 = new Accessoires(25, "L", "unisex", 54, "sportlich", "graues Schweißband");
         Accessoires a52 = new Accessoires(25, "XL", "unisex", 54, "sportlich", "graues Schweißband");
         Accessoires a53 = new Accessoires(20, "S", "männlich", 38, "sortlich", "Nike Sportsocken");
-        Accessoires a54 = new Accessoires(20, "M", "männlich", 38, "sportlich", "Nike Sportsocken");
+        Accessoires a54 = new Accessoires(20, "M", "männlich", 38, "sportlich", "Nike Sportsocken mit Löchern");
         Accessoires a55 = new Accessoires(20, "L", "männlich", 38, "sportlich", "Nike Sportsocken");
         Accessoires a56 = new Accessoires(20, "XL", "männlich", 38, "sportlich", "Nike Sportsocken");
         Accessoires a57 = new Accessoires(20, "S", "weiblich", 38, "sportlich", "Slimmer Gürtel");
@@ -564,7 +564,7 @@ public class Verwaltung implements Serializable {
         Accessoires a61 = new Accessoires(25, "S", "unisex", 54, "sportlich", "schwarze Sportsocken");
         Accessoires a62 = new Accessoires(25, "M", "unisex", 54, "sportlich", "schwarze Sportsocken");
         Accessoires a63 = new Accessoires(25, "L", "unisex", 54, "sportlich", "schwarze Sportsocken");
-        Accessoires a64 = new Accessoires(25, "XL", "unisex", 54, "sportlich", "schwarze Sportsocken");
+        Accessoires a64 = new Accessoires(85, "XL", "unisex", 54, "sportlich", "schwarze Sportsocken");
         Accessoires a65 = new Accessoires(20, "S", "männlich", 38, "sportlich", "schwarze Schweißbänder für Stirn und Arme");
         Accessoires a66 = new Accessoires(20, "M", "männlich", 38, "sportlich", "schwarze Schweißbänder für Stirn und Arme");
         Accessoires a67 = new Accessoires(20, "L", "männlich", 38, "sportlich", "schwarze Schweißbänder für Stirn und Arme");
@@ -1115,7 +1115,9 @@ public class Verwaltung implements Serializable {
             if (gefundeneOberteile.size() > 1 && gefundeneUnterteile.size() > 1 && gefundeneSchuhe.size() > 1 && gefundeneAccessoires.size() > 1) {
                 //Es gibt von allen mindestens eines
                 Outfit outfit2 = new Outfit(gefundeneOberteile.get(1), gefundeneUnterteile.get(1), gefundeneSchuhe.get(1), gefundeneAccessoires.get(1));
-                outfits.add(outfit2);
+
+        outfits.add(outfit2);
+        
             }
 //            if (gefundeneOberteile.size() > 1) {
 //                Outfit outfit1 = new Outfit(gefundeneOberteile.get(1), gefundeneUnterteile.get(0), gefundeneSchuhe.get(0), gefundeneAccessoires.get(0));
@@ -1131,8 +1133,11 @@ public class Verwaltung implements Serializable {
             //kein Outfit möglich
             System.out.println("Es gibt kein Outfit mit ihren Angaben");
         }
-        for (Outfit outfit : outfits) {
-
+        if (gefundeneOberteile.size() > 1 && gefundeneUnterteile.size() > 1 && gefundeneSchuhe.size() > 1 && gefundeneAccessoires.size() > 1) {
+            int i = 1;
+            for (Outfit outfit : outfits) {
+            
+            System.out.println("Outfit "+i+":");
             String s = castInt2String(outfit.oberteil.getArtikelnummer());
             printZentriert(s);
 
@@ -1152,7 +1157,7 @@ public class Verwaltung implements Serializable {
 
             printLinksbuendig(outfit.oberteil.getBeschreibung());
             printLF();
-
+            
             s = castInt2String(outfit.unterteil.getArtikelnummer());
             printZentriert(s);
 
@@ -1210,9 +1215,15 @@ public class Verwaltung implements Serializable {
 
             printLinksbuendig(outfit.accessoires.getBeschreibung());
             printLF();
-
+            
+            
+            i++;
+            
+            
         }
-     OutfitWählen();
+        OutfitWählen();
+        }
+     
     }
 
     
