@@ -22,7 +22,7 @@ public class Verwaltung implements Serializable {
     private ArrayList<Artikel> artikelListeListe2; //Kundenliste
     private ArrayList<Kunde> kundenListe; //Kundenliste
     private ArrayList<Artikel> artikelListe; 
-    private ArrayList<Warenkorb> warenkorb; //liste des Warenkorbs 
+    //private ArrayList<Warenkorb> warenkorb; //liste des Warenkorbs 
     final static int FELDLAENGE = 14;
 
     /**
@@ -50,14 +50,14 @@ public class Verwaltung implements Serializable {
         kundenListe.add(k4);
 
         Oberteil o0 = new Oberteil(19.99,"L","unisex",66,"business","Unsichtbarer Eisbärenfell Peltzmantel");
-       Oberteil o1 = new Oberteil(24.99, "S", "unisex", 255, "sportlich", "Blauer Kapuzenpullover mit Aufschrift"); 
+        Oberteil o1 = new Oberteil(24.99, "S", "unisex", 255, "sportlich", "Blauer Kapuzenpullover mit Aufschrift"); 
         Oberteil o2 = new Oberteil(15.99, "M", "männlich", 155, "freizeit", "Blauer Pullover mit V-Ausschnitt");  
         Oberteil o3 = new Oberteil(20.99, "S", "unisex", 145, "freizeit", "Roter Kapuzenpullover");
         Oberteil o4 = new Oberteil(29.99, "L", "weiblich", 305, "business", "Weiße Bluse mit 3/4 Ärmel und Knopfleiste");
-        Oberteil o5 = new Oberteil(6.66, "XL", "männlich", 305, "business", "Schwarze Kutte zerfetzt");
-        Oberteil o6 = new Oberteil(29.99, "L", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
-        Oberteil o7 = new Oberteil(29.99, "M", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
-        Oberteil o8 = new Oberteil(29.99, "S", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o5 = new Oberteil(6.66, "S", "männlich", 305, "business", "Schwarze Kutte zerfetzt");
+        Oberteil o6 = new Oberteil(29.99, "M", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o7 = new Oberteil(29.99, "L", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
+        Oberteil o8 = new Oberteil(29.99, "XL", "männlich", 305, "business", "Weißes Hemd mit Brusttasche und Knopfleiste");
         Oberteil o9 = new Oberteil(29.99, "S", "weiblich", 305, "business", "Weißes Bluse mit Brusttasche und Knopfleiste");
         Oberteil o10 = new Oberteil(29.99, "M", "weiblich", 305, "business", "Weißes Bluse mit Brusttasche und Knopfleiste");
         Oberteil o11 = new Oberteil(29.99, "L", "weiblich", 305, "business", "Weißes Bluse mit Brusttasche und Knopfleiste");
@@ -1052,7 +1052,8 @@ public class Verwaltung implements Serializable {
             System.out.println("[1]  Outfitsuche starten");
             System.out.println("[0] HAUPTMENUE");
             printAuswahlTreffen();
-            eingabe = Stdin.readlnChar();
+
+        eingabe = Stdin.readlnChar();
 
             switch (eingabe) {
                 case '0':
@@ -1279,8 +1280,7 @@ public class Verwaltung implements Serializable {
     */
    public void Outfit1InWarenkorb()
    {
-    warenkorb.add(outfit);
-    outfits.delete(); 
+   
    }
    
    
@@ -1289,7 +1289,7 @@ public class Verwaltung implements Serializable {
     */
    public void Outfit2InWarenkorb()
    {
-    warenkorb.add(outfit2);
+    
    
    }
    

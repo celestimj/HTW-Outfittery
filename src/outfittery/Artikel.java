@@ -140,11 +140,11 @@ public abstract class Artikel
      */
     public String getPreiskategorie()
     {
-        if(preis< 29.99)
+        if(preis<= 29.99)
         {
         return this.preiskategorie = "niedrig";
         }
-        if(preis>=29.99 && preis<80.00)
+        if(preis>29.99 && preis<80.00)
         {
          return this.preiskategorie= "mittel";
         }
