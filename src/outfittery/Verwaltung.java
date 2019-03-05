@@ -17,12 +17,12 @@ import de.htw.saarland.stl.Stdin;           // fuer Eingaben von der Konsole
  * Variablen der Klasse Verwaltung
  */
 public class Verwaltung implements Serializable {
-    private ArrayList<Warenkorb> warenkorbListe; //Warenkorb
+    private ArrayList<Warenkorb> Warenkorb;//die Artikelnummern oder outfitids gepeichert
     private ArrayList<Outfit> outfitListe; //Liste für gefundene Outfits
     private ArrayList<Artikel> artikelListeListe2; //Kundenliste
     private ArrayList<Kunde> kundenListe; //Kundenliste
     private ArrayList<Artikel> artikelListe; 
-    //private ArrayList<Warenkorb> warenkorb; //liste des Warenkorbs 
+    
     final static int FELDLAENGE = 14;
 
     /**
@@ -865,7 +865,7 @@ public class Verwaltung implements Serializable {
 
             String price = Stdin.readlnString("Bitte geben Sie den Preis des Kleidungstücks ein:");
             String lagerbestandd = Stdin.readlnString("Bitte geben Sie den Lagerbestand des Kleidungsstücks ein:");
-            if (price.matches("[0-9.]+") && lagerbestandd.matches("[0-9]+")) {//damit das Programm nicht abstürtzt wenn der String nicht doubel oder int compatibel ist
+            if (price.matches("[0-9.]+") && lagerbestandd.matches("[0-9]+")) {                                                                          //damit das Programm nicht abstürtzt wenn der String nicht doubel oder int compatibel ist
 
             String größe = Stdin.readlnString("Bitte geben Sie die Größe des Kleidungsstücks ein:");
             String geschlecht = Stdin.readlnString("Bitte geben Sie das Geschlecht für das Kleidungsstücks ein:");
@@ -874,48 +874,50 @@ public class Verwaltung implements Serializable {
             String beschreibung = Stdin.readlnString("Bitte geben Sie die Beschreibung des Kleidungstücks ein:");
             String verschluss = Stdin.readlnString("Bitte geben Sie den gewünschten Verschluss des Schuhs ein:");
             String bestätigung = Stdin.readlnString("Wollen sie ihre Eingaben Verwerfen? (J/N):");
-            if (bestätigung.equals("N") || bestätigung.equals("Nein") || bestätigung.equals("n") || bestätigung.equals("nein")) {//hiermit können fehlerhafte eingaben abgebrochen werden
+            if (bestätigung.equals("N") || bestätigung.equals("Nein") || bestätigung.equals("n") || bestätigung.equals("nein")) {                       //hiermit können fehlerhafte eingaben abgebrochen werden
 
-                //in dieser if bedingung könnten auch alle anderen eingaben reglementiert werden
+                                                                                                                                                        //in dieser if bedingung könnten auch alle anderen eingaben reglementiert werden
                 
-                    double preis = Double.parseDouble(price);// macht aus einem Sting price einen Double preis für Konstruktor
-                    int lagerbestand = Integer.parseInt(lagerbestandd);//String lagerbestandd digitiert zuuuu Integer Lagerbestandunpassende werte für int oder double umwandlung enthält
+                    double preis = Double.parseDouble(price);                                                                                           // macht aus einem Sting price einen Double preis für Konstruktor
+                    int lagerbestand = Integer.parseInt(lagerbestandd);                                                                                 //String lagerbestandd digitiert zuuuu Integer Lagerbestandunpassende werte für int oder double umwandlung enthält
 
-                    //Speichert Kleidungsstück als entsprechendes ab (Oberteil;Unterteil;Schuhe;Assoires)
+                                                                                                                                                        //Speichert Kleidungsstück als entsprechendes ab (Oberteil;Unterteil;Schuhe;Assoires)
                     if (artikelart.equals("oberteil")) {
 
-                        Oberteil o5 = new Oberteil(preis, größe, geschlecht, lagerbestand, stil, beschreibung);  //für den Fall, dass Oberteil
+                        Oberteil o5 = new Oberteil(preis, größe, geschlecht, lagerbestand, stil, beschreibung);                                         //für den Fall, dass Oberteil
                         artikelListe.add(o5); //hinzufügen zur Artikelliste
                         System.out.println("Oberteile wurden zur Artikelliste Hinzugefügt");
                         WilleZurSpeicherung();
 
                     }
                     if (artikelart.equals("unterteil")) {
-                        Unterteil u5 = new Unterteil(preis, größe, geschlecht, lagerbestand, stil, beschreibung); //für den Fall, dass Unterteil
+                        Unterteil u5 = new Unterteil(preis, größe, geschlecht, lagerbestand, stil, beschreibung);                                       //für den Fall, dass Unterteil
                         artikelListe.add(u5);    //hinzufügen zur Artikelliste
                         System.out.println("Unterteile wurden zur Artikelliste Hinzugefügt");
                         WilleZurSpeicherung();
                     }
                     if (artikelart.equals("schuhe")) {
-                        Schuhe s7 = new Schuhe(preis, größe, geschlecht, lagerbestand, stil, beschreibung, verschluss );  //für den Fall, dass Schuhe
+                        Schuhe s7 = new Schuhe(preis, größe, geschlecht, lagerbestand, stil, beschreibung, verschluss );                                //für den Fall, dass Schuhe
                         artikelListe.add(s7);  //hinzufügen zur Artikelliste
                         System.out.println("Schuhe wurden zur Artikelliste Hinzugefügt");
                         WilleZurSpeicherung();
                     }
                     if (artikelart.equals("accessoires")) {
-                        Accessoires a5 = new Accessoires(preis, größe, geschlecht, lagerbestand, stil, beschreibung);  //für den Fall, dass Accessoires
+                        Accessoires a5 = new Accessoires(preis, größe, geschlecht, lagerbestand, stil, beschreibung);                                   //für den Fall, dass Accessoires
                         artikelListe.add(a5);  //hinzufügen zur Artikelliste
                         System.out.println("Accessoires wurden zur Artikelliste Hinzugefügt");
                         WilleZurSpeicherung();
                     }
-                } else {
+                } 
+            }
+            else {
 
                     System.out.println("Die Eingaben des Preises oder des Lagerbestandes sind ungültig");
                     System.out.println("Kommas müssen als . Geschreiben werden und es sind nur Zahlen gültig");
                 }
-            }
+            
         } else {
-            System.out.println("Ungültige Eingabe der Artikelart");// wenn die Artikelart eingabe ungültig ist
+            System.out.println("Ungültige Eingabe der Artikelart");                                                                                    // wenn die Artikelart eingabe ungültig ist
         }
     }
 
@@ -924,7 +926,7 @@ public class Verwaltung implements Serializable {
      */
     private void WilleZurSpeicherung() {
         String speicher = Stdin.readlnString("Wollen sie ihre Eingaben Für immer und ewig in der Xml Speicher? (J/N):");
-        if (speicher.equals("J") || speicher.equals("Ja") || speicher.equals("j")) {//hiermit können fehlerhafte eingaben abgebrochen werden
+        if (speicher.equals("J") || speicher.equals("Ja") || speicher.equals("j")) {                                                                  //hiermit können fehlerhafte eingaben abgebrochen werden
 
             save();
             System.out.println("Ihre Änderungen am Warenbestand wurden gespeichert");
@@ -1081,6 +1083,33 @@ public class Verwaltung implements Serializable {
         String geschlecht = Stdin.readString("Bitte Geschlecht eingeben, nachdem gesucht werden soll:");
         String größe = Stdin.readString("Bitte Größe eingeben, nachder gesucht werden soll:");
         String stil = Stdin.readString("Bitte Stil eingeben, nachdem gesucht werden soll:");
+        
+       
+     
+//       String c;
+//         
+//        if ( ) {
+//            f(artikelart.equals("schuhe")){
+//                char option;
+//            
+//       
+//        do {
+//            System.out.println("[1] Schnürer ");
+//            System.out.println("[2] Klettverschluss ");
+//            printAuswahlTreffen();
+//            option = Stdin.readlnChar();
+//            switch (option) {
+//                case '1':
+//                    String verschluss = "Schnürer";
+//                    break; 
+//                case '2':
+//                    String verschluss = "Klettverschluss";  // bei Wahl Aufruf der Oberteilliste
+//                    break;
+//                    default:
+//            }
+        
+       
+        
 
         ArrayList<Oberteil> gefundeneOberteile = new ArrayList<Oberteil>();
         ArrayList<Unterteil> gefundeneUnterteile = new ArrayList<Unterteil>();
@@ -1100,9 +1129,10 @@ public class Verwaltung implements Serializable {
         }
 
         for (Artikel artikel : artikelListe) {
-            if ((artikel instanceof Schuhe) && artikel.getPreiskategorie().equalsIgnoreCase(preiskategorie) && artikel.getGeschlecht().equalsIgnoreCase(geschlecht) && artikel.getGröße().equalsIgnoreCase(größe) && artikel.getStil().equalsIgnoreCase(stil)) {
+            if ((artikel instanceof Schuhe) && artikel.getPreiskategorie().equalsIgnoreCase(preiskategorie)  && artikel.getGeschlecht().equalsIgnoreCase(geschlecht) && artikel.getGröße().equalsIgnoreCase(größe) && artikel.getStil().equalsIgnoreCase(stil)) {
                 gefundeneSchuhe.add((Schuhe) artikel);
-            }
+         
+            }   
         }
 
         for (Artikel artikel : artikelListe) {
@@ -1117,7 +1147,8 @@ public class Verwaltung implements Serializable {
             //Es gibt von allen mindestens eines
             Outfit outfit = new Outfit(gefundeneOberteile.get(0), gefundeneUnterteile.get(0), gefundeneSchuhe.get(0), gefundeneAccessoires.get(0));
             outfits.add(outfit);
-outfitListe.add(outfit);
+            outfitListe.add(outfit);
+            
             if (gefundeneOberteile.size() > 1 && gefundeneUnterteile.size() > 1 && gefundeneSchuhe.size() > 1 && gefundeneAccessoires.size() > 1) {
                 //Es gibt von allen mindestens eines
                 Outfit outfit2 = new Outfit(gefundeneOberteile.get(1), gefundeneUnterteile.get(1), gefundeneSchuhe.get(1), gefundeneAccessoires.get(1));
@@ -1143,7 +1174,7 @@ outfitListe.add(outfit);
             int i = 1;
             for (Outfit outfit : outfits) {
             
-                 System.out.println("Outfit "+i+":");
+            System.out.println("Outfit "+i+":");                
             System.out.print("Artikel "+i+":  ");            
             String s = castInt2String(outfit.oberteil.getArtikelnummer());
             printZentriert(s);
@@ -1157,6 +1188,7 @@ outfitListe.add(outfit);
             printLinksbuendig(s);
             printLinksbuendig(outfit.oberteil.getBeschreibung());
             printLF();
+            
             
             System.out.print("Artikel "+(i+1)+":  ");
             s = castInt2String(outfit.unterteil.getArtikelnummer());
@@ -1199,7 +1231,8 @@ outfitListe.add(outfit);
             printLinksbuendig(s);
             printLinksbuendig(outfit.accessoires.getBeschreibung());
             printLF();
-            
+                System.out.println();
+            System.out.println("Outfit ID:"+outfit.getOutfitid());
             
             i++;
                 System.out.println();
@@ -1223,11 +1256,11 @@ outfitListe.add(outfit);
             System.out.println("Möchten Sie eines dieser Outfits bestellen?");
             System.out.println("------------------------------------------------------------");
 
-            System.out.println("[1]  Ja, in Warenkorb Outfit 1 hinzufügen");
-            System.out.println("[2]  Ja, in Warenkorb Outfit 2 hinzufügen");
-            System.out.println("[3]  Ja, in Warenkorb beide hinzufügen");
-            System.out.println("[4]  Nein ");
-            System.out.println("[0] HAUPTMENUE");
+            System.out.println("[1] beide Outfits in den Warenkorb");
+            System.out.println("[2] Outfit 1 in den Warenkorb");
+            System.out.println("[3] Outfit 2 in den Warenkorb");
+            System.out.println("[4] Das Programm beenden ");
+            System.out.println("[0] Zurück zur suche");
             printAuswahlTreffen();
             eingabe = Stdin.readlnChar();
 
@@ -1236,13 +1269,13 @@ outfitListe.add(outfit);
                     menuewechsel = true;
                     break;
                 case '1':
-                    Outfit1InWarenkorb();  //speichere das 1. Outfit in den Warenkorb
+                    OutfitBeideInWarenkorb();  //speichere das 1. Outfit in den Warenkorb
                     break;
                 case '2':
-                    Outfit2InWarenkorb(); //speichere das 2. Outfit in den Warenkorb
+                    Outfit1InWarenkorb(); //speichere das 2. Outfit in den Warenkorb
                     break;
                 case '3':
-                  Outfit1InWarenkorb(); Outfit2InWarenkorb();  //speichere beide Outfits in den Warenkorb ab
+                    Outfit2InWarenkorb();  //speichere beide Outfits in den Warenkorb ab
                     break;
                          
                 case '4':
@@ -1258,12 +1291,13 @@ outfitListe.add(outfit);
       }
    
     /**
-    * Methode fügt Outfit 1 in Warenkorb hinzu
+    * Methode fügt beide Outfit in Warenkorb hinzu
     */
-   public void Outfit1InWarenkorb()
+   public void OutfitBeideInWarenkorb()
    {    
        if (outfitListe.size()>0) {
            
+             
              
             int i = 1;
             for (Outfit outfit : outfitListe) {
@@ -1325,6 +1359,8 @@ outfitListe.add(outfit);
             printLinksbuendig(outfit.accessoires.getBeschreibung());
             printLF();
             
+//            Warenkorb w1 = new Warenkorb(getOutfitid());
+//             Warenkorb.add(w1);
             
             i++;
                 System.out.println();
@@ -1334,7 +1370,14 @@ outfitListe.add(outfit);
        else{System.out.println("schwingdeiding");}
    }
    
+   /**
+    * Methode fügt Outfit 2 in Warenkorb hinzu
+    */
+   public void Outfit1InWarenkorb()
+   {
+    
    
+   }
    /**
     * Methode fügt Outfit 2 in Warenkorb hinzu
     */
@@ -1349,17 +1392,43 @@ outfitListe.add(outfit);
      * Methode entfernt einen bestimmten Artikel
      */
    public void ArtikelEntfernen()
-   {
-   
+   {int nr = Stdin.readlnInt("Bitte geben Sie die ID des zu entfernenden Kunden ein:");
+   int a = artikelListe.size();
+        
+        for (int i = 0; i < a; i++) {
+            System.out.println("id=" + artikelListe.get(i).getArtikelnummer());
+            System.out.println("i=" + i);
+            if (nr == artikelListe.get(i).getArtikelnummer()) {
+                artikelListe.remove(i);
+                break;
+            }
+             
+        }
+       warenBestand();
    
    }
    
     /**
      * Methode entfernt bestimmten Kunden
      */
-   public void KundenEntfernen() {
- 
-   }
+      public void KundenEntfernen() {
+          int nr = Stdin.readlnInt("Bitte geben Sie die ID des zu entfernenden Kunden ein:");
+        
+        int a = kundenListe.size();
+        
+        for (int i = 0; i < a; i++) {
+            System.out.println("id=" + kundenListe.get(i).getKundennummer());
+            System.out.println("i=" + i);
+            if (nr == kundenListe.get(i).getKundennummer()) {
+                kundenListe.remove(i);
+                break;
+            }
+            
+        }
+        showKundenListe();
+    } 
+   
+   
     /**
      *  2. Methode um Outfit zu finden (unrelevant)
      */

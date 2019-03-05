@@ -33,6 +33,8 @@ public class Outfit extends Artikel {
         this.unterteil = unterteil;
         this.schuhe = schuhe;
         this.accessoires = accessoires;
+        this.outfitid = Outfit.id_counter;//hier muss noch angepasst werden das jedes kleidungsstück die gleicheoutfit ID bekommt
+        id_counter = id_counter + 1;
     }
 
     

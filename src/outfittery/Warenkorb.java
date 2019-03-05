@@ -12,9 +12,12 @@ package outfittery;
 public class Warenkorb {
     
     
-    public Oberteil oberteil;
-    public Unterteil unterteil;
-    public Schuhe schuhe;
-    public Accessoires accessoires;
+   private int erkennungsnummer;
+   
+   public Warenkorb(int erkennungsnummer){
+       
+   this.erkennungsnummer=erkennungsnummer;
+   
+   }
 
 }
